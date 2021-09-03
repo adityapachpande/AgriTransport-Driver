@@ -1,0 +1,4666 @@
+;-----------------------------------------------
+;----------2007090045-19.40.50-200505a-357018C-HP
+;----------2110324
+
+; AMD display information file
+;
+; Installation INF for the AMD display driver.
+; Copyright(C) AMD 2007-2020
+;-----------------------------------------------
+
+[Version]
+Signature="$Windows NT$"
+Provider=%ATI%
+ClassGUID={4D36E968-E325-11CE-BFC1-08002BE10318}
+Class=Display
+DriverVer=05/05/2020, 26.20.14050.2
+;;LayoutFile=layout.inf
+CatalogFile=C0357018.CAT
+
+[SignatureAttributes]
+atimpc32.dll=SignatureAttributes.PETrust
+atimpc64.dll=SignatureAttributes.PETrust
+atiumd64.dll=SignatureAttributes.PETrust
+atiumd6a.dll=SignatureAttributes.PETrust
+atiumdag.dll=SignatureAttributes.PETrust
+atidxx32.dll=SignatureAttributes.PETrust
+aticfx32.dll=SignatureAttributes.PETrust
+atiu9pag.dll=SignatureAttributes.PETrust
+atiuxpag.dll=SignatureAttributes.PETrust
+atidxx64.dll=SignatureAttributes.PETrust
+aticfx64.dll=SignatureAttributes.PETrust
+atiu9p64.dll=SignatureAttributes.PETrust
+atiuxp64.dll=SignatureAttributes.PETrust
+atiumdva.dll=SignatureAttributes.PETrust
+amdave32.dll=SignatureAttributes.PETrust
+amdave64.dll=SignatureAttributes.PETrust
+amdpcom64.dll=SignatureAttributes.PETrust
+amdpcom32.dll=SignatureAttributes.PETrust
+amduve64.dll=SignatureAttributes.PETrust
+amduve32.dll=SignatureAttributes.PETrust
+AMDh265Enc32.dll=SignatureAttributes.PETrust
+AMDh265Enc64.dll=SignatureAttributes.PETrust
+amdmiracast.dll=SignatureAttributes.PETrust
+amdxc32.dll=SignatureAttributes.PETrust
+amdxc64.dll=SignatureAttributes.PETrust
+amf-mft-mjpeg-decoder32.dll=SignatureAttributes.PETrust
+amf-mft-mjpeg-decoder64.dll=SignatureAttributes.PETrust
+AMDh264Enc32.dll=SignatureAttributes.PETrust
+AMDh264Enc64.dll=SignatureAttributes.PETrust
+amdhdl32.dll=SignatureAttributes.PETrust
+amdhdl64.dll=SignatureAttributes.PETrust
+
+[SignatureAttributes.PETrust]
+PETrust=true
+
+[DestinationDirs]
+DefaultDestDir  = 11
+R300.Miniport   = 12  ; drivers
+R300.Display    = 11  ; system32
+R300.DXX        = 11  ; system32
+R300.Mppxy      = 12  ; drivers
+R300.DispWow    = 10, SysWOW64
+R300.ProxyM	= 12  ; drivers
+R300.ProxyU	= 11  ; system32
+R300.Samu	= 11  ; system32
+R300.SamuWow64	= 10, SysWOW64
+R300.ProxyUWoW  = 10, SysWOW64
+r300.CFNext	= 11
+r300.CFNextWow	= 10, SysWOW64
+R300.VCE = 11
+R300.VCEWOW = 10, SysWOW64
+Coinstaller_CopyFiles = 11
+R300.OD = 11
+DS.Graphics = 13, B354982
+DS.System32 = 11
+DS.DelFiles = 11
+DS.SysWow64 = 10, SysWOW64
+DS.DelFilesWow = 10, SysWOW64
+R300.MFTHEVC = 16427, ATI Technologies\Multimedia
+CCC.Install = 16422, %InstallDir%
+R300.DSE = 16427, ATI Technologies
+R300.MFTDEC = 16427, ATI Technologies\Multimedia
+R300.MFTMJPEG = 16427, ATI Technologies\Multimedia
+R300.MFTENC = 16427, ATI Technologies\Multimedia
+R300.OpenCL = 11
+R300.OpenCLWow64 = 10, SysWOW64
+R300.AMDKMPFD = 24, Program Files\AMD\amdkmpfd
+R300.Miniport_PA = 12
+R300.Display_PA = 11
+R300.DispWow_PA = 10, SysWOW64
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+;
+; Driver information
+;
+
+[Manufacturer]
+%ATI% = ATI.Mfg, NTamd64.10.0.1..14310, NTamd64.10.0.1, NTamd64.6.0.1, NTamd64.6.1.1, NTamd64.6.2.1, NTamd64.6.3.1
+
+[ATI.Mfg.NTamd64.10.0.1]
+"%AMD15D8.1%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C1
+"%AMD15D8.2%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C2
+"%AMD15D8.3%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C3
+"%AMD15D8.4%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C4
+"%AMD15D8.5%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C5
+"%AMD15D8.6%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C1
+"%AMD15D8.7%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C2
+"%AMD15D8.8%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C3
+"%AMD15D8.9%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C4
+"%AMD15D8.10%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C5
+"%AMD15D8.11%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C1
+"%AMD15D8.12%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C2
+"%AMD15D8.13%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C3
+"%AMD15D8.14%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C4
+"%AMD15D8.15%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C5
+"%AMD15D8.16%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C1
+"%AMD15D8.17%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C2
+"%AMD15D8.18%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C3
+"%AMD15D8.19%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C4
+"%AMD15D8.20%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C5
+"%AMD15D8.21%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8796103C&REV_C4
+"%AMD15D8.22%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8796103C&REV_CD
+"%AMD15D8.23%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8796103C&REV_CE
+"%AMD15D8.24%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8797103C&REV_C4
+"%AMD15D8.25%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8797103C&REV_CD
+"%AMD15D8.26%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_8797103C&REV_CE
+"%AMD15D8.27%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879A103C&REV_C4
+"%AMD15D8.28%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879A103C&REV_CD
+"%AMD15D8.29%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879A103C&REV_CE
+"%AMD15D8.30%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879B103C&REV_C4
+"%AMD15D8.31%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879B103C&REV_CD
+"%AMD15D8.32%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879B103C&REV_CE
+"%AMD15D8.33%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879E103C&REV_C4
+"%AMD15D8.34%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879E103C&REV_CD
+"%AMD15D8.35%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879E103C&REV_CE
+"%AMD15D8.36%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879F103C&REV_C4
+"%AMD15D8.37%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879F103C&REV_CD
+"%AMD15D8.38%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_879F103C&REV_CE
+"%AMD15D8.39%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_87CE103C&REV_C4
+"%AMD15D8.40%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_87CE103C&REV_CD
+"%AMD15D8.41%" = ati2mtag_Picasso, PCI\VEN_1002&DEV_15D8&SUBSYS_87CE103C&REV_CE
+"%AMD15DD.1%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84A2103C&REV_C3
+"%AMD15DD.2%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84A2103C&REV_C4
+"%AMD15DD.3%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84A2103C&REV_C5
+"%AMD15DD.4%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84A2103C&REV_CC
+"%AMD15DD.5%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84A3103C&REV_C3
+"%AMD15DD.6%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84A3103C&REV_C4
+"%AMD15DD.7%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84A3103C&REV_C5
+"%AMD15DD.8%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84A3103C&REV_CC
+"%AMD15DD.9%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84AE103C&REV_C3
+"%AMD15DD.10%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84AE103C&REV_C4
+"%AMD15DD.11%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84AE103C&REV_C5
+"%AMD15DD.12%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84AE103C&REV_CC
+"%AMD15DD.13%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84AF103C&REV_C3
+"%AMD15DD.14%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84AF103C&REV_C4
+"%AMD15DD.15%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84AF103C&REV_C5
+"%AMD15DD.16%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84AF103C&REV_CC
+"%AMD15DD.17%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84D2103C&REV_C4
+"%AMD15DD.18%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84D2103C&REV_C5
+"%AMD15DD.19%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84D2103C&REV_CC
+"%AMD15DD.20%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84D3103C&REV_C4
+"%AMD15DD.21%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84D3103C&REV_C5
+"%AMD15DD.22%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_84D3103C&REV_CC
+"%AMD15DD.23%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_8562103C&REV_C3
+"%AMD15DD.24%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_8562103C&REV_C4
+"%AMD15DD.25%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_8562103C&REV_C5
+"%AMD15DD.26%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_8562103C&REV_CC
+"%AMD15DD.27%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_8563103C&REV_C3
+"%AMD15DD.28%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_8563103C&REV_C4
+"%AMD15DD.29%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_8563103C&REV_C5
+"%AMD15DD.30%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_8563103C&REV_CC
+"%AMD15DD.31%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_85BD103C&REV_C3
+"%AMD15DD.32%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_85BD103C&REV_C4
+"%AMD15DD.33%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_85BD103C&REV_C5
+"%AMD15DD.34%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_85BD103C&REV_CC
+"%AMD15DD.35%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_85BE103C&REV_C3
+"%AMD15DD.36%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_85BE103C&REV_C4
+"%AMD15DD.37%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_85BE103C&REV_C5
+"%AMD15DD.38%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_85BE103C&REV_CC
+"%AMD15DD.39%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_863A103C&REV_C3
+"%AMD15DD.40%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_863A103C&REV_C4
+"%AMD15DD.41%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_863A103C&REV_C5
+"%AMD15DD.42%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_863A103C&REV_CC
+"%AMD15DD.43%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_863B103C&REV_C3
+"%AMD15DD.44%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_863B103C&REV_C4
+"%AMD15DD.45%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_863B103C&REV_C5
+"%AMD15DD.46%" = ati2mtag_Raven, PCI\VEN_1002&DEV_15DD&SUBSYS_863B103C&REV_CC
+"%AMD6660.1%" = ati2mtag_R503, PCI\VEN_1002&DEV_6660&SUBSYS_8331103C&REV_83
+"%AMD6660.2%" = ati2mtag_R503, PCI\VEN_1002&DEV_6660&SUBSYS_8333103C&REV_83
+"%AMD6660.3%" = ati2mtag_R503, PCI\VEN_1002&DEV_6660&SUBSYS_84AD103C&REV_83
+"%AMD6665.1%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_84A1103C&REV_C3
+"%AMD6665.2%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_84A3103C&REV_C3
+"%AMD6665.3%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_84AD103C&REV_C3
+"%AMD6665.4%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_84AF103C&REV_C3
+"%AMD6665.5%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_8561103C&REV_C3
+"%AMD6665.6%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_8563103C&REV_C3
+"%AMD6665.7%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_85BC103C&REV_C3
+"%AMD6665.8%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_85BE103C&REV_C3
+"%AMD6665.9%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_863B103C&REV_C3
+"%AMD6665.10%" = ati2mtag_R503, PCI\VEN_1002&DEV_6665&SUBSYS_863D103C&REV_C3
+"%AMD6900.1%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_8331103C&REV_83
+"%AMD6900.2%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_8333103C&REV_83
+"%AMD6900.3%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_84AD103C&REV_C1
+"%AMD6900.4%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_84AD103C&REV_C3
+"%AMD6900.5%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_84AF103C&REV_C1
+"%AMD6900.6%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_84AF103C&REV_C3
+"%AMD6900.7%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_84D1103C&REV_C1
+"%AMD6900.8%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_84D1103C&REV_C3
+"%AMD6900.9%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_84D3103C&REV_C1
+"%AMD6900.10%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_84D3103C&REV_C3
+"%AMD6900.11%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_85BC103C&REV_C1
+"%AMD6900.12%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_85BC103C&REV_C3
+"%AMD6900.13%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_85BE103C&REV_C1
+"%AMD6900.14%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_85BE103C&REV_C3
+"%AMD6900.15%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_85EC103C&REV_C1
+"%AMD6900.16%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_85EC103C&REV_C3
+"%AMD6900.17%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_8639103C&REV_C1
+"%AMD6900.18%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_8639103C&REV_C3
+"%AMD6900.19%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_863B103C&REV_C1
+"%AMD6900.20%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_863B103C&REV_C3
+"%AMD6900.21%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_863D103C&REV_C1
+"%AMD6900.22%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_863D103C&REV_C3
+"%AMD6900.23%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_8797103C&REV_C1
+"%AMD6900.24%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_8797103C&REV_C3
+"%AMD6900.25%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_879B103C&REV_C1
+"%AMD6900.26%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_879B103C&REV_C3
+"%AMD6900.27%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_879F103C&REV_C1
+"%AMD6900.28%" = ati2mtag_Topaz, PCI\VEN_1002&DEV_6900&SUBSYS_879F103C&REV_C3
+"%AMD9874.1%" = ati2mtag_Carrizo, PCI\VEN_1002&DEV_9874&SUBSYS_8332103C&REV_C8
+"%AMD9874.2%" = ati2mtag_Carrizo, PCI\VEN_1002&DEV_9874&SUBSYS_8332103C&REV_C9
+"%AMD9874.3%" = ati2mtag_Carrizo, PCI\VEN_1002&DEV_9874&SUBSYS_8332103C&REV_CA
+"%AMD9874.4%" = ati2mtag_Carrizo, PCI\VEN_1002&DEV_9874&SUBSYS_8333103C&REV_C8
+"%AMD9874.5%" = ati2mtag_Carrizo, PCI\VEN_1002&DEV_9874&SUBSYS_8333103C&REV_C9
+"%AMD9874.6%" = ati2mtag_Carrizo, PCI\VEN_1002&DEV_9874&SUBSYS_8333103C&REV_CA
+"%AMD98E4.1%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_C0
+"%AMD98E4.2%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_C2
+"%AMD98E4.3%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_C6
+"%AMD98E4.4%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_D2
+"%AMD98E4.5%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_D4
+"%AMD98E4.6%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_DA
+"%AMD98E4.7%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_E2
+"%AMD98E4.8%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_EA
+"%AMD98E4.9%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_C0
+"%AMD98E4.10%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_C2
+"%AMD98E4.11%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_C6
+"%AMD98E4.12%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_D2
+"%AMD98E4.13%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_D4
+"%AMD98E4.14%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_DA
+"%AMD98E4.15%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_E2
+"%AMD98E4.16%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_EA
+"%AMD98E4.17%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84A0103C&REV_D4
+"%AMD98E4.18%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84A0103C&REV_DA
+"%AMD98E4.19%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84A0103C&REV_E2
+"%AMD98E4.20%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84A0103C&REV_EA
+"%AMD98E4.21%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84A1103C&REV_D4
+"%AMD98E4.22%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84A1103C&REV_DA
+"%AMD98E4.23%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84A1103C&REV_E2
+"%AMD98E4.24%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84A1103C&REV_EA
+"%AMD98E4.25%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84AC103C&REV_D4
+"%AMD98E4.26%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84AC103C&REV_DA
+"%AMD98E4.27%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84AC103C&REV_E2
+"%AMD98E4.28%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84AC103C&REV_EA
+"%AMD98E4.29%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84AD103C&REV_D4
+"%AMD98E4.30%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84AD103C&REV_DA
+"%AMD98E4.31%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84AD103C&REV_E2
+"%AMD98E4.32%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84AD103C&REV_EA
+"%AMD98E4.33%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84D0103C&REV_D4
+"%AMD98E4.34%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84D0103C&REV_DA
+"%AMD98E4.35%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84D0103C&REV_E2
+"%AMD98E4.36%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84D0103C&REV_EA
+"%AMD98E4.37%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84D1103C&REV_D4
+"%AMD98E4.38%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84D1103C&REV_DA
+"%AMD98E4.39%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84D1103C&REV_E2
+"%AMD98E4.40%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_84D1103C&REV_EA
+"%AMD98E4.41%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8560103C&REV_D4
+"%AMD98E4.42%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8560103C&REV_DA
+"%AMD98E4.43%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8560103C&REV_E2
+"%AMD98E4.44%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8560103C&REV_EA
+"%AMD98E4.45%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8561103C&REV_D4
+"%AMD98E4.46%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8561103C&REV_DA
+"%AMD98E4.47%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8561103C&REV_E2
+"%AMD98E4.48%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_8561103C&REV_EA
+"%AMD98E4.49%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_85BB103C&REV_D4
+"%AMD98E4.50%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_85BB103C&REV_DA
+"%AMD98E4.51%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_85BB103C&REV_E2
+"%AMD98E4.52%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_85BB103C&REV_EA
+"%AMD98E4.53%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_85BC103C&REV_D4
+"%AMD98E4.54%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_85BC103C&REV_DA
+"%AMD98E4.55%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_85BC103C&REV_E2
+"%AMD98E4.56%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_85BC103C&REV_EA
+"%AMD98E4.57%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_863C103C&REV_D4
+"%AMD98E4.58%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_863C103C&REV_DA
+"%AMD98E4.59%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_863C103C&REV_E2
+"%AMD98E4.60%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_863C103C&REV_EA
+"%AMD98E4.61%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_863D103C&REV_D4
+"%AMD98E4.62%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_863D103C&REV_DA
+"%AMD98E4.63%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_863D103C&REV_E2
+"%AMD98E4.64%" = ati2mtag_Stoney, PCI\VEN_1002&DEV_98E4&SUBSYS_863D103C&REV_EA
+"%AMD9400.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9400
+"%AMD9403.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9403
+"%AMD9405.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9405
+"%AMD940A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_940A
+"%AMD940B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_940B
+"%AMD940F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_940F
+"%AMD9440.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9440
+"%AMD9441.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9441
+"%AMD9442.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9442
+"%AMD9443.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9443
+"%AMD9444.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9444
+"%AMD944A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_944A
+"%AMD944C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_944C
+"%AMD944E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_944E
+"%AMD9450.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9450
+"%AMD9452.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9452
+"%AMD9456.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9456
+"%AMD945A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_945A
+"%AMD9460.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9460
+"%AMD9462.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9462
+"%AMD9480.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9480
+"%AMD9488.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9488
+"%AMD9490.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9490
+"%AMD9491.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9491
+"%AMD9495.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9495
+"%AMD9498.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9498
+"%AMD949C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_949C
+"%AMD949E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_949E
+"%AMD949F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_949F
+"%AMD94A0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94A0
+"%AMD94A1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94A1
+"%AMD94A3.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94A3
+"%AMD94B3.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94B3
+"%AMD94B4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94B4
+"%AMD94B5.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94B5
+"%AMD94C1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C1
+"%AMD94C3.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C3
+"%AMD94C4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C4
+"%AMD94C6.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C6
+"%AMD94C7.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C7
+"%AMD94C8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C8
+"%AMD94C9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C9
+"%AMD94CB.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94CB
+"%AMD94CC.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94CC
+"%AMD9501.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9501
+"%AMD9504.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9504
+"%AMD9505.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9505
+"%AMD9506.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9506
+"%AMD9507.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9507
+"%AMD9508.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9508
+"%AMD9509.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9509
+"%AMD950F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_950F
+"%AMD9511.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9511
+"%AMD9513.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9513
+"%AMD9515.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9515
+"%AMD9519.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9519
+"%AMD9540.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9540
+"%AMD954F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_954F
+"%AMD9552.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9552
+"%AMD9553.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9553
+"%AMD9555.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9555
+"%AMD9557.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9557
+"%AMD955F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_955F
+"%AMD9581.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9581
+"%AMD9583.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9583
+"%AMD9586.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9586
+"%AMD9587.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9587
+"%AMD9588.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9588
+"%AMD9589.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9589
+"%AMD958A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_958A
+"%AMD958B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_958B
+"%AMD958C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_958C
+"%AMD958D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_958D
+"%AMD9591.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9591
+"%AMD9593.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9593
+"%AMD9596.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9596
+"%AMD9598.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9598
+"%AMD95C0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C0
+"%AMD95C2.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C2
+"%AMD95C4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C4
+"%AMD95C5.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C5
+"%AMD95C6.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C6
+"%AMD95C9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C9
+"%AMD95CC.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95CC
+"%AMD95CD.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95CD
+"%AMD95CE.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95CE
+"%AMD95CF.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95CF
+"%AMD9610.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9610
+"%AMD9611.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9611
+"%AMD9612.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9612
+"%AMD9613.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9613
+"%AMD9614.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9614
+"%AMD9615.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9615
+"%AMD9616.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9616
+"%AMD9710.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9710
+"%AMD9712.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9712
+"%AMD9713.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9713
+"%AMD9714.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9714
+"%AMD9715.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9715
+"%AMD6700.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6700
+"%AMD6701.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6701
+"%AMD6702.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6702
+"%AMD6703.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6703
+"%AMD6704.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6704
+"%AMD6705.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6705
+"%AMD6706.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6706
+"%AMD6707.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6707
+"%AMD6708.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6708
+"%AMD6709.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6709
+"%AMD6718.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6718
+"%AMD6719.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6719
+"%AMD671C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_671C
+"%AMD671D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_671D
+"%AMD671F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_671F
+"%AMD6720.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6720
+"%AMD6721.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6721
+"%AMD6722.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6722
+"%AMD6723.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6723
+"%AMD6724.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6724
+"%AMD6725.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6725
+"%AMD6726.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6726
+"%AMD6727.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6727
+"%AMD6728.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6728
+"%AMD6729.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6729
+"%AMD6738.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6738
+"%AMD6739.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6739
+"%AMD673E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_673E
+"%AMD6740.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6740
+"%AMD6741.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6741
+"%AMD6742.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6742
+"%AMD6743.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6743
+"%AMD6744.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6744
+"%AMD6746.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6746
+"%AMD6747.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6747
+"%AMD6748.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6748
+"%AMD6749.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6749
+"%AMD674A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_674A
+"%AMD6750.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6750
+"%AMD6751.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6751
+"%AMD6758.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6758
+"%AMD6759.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6759
+"%AMD675B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_675B
+"%AMD675D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_675D
+"%AMD675F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_675F
+"%AMD6760.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6760
+"%AMD6761.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6761
+"%AMD6762.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6762
+"%AMD6763.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6763
+"%AMD6764.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6764
+"%AMD6765.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6765
+"%AMD6766.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6766
+"%AMD6767.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6767
+"%AMD6768.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6768
+"%AMD6770.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6770
+"%AMD6771.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6771
+"%AMD6772.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6772
+"%AMD6778.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6778
+"%AMD6779.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6779
+"%AMD677B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_677B
+"%AMD6840.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6840
+"%AMD6841.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6841
+"%AMD6842.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6842
+"%AMD6843.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6843
+"%AMD6849.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6849
+"%AMD684C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_684C
+"%AMD6850.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6850
+"%AMD6858.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6858
+"%AMD6859.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6859
+"%AMD6880.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6880
+"%AMD6888.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6888
+"%AMD6889.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6889
+"%AMD688A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_688A
+"%AMD688C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_688C
+"%AMD688D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_688D
+"%AMD6898.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6898
+"%AMD6899.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6899
+"%AMD689B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_689B
+"%AMD689C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_689C
+"%AMD689D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_689D
+"%AMD689E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_689E
+"%AMD68A0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68A0
+"%AMD68A1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68A1
+"%AMD68A8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68A8
+"%AMD68A9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68A9
+"%AMD68B0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68B0
+"%AMD68B8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68B8
+"%AMD68B9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68B9
+"%AMD68BA.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68BA
+"%AMD68BE.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68BE
+"%AMD68BF.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68BF
+"%AMD68C0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C0
+"%AMD68C1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C1
+"%AMD68C7.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C7
+"%AMD68C8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C8
+"%AMD68C9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C9
+"%AMD68D8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68D8
+"%AMD68D9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68D9
+"%AMD68DA.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68DA
+"%AMD68DE.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68DE
+"%AMD68E0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E0
+"%AMD68E1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E1
+"%AMD68E4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E4
+"%AMD68E5.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E5
+"%AMD68E8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E8
+"%AMD68E9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E9
+"%AMD68F1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68F1
+"%AMD68F2.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68F2
+"%AMD68F8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68F8
+"%AMD68F9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68F9
+"%AMD68FA.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68FA
+"%AMD68FE.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68FE
+"%AMD964E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_964E
+"%AMD964F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_964F
+"%AMD9900.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9900
+"%AMD9901.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9901
+"%AMD9903.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9903
+"%AMD9904.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9904
+"%AMD9905.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9905
+"%AMD9906.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9906
+"%AMD9907.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9907
+"%AMD9908.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9908
+"%AMD9909.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9909
+"%AMD990A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990A
+"%AMD990B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990B
+"%AMD990C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990C
+"%AMD990D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990D
+"%AMD990E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990E
+"%AMD990F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990F
+"%AMD9910.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9910
+"%AMD9913.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9913
+"%AMD9917.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9917
+"%AMD9918.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9918
+"%AMD9919.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9919
+"%AMD9990.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9990
+"%AMD9991.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9991
+"%AMD9992.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9992
+"%AMD9993.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9993
+"%AMD9994.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9994
+"%AMD9995.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9995
+"%AMD9996.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9996
+"%AMD9997.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9997
+"%AMD9998.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9998
+"%AMD9999.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9999
+"%AMD999A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_999A
+"%AMD999B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_999B
+"%AMD999C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_999C
+"%AMD999D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_999D
+"%AMD99A0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_99A0
+"%AMD99A2.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_99A2
+"%AMD99A4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_99A4
+
+;
+; General installation section
+;
+
+[ati2mtag_Carrizo]
+FeatureScore=D1
+CopyFiles=R300.Miniport, R300.Display, R300.DXX, R300.DispWow, R300.Samu, R300.SamuWow64
+CopyFiles = R300.VCE
+CopyFiles = R300.VCEWOW
+CopyFiles = R300.OD
+CopyFiles=R300.Mppxy
+CopyFiles=R300.ProxyM, R300.ProxyU
+CopyFiles=r300.CFNext
+CopyFiles=r300.CFNextWow
+CopyFiles = CCC.Install
+CopyFiles = R300.OpenCL
+CopyFiles = R300.OpenCLWow64
+CopyFiles = R300.AMDKMPFD
+CopyFiles = r300.Miniport_PA
+CopyFiles = r300.Display_PA
+CopyFiles = r300.DispWow_PA
+CopyFiles = R300.MFTENC
+CopyFiles = R300.MFTDEC
+CopyFiles = R300.MFTMJPEG
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_VI_SoftwareDeviceSettings
+AddReg = ati2mtag_Carrizo_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXAA_IGPU_Only_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = R300.DelFiles
+RegisterDlls = MFTENCRegister
+RegisterDlls = MFTDECRegister
+RegisterDlls = MFTMJPEGRegister
+
+[ati2mtag_Raven]
+FeatureScore=D1
+CopyFiles=R300.Miniport, R300.Display, R300.DXX, R300.DispWow, R300.Samu, R300.SamuWow64
+CopyFiles = R300.VCE
+CopyFiles = R300.VCEWOW
+CopyFiles = R300.OD
+CopyFiles=R300.Mppxy
+CopyFiles=R300.ProxyM, R300.ProxyU
+CopyFiles=r300.CFNext
+CopyFiles=r300.CFNextWow
+CopyFiles = CCC.Install
+CopyFiles = R300.OpenCL
+CopyFiles = R300.OpenCLWow64
+CopyFiles = R300.AMDKMPFD
+CopyFiles = r300.Miniport_PA
+CopyFiles = r300.Display_PA
+CopyFiles = r300.DispWow_PA
+CopyFiles = R300.MFTENC
+CopyFiles = R300.MFTDEC
+CopyFiles = R300.MFTMJPEG
+CopyFiles = R300.MFTHEVC
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_AI_SoftwareDeviceSettings
+AddReg = ati2mtag_Raven_SoftwareDeviceSettings
+AddReg = ati2mtag_RavenDefault_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXAA_IGPU_Only_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = R300.DelFiles
+RegisterDlls = MFTENCRegister
+RegisterDlls = MFTDECRegister
+RegisterDlls = MFTMJPEGRegister
+RegisterDlls = MFTHEVCRegister
+AddPowerSetting = PowerSlider
+
+[ati2mtag_Picasso]
+FeatureScore=D1
+CopyFiles=R300.Miniport, R300.Display, R300.DXX, R300.DispWow, R300.Samu, R300.SamuWow64
+CopyFiles = R300.VCE
+CopyFiles = R300.VCEWOW
+CopyFiles = R300.OD
+CopyFiles=R300.Mppxy
+CopyFiles=R300.ProxyM, R300.ProxyU
+CopyFiles=r300.CFNext
+CopyFiles=r300.CFNextWow
+CopyFiles = CCC.Install
+CopyFiles = R300.OpenCL
+CopyFiles = R300.OpenCLWow64
+CopyFiles = R300.AMDKMPFD
+CopyFiles = r300.Miniport_PA
+CopyFiles = r300.Display_PA
+CopyFiles = r300.DispWow_PA
+CopyFiles = R300.MFTENC
+CopyFiles = R300.MFTDEC
+CopyFiles = R300.MFTMJPEG
+CopyFiles = R300.MFTHEVC
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_AI_SoftwareDeviceSettings
+AddReg = ati2mtag_Picasso_SoftwareDeviceSettings
+AddReg = ati2mtag_PicassoDefault_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXAA_IGPU_Only_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = R300.DelFiles
+RegisterDlls = MFTENCRegister
+RegisterDlls = MFTDECRegister
+RegisterDlls = MFTMJPEGRegister
+RegisterDlls = MFTHEVCRegister
+AddPowerSetting = PowerSlider
+
+[ati2mtag_Stoney]
+FeatureScore=D1
+CopyFiles=R300.Miniport, R300.Display, R300.DXX, R300.DispWow, R300.Samu, R300.SamuWow64
+CopyFiles = R300.VCE
+CopyFiles = R300.VCEWOW
+CopyFiles = R300.OD
+CopyFiles=R300.Mppxy
+CopyFiles=R300.ProxyM, R300.ProxyU
+CopyFiles=r300.CFNext
+CopyFiles=r300.CFNextWow
+CopyFiles = CCC.Install
+CopyFiles = R300.OpenCL
+CopyFiles = R300.OpenCLWow64
+CopyFiles = R300.AMDKMPFD
+CopyFiles = r300.Miniport_PA
+CopyFiles = r300.Display_PA
+CopyFiles = r300.DispWow_PA
+CopyFiles = R300.MFTENC
+CopyFiles = R300.MFTDEC
+CopyFiles = R300.MFTMJPEG
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_VI_SoftwareDeviceSettings
+AddReg = ati2mtag_Stoney_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXAA_IGPU_Only_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = R300.DelFiles
+RegisterDlls = MFTENCRegister
+RegisterDlls = MFTDECRegister
+RegisterDlls = MFTMJPEGRegister
+
+[ati2mtag_Topaz]
+FeatureScore=D1
+CopyFiles=R300.Miniport, R300.Display, R300.DXX, R300.DispWow, R300.Samu, R300.SamuWow64
+CopyFiles = R300.VCE
+CopyFiles = R300.VCEWOW
+CopyFiles = R300.OD
+CopyFiles=R300.Mppxy
+CopyFiles=R300.ProxyM, R300.ProxyU
+CopyFiles=r300.CFNext
+CopyFiles=r300.CFNextWow
+CopyFiles = CCC.Install
+CopyFiles = R300.OpenCL
+CopyFiles = R300.OpenCLWow64
+CopyFiles = R300.AMDKMPFD
+CopyFiles = r300.Miniport_PA
+CopyFiles = r300.Display_PA
+CopyFiles = r300.DispWow_PA
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_VI_SoftwareDeviceSettings
+AddReg = ati2mtag_Topaz_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Topaz_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PX_DGPU_Only_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = R300.DelFiles
+
+[ati2mtag_R503]
+FeatureScore=D1
+CopyFiles=R300.Miniport, R300.Display, R300.DXX, R300.DispWow, R300.Samu, R300.SamuWow64
+CopyFiles = R300.VCE
+CopyFiles = R300.VCEWOW
+CopyFiles = R300.OD
+CopyFiles=R300.Mppxy
+CopyFiles=R300.ProxyM, R300.ProxyU
+CopyFiles=r300.CFNext
+CopyFiles=r300.CFNextWow
+CopyFiles = CCC.Install
+CopyFiles = R300.OpenCL
+CopyFiles = R300.OpenCLWow64
+CopyFiles = R300.AMDKMPFD
+CopyFiles = r300.Miniport_PA
+CopyFiles = r300.Display_PA
+CopyFiles = r300.DispWow_PA
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_CI_SoftwareDeviceSettings
+AddReg = ati2mtag_R503_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_R503_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PX_DGPU_Only_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = R300.DelFiles
+
+[ati2mtag_Legacy]
+FeatureScore=D1
+
+;
+; File sections
+;
+[r300.CFNext]
+aticfx64.dll,,,0x00004000
+amdxc64.dll,,,0x00004000
+
+[r300.CFNextWow]
+aticfx32.dll,,,0x00004000
+amdxc32.dll,,,0x00004000
+
+[r300.Miniport]
+ati2erec.dll
+atikmdag.sys
+
+[r300.Miniport_PA]
+atikmpag.sys,,,0x00004000
+
+[r300.Mppxy]
+
+[r300.Display]
+atiumd64.dll,,,0x00004000             ; COPYFLG_IN_USE_TRY_RENAME
+atiumd6a.dll,,,0x00004000             ; COPYFLG_IN_USE_TRY_RENAME
+atimpc64.dll,,,0x00004000
+atiumd6a.cap,,,0x00004000
+atimuixx.dll,,,0x00004000
+ativvsva.dat,,,0x00004000
+ativvsvl.dat,,,0x00004000
+ativvaxy_cik.dat,,,0x00004000
+ativvaxy_cik_nd.dat,,,0x00004000
+ativce02.dat,,,0x00004000
+amdmmcl6.dll,,,0x00004000
+aticfxstub64.dll,,,0x00004000
+amdihk64.dll,,,0x00004000
+amdlogum.exe,,,0x00004000
+ativvaxy_nv.dat,,,0x00004000
+amdefctb.dat,,,0x00004000
+ativvaxy_vg20.dat,,,0x00004000
+ativvaxy_vg20_nd.dat,,,0x00004000
+atiadlxx.dll,,,0x00004000
+amdpcom64.dll,,,0x00004000
+ativvaxy_rv.dat,,,0x00004000
+amde40a.dat,,,0x00004000
+ativvaxy_gl_nd.dat,,,0x00004000
+amduve64.dll,,,0x00004000
+amfrt64.dll,,,0x00004000
+amdmcl64.dll,,,0x00004000
+amde34b.dat,,,0x00004000
+dgtrayicon.exe,,,0x00004000
+AMDKernelEvents.man,AMDKernelEvents.mc,,0x00004000
+amde34a.dat,,,0x00004000
+ativvaxy_stn_nd.dat,,,0x00004000
+amdvlk64.dll,,,0x00004000
+amd-vulkan64.json,,,0x00004000
+vulkan-1.dll,vulkan64.dll,,0x00004020
+vulkan-1-999-0-0-0.dll,vulkan64.dll,,0x00004020
+vulkaninfo.exe,vulkaninfo64.exe,,0x00004020
+vulkaninfo-1-999-0-0-0.exe,vulkaninfo64.exe,,0x00004020
+GameManager64.dll,,,0x00004000
+amdmiracast.dll,,,0x00004000
+ativvaxy_el_nd.dat,,,0x00004000
+amdlvr64.dll,,,0x00004000
+amdicdxx.dat,,,0x00004000
+atiicdxx.dat,,,0x00004000
+amdocl12cl64.dll,,,0x00004000
+RapidFireServer64.dll,,,0x00004000
+Rapidfire64.dll,,,0x00004000
+ativvaxy_FJ.dat,,,0x00004000
+ativvaxy_FJ_nd.dat,,,0x00004000
+amdxcstub64.dll,,,0x00004000
+ativvaxy_cz_nd.dat,,,0x00004000
+amde31a.dat,,,0x00004000
+ativce03.dat,,,0x00004000
+ativvaxy_vi.dat,,,0x00004000
+ativvaxy_vi_nd.dat,,,0x00004000
+amdhdl64.dll,,,0x00004000
+amdmantle64.dll,,,0x00004000
+mantle64.dll,,,0x00004000
+mantleaxl64.dll,,,0x00004000
+detoured.dll,detoured64.dll,,0x00004000
+amdgfxinfo64.dll,,,0x00004000
+atieah64.exe,,,0x00004000
+atiesrxx.exe,,,0x00004000
+atieclxx.exe,,,0x00004000
+atiapfxx.blb,,,0x00004000
+atidxxstub64.dll,,,0x00004000
+atio6axx.dll,,,0x00004000
+atidemgy.dll,,,0x00004000
+
+[r300.DispWow]
+atiumdag.dll,,,0x00004000             ; COPYFLG_IN_USE_TRY_RENAME
+atiumdva.dll,,,0x00004000             ; COPYFLG_IN_USE_TRY_RENAME
+atimpc32.dll,,,0x00004000
+atiumdva.cap,,,0x00004000
+ativvsva.dat,,,0x00004000
+ativvsvl.dat,,,0x00004000
+amdmmcl.dll,,,0x00004000
+;;atiogl32.dll
+aticfxstub32.dll,,,0x00004000
+amdihk32.dll,,,0x00004000
+amdxn32.dll,,,0x00004000
+amdpcom32.dll,,,0x00004000
+amduve32.dll,,,0x00004000
+amfrt32.dll,,,0x00004000
+amdmcl32.dll,,,0x00004000
+amdvlk32.dll,,,0x00004000
+amd-vulkan32.json,,,0x00004000
+vulkan-1.dll,vulkan32.dll,,0x00004020
+vulkan-1-999-0-0-0.dll,vulkan32.dll,,0x00004020
+vulkaninfo.exe,vulkaninfo32.exe,,0x00004020
+vulkaninfo-1-999-0-0-0.exe,vulkaninfo32.exe,,0x00004020
+GameManager32.dll,,,0x00004000
+amdlvr32.dll,,,0x00004000
+amdocl12cl.dll,,,0x00004000
+RapidFireServer.dll,,,0x00004000
+Rapidfire.dll,,,0x00004000
+amdxcstub32.dll,,,0x00004000
+amdhdl32.dll,,,0x00004000
+amdmantle32.dll,,,0x00004000
+mantle32.dll,,,0x00004000
+mantleaxl32.dll,,,0x00004000
+detoured.dll,detoured32.dll,,0x00004000
+amdgfxinfo32.dll,,,0x00004000
+atieah32.exe,,,0x00004000
+atiapfxx.blb,,,0x00004000
+atidxx32.dll,,,0x00004000
+atidxxstub32.dll,,,0x00004000
+atioglxx.dll,,,0x00004000
+
+[r300.Display_PA]
+atiu9p64.dll,,,0x00004000
+atiuxp64.dll,,,0x00004000
+atig6pxx.dll,,,0x00004000
+atig6txx.dll,,,0x00004000
+
+[r300.DispWow_PA]
+atiu9pag.dll,,,0x00004000
+atigktxx.dll,,,0x00004000
+atiglpxx.dll,,,0x00004000
+atiuxpag.dll,,,0x00004000
+
+[Coinstaller_CopyFiles]
+coinst_19.40.dll,,,0x00004000
+
+[r300.DXX]
+amdxn64.dll,,,0x00004000
+atidxx64.dll,,,0x00004000
+
+[R300.OD]
+ATIODCLI.exe,,,0x00004000
+ATIODE.exe,,,0x00004000
+
+[R300.ProxyM]
+atikmpag.sys,,,0x00004000
+
+[R300.ProxyU]
+atiu9p64.dll,,,0x00004000
+atiuxp64.dll,,,0x00004000
+atig6txx.dll,,,0x00004000
+atiglpxx.dll,,,0x00004000
+
+[R300.Samu]
+atisamu64.dll,,,0x00004000
+kapp_ci.sbin,,,0x00004000
+samu_krnl_ci.sbin,,,0x00004000
+samu_krnl_isv_ci.sbin,,,0x00004000
+kapp_si.sbin,,,0x00004000
+
+[R300.SamuWow64]
+atisamu32.dll,,,0x00004000
+
+[R300.VCE]
+amdave64.dll,,,0x00004000
+
+[R300.VCEWOW]
+amdave32.dll,,,0x00004000
+
+[R300.MFTDEC]
+AMDhwDecoder_32.dll,,,0x00004000
+AMDhwDecoder_64.dll,,,0x00004000
+
+[R300.MFTENC]
+AMDh264Enc32.dll,,,0x00004000
+AMDh264Enc64.dll,,,0x00004000
+
+[R300.MFTMJPEG]
+amf-mft-mjpeg-decoder32.dll,,,0x00004000
+mcl32.dll,,,0x00004000
+amf-mft-mjpeg-decoder64.dll,,,0x00004000
+mcl64.dll,,,0x00004000
+
+[R300.MFTHEVC]
+AMDh265Enc32.dll,,,0x00004000
+AMDh265Enc64.dll,,,0x00004000
+
+[r300.DelFiles]
+ativvaxx.dll
+amdcaldd64.dll
+amdcalrt64.dll
+amdcalcl64.dll
+amdcaldd.dll
+amdcalrt.dll
+amdcalcl.dll
+amdacpksd.sys
+Ati2evxx.exe
+Ati2evxx.dll
+
+[R300.AMDKMPFD]
+amdkmpfd.stz
+amdkmpfd.itz
+amdkmpfd.ctz
+
+[CCC.Install]
+ccc2_install.exe
+
+[R300.OpenCL]
+amd_comgr.dll,,,0x00004000
+amdhip64.dll,,,0x00004000
+OpenCL.dll,AMD_OpenCL64.dll,,0x00004000
+clinfo.exe,,,0x00004000
+amdocl64.dll,,,0x00004000
+
+[R300.OpenCLWow64]
+amd_comgr32.dll,,,0x00004000
+OpenCL.dll,AMD_OpenCL32.dll,,0x00004000
+amdocl.dll,,,0x00004000
+
+[DS.Graphics]
+aticfx32.dll
+aticfx64.dll
+ativvaxy_nv.dat
+amdefctb.dat
+amdxn32.dll
+amdxn64.dll
+ativvaxy_vg20.dat
+ativvaxy_vg20_nd.dat
+amdave32.dll
+amdave64.dll
+ativvaxy_rv.dat
+amde40a.dat
+ativvaxy_gl_nd.dat
+amdmmcl.dll
+atiumdag.dll
+atiumdva.dll
+ativce02.dat
+ativvaxy_cik.dat
+ativvaxy_cik_nd.dat
+amdmmcl6.dll
+atiumd64.dll
+atiumd6a.dll
+amduve64.dll
+amduve32.dll
+amde34b.dat
+amde34a.dat
+ativvaxy_stn_nd.dat
+amdvlk32.dll
+amdvlk64.dll
+amd-vulkan32.json
+amd-vulkan64.json
+ativvaxy_el_nd.dat
+amdicdxx.dat
+atiicdxx.dat
+amdocl12cl.dll
+amdocl12cl64.dll
+ativvaxy_FJ.dat
+ativvaxy_FJ_nd.dat
+amdxc32.dll
+amdxc64.dll
+ativvaxy_cz_nd.dat
+amde31a.dat
+ativce03.dat
+ativvaxy_vi.dat
+ativvaxy_vi_nd.dat
+amdhdl32.dll
+amdhdl64.dll
+amdocl.dll
+amdocl64.dll
+amdmantle32.dll
+amdmantle64.dll
+atiesrxx.exe
+coinst_19.40.dll
+atiu9pag.dll
+atigktxx.dll
+atiglpxx.dll
+atiuxpag.dll
+atiu9p64.dll
+atiuxp64.dll
+atig6pxx.dll
+atig6txx.dll
+ATIODCLI.exe
+ATIODE.exe
+atidxx32.dll
+atidxx64.dll
+atioglxx.dll
+atio6axx.dll
+atikmdag.sys
+atikmpag.sys
+
+[DS.System32]
+aticfx64.dll,aticfxstub64.dll,,0x00004000
+amdihk64.dll,,,0x00004000
+amd_comgr.dll,,,0x00004000
+atiadlxx.dll,,,0x00004000
+amdave64.dll,,,0x00004000
+amdpcom64.dll,,,0x00004000
+atimpc64.dll,,,0x00004000
+atimuixx.dll,,,0x00004000
+atisamu64.dll,,,0x00004000
+atiumd6a.cap,,,0x00004000
+ativvsva.dat,,,0x00004000
+ativvsvl.dat,,,0x00004000
+amfrt64.dll,,,0x00004000
+amdmcl64.dll,,,0x00004000
+dgtrayicon.exe,,,0x00004000
+AMDKernelEvents.man,AMDKernelEvents.mc,,0x00004000
+vulkan-1.dll,vulkan64.dll,,0x00004020
+vulkan-1-999-0-0-0.dll,vulkan64.dll,,0x00004020
+vulkaninfo.exe,vulkaninfo64.exe,,0x00004020
+vulkaninfo-1-999-0-0-0.exe,vulkaninfo64.exe,,0x00004020
+GameManager64.dll,,,0x00004000
+amdmiracast.dll,,,0x00004000
+amdlvr64.dll,,,0x00004000
+RapidFireServer64.dll,,,0x00004000
+Rapidfire64.dll,,,0x00004000
+amdxc64.dll,amdxcstub64.dll,,0x00004000
+kapp_ci.sbin,,,0x00004000
+samu_krnl_ci.sbin,,,0x00004000
+samu_krnl_isv_ci.sbin,,,0x00004000
+kapp_si.sbin,,,0x00004000
+OpenCL.dll,AMD_OpenCL64.dll,,0x00004000
+clinfo.exe,,,0x00004000
+mantle64.dll,,,0x00004000
+mantleaxl64.dll,,,0x00004000
+detoured.dll,detoured64.dll,,0x00004000
+amdgfxinfo64.dll,,,0x00004000
+atieah64.exe,,,0x00004000
+atieclxx.exe,,,0x00004000
+atiapfxx.blb,,,0x00004000
+atig6txx.dll,,,0x00004000
+atidxx64.dll,atidxxstub64.dll,,0x00004000
+ati2erec.dll,,,0x00004000
+atidemgy.dll,,,0x00004000
+
+[DS.SysWow64]
+aticfx32.dll,aticfxstub32.dll,,0x00004000
+amdihk32.dll,,,0x00004000
+amd_comgr32.dll,,,0x00004000
+atiadlxx.dll,atiadlxy.dll,,0x00004000
+atiadlxy.dll,,,0x00004000
+amdave32.dll,,,0x00004000
+amdpcom32.dll,,,0x00004000
+ativvsva.dat,,,0x00004000
+ativvsvl.dat,,,0x00004000
+atimpc32.dll,,,0x00004000
+atisamu32.dll,,,0x00004000
+atiumdva.cap,,,0x00004000
+amfrt32.dll,,,0x00004000
+amdmcl32.dll,,,0x00004000
+vulkan-1.dll,vulkan32.dll,,0x00004020
+vulkan-1-999-0-0-0.dll,vulkan32.dll,,0x00004020
+vulkaninfo.exe,vulkaninfo32.exe,,0x00004020
+vulkaninfo-1-999-0-0-0.exe,vulkaninfo32.exe,,0x00004020
+GameManager32.dll,,,0x00004000
+amdlvr32.dll,,,0x00004000
+RapidFireServer.dll,,,0x00004000
+Rapidfire.dll,,,0x00004000
+amdxc32.dll,amdxcstub32.dll,,0x00004000
+OpenCL.dll,AMD_OpenCL32.dll,,0x00004000
+mantle32.dll,,,0x00004000
+mantleaxl32.dll,,,0x00004000
+detoured.dll,detoured32.dll,,0x00004000
+amdgfxinfo32.dll,,,0x00004000
+atieah32.exe,,,0x00004000
+atiapfxx.blb,,,0x00004000
+atigktxx.dll,,,0x00004000
+atidxx32.dll,atidxxstub32.dll,,0x00004000
+
+;
+;Register COM object
+;
+
+[MFTDECRegister]
+16427,ATI Technologies\Multimedia,AMDhwDecoder_32.dll,1
+16427,ATI Technologies\Multimedia,AMDhwDecoder_64.dll,1
+
+[MFTENCRegister]
+16427,ATI Technologies\Multimedia,AMDh264Enc32.dll,1
+16427,ATI Technologies\Multimedia,AMDh264Enc64.dll,1
+
+[MFTMJPEGRegister]
+16427,ATI Technologies\Multimedia,amf-mft-mjpeg-decoder32.dll,1
+16427,ATI Technologies\Multimedia,amf-mft-mjpeg-decoder64.dll,1
+
+[MFTHEVCRegister]
+16427,ATI Technologies\Multimedia,AMDh265Enc32.dll,1
+16427,ATI Technologies\Multimedia,AMDh265Enc64.dll,1
+
+[ati2mtag_Carrizo.Services]
+AddService = amdkmdap, 0x00000002, Proxy_Service_Inst_PX_2ID, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, AMD_Service_Inst_Carrizo, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_Raven.Services]
+AddService = amdkmdap, 0x00000002, Proxy_Service_Inst_PX_2ID, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, AMD_Service_Inst_Raven, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_Picasso.Services]
+AddService = amdkmdap, 0x00000002, Proxy_Service_Inst_PX_2ID, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, AMD_Service_Inst_Picasso, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_Stoney.Services]
+AddService = amdkmdap, 0x00000002, Proxy_Service_Inst_PX_2ID, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, AMD_Service_Inst_Stoney, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_Topaz.Services]
+AddService = amdkmdap, 0x00000002, Proxy_Service_Inst_PX_2ID, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, AMD_Service_Inst_Topaz, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_R503.Services]
+AddService = amdkmdap, 0x00000002, Proxy_Service_Inst_PX_2ID, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, AMD_Service_Inst_R503, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_Legacy.Services]
+AddService = ,0x00000002 ; no value for the service name
+
+;; Coinstallers
+
+[ati2mtag_Carrizo.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_Raven.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_Picasso.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_Stoney.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_Topaz.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_R503.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[Proxy_Service_Inst_PX_2ID]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Video
+ServiceBinary = %12%\atikmpag.sys
+Delreg = Delreg_services
+AddReg = Addreg_PX_Services_2ID
+
+[AMD_Service_Inst_Carrizo]
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_Carrizo_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXService_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Video
+ServiceBinary = %12%\atikmdag.sys
+
+[AMD_Service_Inst_Raven]
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_Raven_SoftwareDeviceSettings
+AddReg = ati2mtag_RavenDefault_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXService_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Video
+ServiceBinary = %12%\atikmdag.sys
+
+[AMD_Service_Inst_Picasso]
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_Picasso_SoftwareDeviceSettings
+AddReg = ati2mtag_PicassoDefault_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXService_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Video
+ServiceBinary = %12%\atikmdag.sys
+
+[AMD_Service_Inst_Stoney]
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_Stoney_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXService_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Video
+ServiceBinary = %12%\atikmdag.sys
+
+[AMD_Service_Inst_Topaz]
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_Topaz_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Topaz_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXService_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Video
+ServiceBinary = %12%\atikmdag.sys
+
+[AMD_Service_Inst_R503]
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_R503_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_ProxySettings_DX10
+AddReg = ati2mtag_ProxySettings_DX10_PXAA
+AddReg = ati2mtag_ProxySettings_DX10_PXAA_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_R503_PX
+AddReg = ati2mtag_DX11
+AddReg = ati2mtag_PXService_2ID
+DelReg = ati2mtag_RemoveDeviceSettings
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Video
+ServiceBinary = %12%\atikmdag.sys
+
+[Ati2evxx_EventLog_AddReg]
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,%%SystemRoot%%\System32\drivers\ati2erec.dll
+HKR,,eRecordEnable,%REG_DWORD%,1
+HKR,,CategoryCount,%REG_DWORD%,0x3f
+HKR,,TypesSupported,%REG_DWORD%,0x7
+HKR,,CategoryMessageFile,%REG_EXPAND_SZ%,%%SystemRoot%%\System32\drivers\ati2erec.dll
+HKLM,"SOFTWARE\ATI Technologies",eRecordEnable,%REG_DWORD%,1
+HKR,,TypesSupported,0x00010001,7
+
+[Ati2evxx_EventLog_Inst]
+AddReg=Ati2evxx_EventLog_AddReg
+
+[Ati2evxx_Generic_Service_Inst]
+ServiceType    = 0x10
+StartType      = 2
+ErrorControl   = 1
+ServiceBinary = %11%\atiesrxx.exe
+LoadOrderGroup = Event log
+
+[R300_EventLog_AddReg]
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,%%SystemRoot%%\System32\drivers\ati2erec.dll
+HKR,,CategoryCount,%REG_DWORD%,63
+HKR,,TypesSupported,%REG_DWORD%,7
+HKR,,CategoryMessageFile,%REG_EXPAND_SZ%,%%SystemRoot%%\System32\drivers\ati2erec.dll
+
+[R300_EventLog_Inst]
+AddReg = R300_EventLog_AddReg
+
+[ati2mtag_Carrizo.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_Raven.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_Picasso.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_Stoney.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_R503.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_Topaz.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_DSUMD]
+HKR,,OpenGLDriverName,%REG_MULTI_SZ%,%13%\B354982\atig6pxx.dll
+HKR,,UserModeDriverName,%REG_MULTI_SZ%,%13%\B354982\aticfx64.dll,%13%\B354982\aticfx64.dll,%13%\B354982\aticfx64.dll,%13%\B354982\amdxc64.dll
+HKR,,UserModeDriverNameWow,%REG_MULTI_SZ%,%13%\B354982\aticfx32.dll,%13%\B354982\aticfx32.dll,%13%\B354982\aticfx32.dll,%13%\B354982\amdxc32.dll
+HKR,,ProxyLDA_Support,%REG_DWORD%,2
+HKR,,OpenGLDynamicPX,%REG_DWORD%,1
+HKR,,UserModeDListDriverName,%REG_SZ%,%13%\B354982\amdhdl64.dll
+HKR,,UserModeDListDriverNameWow,%REG_SZ%,%13%\B354982\amdhdl32.dll
+HKR,,OpenGLDriverNameWoW,%REG_MULTI_SZ%,%13%\B354982\atiglpxx.dll
+HKLM,"SOFTWARE\Khronos\OpenCL\Vendors","%13%\B354982\amdocl64.dll",%REG_DWORD%,0
+HKLM,"SOFTWARE\Wow6432Node\Khronos\OpenCL\Vendors","%13%\B354982\amdocl.dll",%REG_DWORD%,0
+HKR,,VulkanDriverName,%REG_SZ%,%13%\B354982\amd-vulkan64.json
+HKR,,VulkanImplicitLayers,%REG_SZ%,%13%\B354982\amd-vulkan64.json
+HKR,,VulkanDriverNameWow,%REG_SZ%,%13%\B354982\amd-vulkan32.json
+HKR,,VulkanImplicitLayersWow,%REG_SZ%,%13%\B354982\amd-vulkan32.json
+HKR,,OpenGLVendorName,%REG_MULTI_SZ%,%13%\B354982\atio6axx.dll,%13%\B354982\atio6axx.dll
+HKR,,OpenGLVendorNameWoW,%REG_MULTI_SZ%,%13%\B354982\atioglxx.dll,%13%\B354982\atioglxx.dll
+
+[ati2mtag_DSUMD_common]
+HKR,,D3DVendorName,%REG_MULTI_SZ%,%13%\B354982\atiumd64.dll,%13%\B354982\atiumd64.dll,%13%\B354982\atidxx64.dll,%13%\B354982\atidxx64.dll
+HKR,,D3DVendorNameWoW,%REG_MULTI_SZ%,%13%\B354982\atiumdag.dll,%13%\B354982\atiumdag.dll,%13%\B354982\atidxx32.dll,%13%\B354982\atidxx32.dll
+HKR,,InstalledDisplayDrivers,%REG_MULTI_SZ%,aticfx64,aticfx64,aticfx64,amdxc64,aticfx32,aticfx32,aticfx32,amdxc32,atiumd64,atidxx64,atidxx64,atiumdag,atidxx32,atidxx32,atiumdva,atiumd6a
+
+[Coinstaller_AddReg]
+HKR,,CoInstallers32,%REG_MULTI_SZ%,"coinst_19.40.dll,CoInstallerEntry"
+HKLM,"Software\AMD\Install",InstallWUCCC,%REG_DWORD%,1
+
+[ati2mtag_DX11]
+HKR,,UserModeDriverName,%REG_MULTI_SZ%,aticfx64.dll,aticfx64.dll,aticfx64.dll,amdxc64.dll
+HKR,,UserModeDriverNameWow,%REG_MULTI_SZ%,aticfx32.dll,aticfx32.dll,aticfx32.dll,amdxc32.dll
+HKR,,ProxyLDA_Support,%REG_DWORD%,2
+HKR,,VulkanDriverName,%REG_SZ%,%25%\System32\amd-vulkan64.json
+HKR,,VulkanImplicitLayers,%REG_SZ%,%25%\System32\amd-vulkan64.json
+HKR,,VulkanDriverNameWow,%REG_SZ%,%25%\SysWow64\amd-vulkan32.json
+HKR,,VulkanImplicitLayersWow,%REG_SZ%,%25%\SysWow64\amd-vulkan32.json
+
+[ati2mtag_Carrizo_SoftwareDeviceSettings]
+HKR,,WmAgpMaxIdleClk,%REG_DWORD%,0x20
+HKR,,MemInitLatencyTimer,%REG_DWORD%,0x775771BF
+HKR,,SMOOTHVISION_NAME,%REG_SZ%,""
+HKR,UMD,GI_DEF,%REG_SZ%,1
+HKR,UMD,ASTT_DEF,%REG_SZ%,0
+HKR,UMD,AreaAniso_DEF,%REG_SZ%,0
+HKR,,SameOnAllUsingStandardInVideoTheaterCloneMode,%REG_SZ%,"1"
+HKR,,3to2Pulldown_NA,%REG_SZ%,0
+HKR,,GI_NA,%REG_SZ%,1
+HKR,,VIDEO_NAME_SUFFIX,%REG_SZ%,"Avivo(TM)"
+HKR,,AAF_NA,%REG_SZ%,0
+HKR,,AreaAniso_NA,%REG_SZ%,"1"
+HKR,UMD,AAF_DEF,%REG_SZ%,0
+HKR,UMD,AAF_Mapping_SET,%REG_SZ%,"0(Standard:2,Edge-detect:12) 2(Standard:2) 4(Standard:4,Edge-detect:12) 8(Standard:8,Edge-detect:24) 16(Standard:16)"
+HKR,,TemporalAAMultiplier_NA,%REG_SZ%,"1"
+HKR,UMD,AAAMethod_DEF,%REG_SZ%,0
+HKR,UMD,ATMS_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",3to2Pulldown,%REG_SZ%,"1"
+HKR,"UMD\DXVA",3to2Pulldown_DEF,%REG_SZ%,"1"
+HKR,,Denoise_NA,%REG_SZ%,"0"
+HKR,,Detail_NA,%REG_SZ%,"0"
+HKR,,DynamicContrast_NA,%REG_SZ%,"0"
+HKR,"UMD\DXVA",StaticGamma,%REG_SZ%,"100"
+HKR,"UMD\DXVA",StaticGamma_DEF,%REG_SZ%,"100"
+HKR,,ASTT_NA,%REG_SZ%,"1"
+HKR,UMD,ASD_DEF,%REG_SZ%,0
+HKR,UMD,ASE_DEF,%REG_SZ%,0
+HKR,,DemoMode_NA,%REG_SZ%,"0"
+HKR,,SplitScreen_NA,%REG_SZ%,"0"
+HKR,,TheaterMode_NA,%REG_SZ%,1
+HKR,,DemoMode_DEF,%REG_SZ%,"0"
+HKR,,StaticGamma_NA,%REG_SZ%,0
+HKR,,Gamma_NA,%REG_SZ%,1
+HKR,,PP_Sumo_DisableGfxPowerGatingInUVD,%REG_DWORD%,0
+HKR,,EQAA_NA,%REG_SZ%,0
+HKR,UMD,EQAA_DEF,%REG_SZ%,0
+HKR,UMD,EQAAMapping_SET,%REG_SZ%,"0(0:0,1:0) 2(0:2,1:2) 4(0:4,1:4) 8(0:8,1:8,2:16)"
+HKR,,MLF_NA,%REG_SZ%,0
+HKR,UMD,MLF_DEF,%REG_SZ%,0
+HKR,,SurfaceFormatReplacements_NA,%REG_SZ%,0
+HKR,UMD,SurfaceFormatReplacements_DEF,%REG_SZ%,1
+HKR,,TFQ_NA,%REG_SZ%,0
+HKR,UMD,TFQ_DEF,%REG_SZ%,1
+HKR,,CameraShakeMotionDetect_NA,%REG_SZ%,1
+HKR,,TextureLod_NA,%REG_SZ%,1
+HKR,"UMD\DXVA",W7VideoExperience_NA,%REG_SZ%,0
+HKR,,GIBenchmark,%REG_DWORD%,0
+HKR,,GamePerformanceAdviserEnabled,%REG_DWORD%,0
+HKR,,RSOptimizer_NA,%REG_DWORD%,1
+HKLM,"SOFTWARE\AMD\DVR",OclDJInterval,%REG_DWORD%,60
+HKR,,DalMPOSupport,%REG_DWORD%,0
+HKR,UMD,NoOSPowerOptions,%REG_SZ%,0
+HKR,"UMD\DXVA",VForceUVDH265OEM,%REG_SZ%,1
+HKR,,DalMonitorSpecificDrrOverride,%REG_BINARY%,AF,06,22,ED,28,3C,E4,30,05,6E,28,3C,AE,0D,15,FA,28,3C,AF,06,23,ED,28,3C,AE,0D,15,FA,28,3C,AF,06,21,ED,28,3C,AE,0D,15,F5,28,3C,AE,0D,15,DD,28,3C,E4,30,05,BD,00,00,AF,06,61,ED,28,3C,AF,06,23,ED,28,3C,E5,09,07,FF,28,3C,AE,0D,15,02,28,3C,E4,30,05,CE,28,3C,E5,09,08,01,28,3C,E4,30,05,D2,28,3C,E5,09,07,D4,28,3C,AF,06,57,2D,28,3C,E4,30,05,EB,28,3C,70,38,00,32,28,3C,AF,06,ED,22,28,3C,AE,0D,15,03,28,3C,70,38,00,31,28,3C,10,4D,14,A9,28,3C,E5,09,08,52,28,3C,E5,09,08,51,28,3C,AE,0D,15,0d,28,3C,AE,0D,15,E8,28,3C,E4,30,05,FE,28,3C,AF,06,82,ED,28,3C,AF,06,F3,8C,28,3C,AE,0D,13,A8,28,3C,AF,06,5E,2D,28,3C,E4,30,06,27,28,3C,AF,06,DB,8C,28,3C,AE,0D,13,9D,28,3C,E5,09,08,A8,28,3C,AE,0D,15,12,28,3C,AE,0D,15,17,28,3C,E4,30,06,50,28,3C,AF,06,C4,8A,28,3C,AF,06,A0,8B,28,3C,E5,09,08,9D,28,3C,AE,0D,15,15,28,3C,CF,26,85,84,28,3C,E4,30,06,2E,28,3C,E4,30,05,FE,3C,90,70,38,00,40,28,3C,AE,0D,15,0E,28,3C,AF,06,82,ED,3C,90,AF,06,20,ED,28,3C,70,38,00,58,3C,90,AF,06,27,ED,28,3C,AE,0D,15,16,28,3C,E4,30,06,2F,28,3C,70,38,00,3F,28,3C,AF,06,B7,8F,28,3C,AE,0D,15,23,28,3C,AF,06,37,91,28,3C,AE,0D,15,21,3C,90,AF,06,29,92,3C,90,E5,09,09,4D,3C,90
+HKR,,BlueStretch_NA,%REG_SZ%,1
+HKLM,"Software\Wow6432Node\ATI\ACE\Settings\CLI",LazyStart,%REG_SZ%,True
+HKR,,DAL_DPMSAudioEndPointControl,%REG_DWORD%,0
+HKR,,DisableStaticGfxMGPowerGating,%REG_DWORD%,0
+HKR,,PP_SclkDeepSleepDisable,%REG_DWORD%,0
+HKR,,DisableCailLoadUcode,%REG_DWORD%,0
+HKR,,PP_DisableVoltageIsland,%REG_DWORD%,1
+HKR,,DalTmdsCoherenceMode,%REG_DWORD%,1
+HKR,,PP_DriverEnableNBDPM,%REG_DWORD%,1
+HKR,,DisableSAMUPowerGating,%REG_DWORD%,0
+HKR,,DalEnableLBUnderflowInterupt,%REG_DWORD%,0
+HKR,,DalPSRFeatureEnable,%REG_DWORD%,0
+HKR,,KMD_GartCheck,%REG_DWORD%,0
+HKR,,DisablePowerGating,%REG_DWORD%,0
+HKR,,DisablePCIConfigAsicReset,%REG_DWORD%,0
+HKR,,KMD_CursorMagnificationThreshold,%REG_DWORD%,0xFFFFFFFF
+HKR,,DalWirelessDisplaySupport,%REG_DWORD%,1
+HKR,,DisableDynamicGfxMGPowerGating,%REG_DWORD%,1
+HKR,,DisableRlcSmuPGHandshake,%REG_DWORD%,1
+HKR,,DalTravisPwDnPolling,%REG_DWORD%,1
+HKR,"UMD\DXVA",CameraShake_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",CameraShakeStrength_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeDelay_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeZoom_DEF,%REG_SZ%,95
+HKR,"UMD\DXVA",CameraShakeDisplayLogoVersion,%REG_SZ%,0
+HKR,,PP_ThermalAutoThrottlingEnable,%REG_DWORD%,1
+HKR,,Fleshtone_NA,%REG_SZ%,1
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_ENABLE_DEF,%REG_SZ%,0
+HKR,,MosquitoNoiseRemoval_NA,%REG_SZ%,0
+HKR,"UMD\DXVA",Deblocking_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",Deblocking_ENABLE_DEF,%REG_SZ%,0
+HKR,,Deblocking_NA,%REG_SZ%,0
+HKR,,EnableSlsSupport,%REG_DWORD%,0
+HKR,,EnableUlps,%REG_DWORD%,1
+HKR,"UMD\DXVA",DI_METHOD_DEF,%REG_SZ%,-1
+HKR,,DigitalHDTVDefaultUnderscan,%REG_DWORD%,0
+HKR,,Gxo24HzTimingSupport,%REG_DWORD%,1
+HKR,,PP_DeferFirstStateSwitch,%REG_DWORD%,1
+HKR,,DisableFBCSupport,%REG_DWORD%,0
+HKR,,EnableCrossFireAutoLink,%REG_DWORD%,1
+HKR,,Gxo50HzTimingSupport,%REG_DWORD%,1
+HKR,,Gxo50HzTimmingSupport,%REG_DWORD%,1
+HKR,,ExtEvent_BIOSEventByInterrupt,%REG_DWORD%,1
+HKR,,TVM6Flag,%REG_DWORD%,0
+HKR,,TVDisableModes,%REG_DWORD%,0
+HKR,UMD,Main3D_DEF,%REG_SZ%,3
+HKR,UMD,AntiAlias_DEF,%REG_SZ%,1
+HKR,UMD,AntiAliasSamples_DEF,%REG_SZ%,0
+HKR,UMD,AnisoType_DEF,%REG_SZ%,0
+HKR,UMD,AnisoDegree_DEF,%REG_SZ%,0
+HKR,UMD,TextureOpt_DEF,%REG_SZ%,0
+HKR,UMD,TextureLod_DEF,%REG_SZ%,0
+HKR,UMD,TruformMode_DEF,%REG_SZ%,0
+HKR,UMD,VSyncControl_DEF,%REG_SZ%,1
+HKR,UMD,SwapEffect_DEF,%REG_SZ%,0
+HKR,UMD,TemporalAAMultiplier_DEF,%REG_SZ%,0
+HKR,UMD,ExportCompressedTex_DEF,%REG_SZ%,1
+HKR,UMD,PixelCenter_DEF,%REG_SZ%,0
+HKR,UMD,ForceZBufferDepth_DEF,%REG_SZ%,0
+HKR,UMD,EnableTripleBuffering_DEF,%REG_SZ%,0
+HKR,UMD,CatalystAI_DEF,%REG_SZ%,1
+HKR,,ColourDesktopGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourDesktopBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourDesktopContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourFullscreenContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,3D_Refresh_Rate_Override_DEF,%REG_DWORD%,0
+HKR,,Display_Detection_DEF,%REG_DWORD%,0
+HKR,,Panning_Mode_DEF,%REG_DWORD%,0
+HKR,,Force_TV_Detection_DEF,%REG_DWORD%,0
+HKLM,"Software\AMD\EEU",MRUListPersistence,%REG_DWORD%,1
+HKR,,BD7CCC678BEFC3EFFD35, %REG_BINARY%,6D,11,08,42
+HKR,,BD7CCC678BEFC3EFFD36, %REG_BINARY%,6D,2D,08,44
+HKR,,BD7CCC678BEFC3EFFD37, %REG_BINARY%,6D,2D,08,44
+HKR,,BD7CCD678BEFC3EFFD35, %REG_BINARY%,6D,11,08,42
+HKR,,BD7CCD678BEFC3EFFD36, %REG_BINARY%,6D,2D,08,44
+HKR,,BD7CCD678BEFC3EFFD37, %REG_BINARY%,6D,2D,08,44
+
+[ati2mtag_Raven_SoftwareDeviceSettings]
+HKR,,WmAgpMaxIdleClk,%REG_DWORD%,0x20
+HKR,,MemInitLatencyTimer,%REG_DWORD%,0x775771BF
+HKR,,SMOOTHVISION_NAME,%REG_SZ%,""
+HKR,UMD,GI_DEF,%REG_SZ%,1
+HKR,UMD,ASTT_DEF,%REG_SZ%,0
+HKR,UMD,AreaAniso_DEF,%REG_SZ%,0
+HKR,,SameOnAllUsingStandardInVideoTheaterCloneMode,%REG_SZ%,"1"
+HKR,,3to2Pulldown_NA,%REG_SZ%,0
+HKR,,GI_NA,%REG_SZ%,1
+HKR,,VIDEO_NAME_SUFFIX,%REG_SZ%,"Avivo(TM)"
+HKR,,AAF_NA,%REG_SZ%,0
+HKR,,AreaAniso_NA,%REG_SZ%,"1"
+HKR,UMD,AAF_DEF,%REG_SZ%,0
+HKR,UMD,AAF_Mapping_SET,%REG_SZ%,"0(Standard:2,Edge-detect:12) 2(Standard:2) 4(Standard:4,Edge-detect:12) 8(Standard:8,Edge-detect:24) 16(Standard:16)"
+HKR,,TemporalAAMultiplier_NA,%REG_SZ%,"1"
+HKR,UMD,AAAMethod_DEF,%REG_SZ%,0
+HKR,UMD,ATMS_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",3to2Pulldown,%REG_SZ%,"1"
+HKR,"UMD\DXVA",3to2Pulldown_DEF,%REG_SZ%,"1"
+HKR,,Denoise_NA,%REG_SZ%,"0"
+HKR,,Detail_NA,%REG_SZ%,"0"
+HKR,,DynamicContrast_NA,%REG_SZ%,"0"
+HKR,"UMD\DXVA",StaticGamma,%REG_SZ%,"100"
+HKR,"UMD\DXVA",StaticGamma_DEF,%REG_SZ%,"100"
+HKR,,ASTT_NA,%REG_SZ%,"1"
+HKR,UMD,ASD_DEF,%REG_SZ%,0
+HKR,UMD,ASE_DEF,%REG_SZ%,0
+HKR,,DemoMode_NA,%REG_SZ%,"0"
+HKR,,SplitScreen_NA,%REG_SZ%,"0"
+HKR,,TheaterMode_NA,%REG_SZ%,1
+HKR,,DemoMode_DEF,%REG_SZ%,"0"
+HKR,,StaticGamma_NA,%REG_SZ%,0
+HKR,,Gamma_NA,%REG_SZ%,1
+HKR,,PP_Sumo_DisableGfxPowerGatingInUVD,%REG_DWORD%,0
+HKR,,EQAA_NA,%REG_SZ%,0
+HKR,UMD,EQAA_DEF,%REG_SZ%,0
+HKR,UMD,EQAAMapping_SET,%REG_SZ%,"0(0:0,1:0) 2(0:2,1:2) 4(0:4,1:4) 8(0:8,1:8,2:16)"
+HKR,,MLF_NA,%REG_SZ%,0
+HKR,UMD,MLF_DEF,%REG_SZ%,0
+HKR,,SurfaceFormatReplacements_NA,%REG_SZ%,0
+HKR,UMD,SurfaceFormatReplacements_DEF,%REG_SZ%,1
+HKR,,TFQ_NA,%REG_SZ%,0
+HKR,UMD,TFQ_DEF,%REG_SZ%,1
+HKR,,CameraShakeMotionDetect_NA,%REG_SZ%,1
+HKR,,TextureLod_NA,%REG_SZ%,1
+HKR,, DALRestrictedModesBCD1, %REG_BINARY%,10,24,07,68,00,00,00,60
+HKR,"UMD\DXVA",W7VideoExperience_NA,%REG_SZ%,0
+HKR,,ShowRSOverlay,%REG_SZ%,false
+HKR,"UMD\DXVA",EnableHLGSupport,%REG_SZ%,1
+HKR,"UMD\DXVA",EnableHDRLUT,%REG_SZ%,1
+HKR,,GIBenchmark,%REG_DWORD%,0
+HKR,,GamePerformanceAdviserEnabled,%REG_DWORD%,0
+HKR,,RSOptimizer_NA,%REG_DWORD%,1
+HKR,,DisableAllClockGating,%REG_DWORD%,0
+HKR,,DalForceSingleDispPipeSplit,%REG_DWORD%,1
+HKR,,EnableVCNDPG,%REG_DWORD%,0
+HKR,,EnableswVcnFwLoading,%REG_DWORD%,0
+HKR,,EnableswGcFwLoading,%REG_DWORD%,0
+HKR,,EnableswSdmaFwLoading,%REG_DWORD%,0
+HKR,,DisableGfxCGPowerGating,%REG_DWORD%,0
+HKR,,DisableCpPowerGating,%REG_DWORD%,0
+HKR,,PP_GfxOffControl,%REG_DWORD%,1
+HKR,,DalDCELogFilePath,%REG_SZ%,%24%\Program Files\AMD\atikmdag_dce.log
+HKR,UMD,NoOSPowerOptions,%REG_SZ%,0
+HKR,"UMD\DXVA",VForceUVDH265OEM,%REG_SZ%,1
+HKR,,DalMonitorSpecificDrrOverride,%REG_BINARY%,AF,06,22,ED,28,3C,E4,30,05,6E,28,3C,AE,0D,15,FA,28,3C,AF,06,23,ED,28,3C,AE,0D,15,FA,28,3C,AF,06,21,ED,28,3C,AE,0D,15,F5,28,3C,AE,0D,15,DD,28,3C,E4,30,05,BD,00,00,AF,06,61,ED,28,3C,AF,06,23,ED,28,3C,E5,09,07,FF,28,3C,AE,0D,15,02,28,3C,E4,30,05,CE,28,3C,E5,09,08,01,28,3C,E4,30,05,D2,28,3C,E5,09,07,D4,28,3C,AF,06,57,2D,28,3C,E4,30,05,EB,28,3C,70,38,00,32,28,3C,AF,06,ED,22,28,3C,AE,0D,15,03,28,3C,70,38,00,31,28,3C,10,4D,14,A9,28,3C,E5,09,08,52,28,3C,E5,09,08,51,28,3C,AE,0D,15,0d,28,3C,AE,0D,15,E8,28,3C,E4,30,05,FE,28,3C,AF,06,82,ED,28,3C,AF,06,F3,8C,28,3C,AE,0D,13,A8,28,3C,AF,06,5E,2D,28,3C,E4,30,06,27,28,3C,AF,06,DB,8C,28,3C,AE,0D,13,9D,28,3C,E5,09,08,A8,28,3C,AE,0D,15,12,28,3C,AE,0D,15,17,28,3C,E4,30,06,50,28,3C,AF,06,C4,8A,28,3C,AF,06,A0,8B,28,3C,E5,09,08,9D,28,3C,AE,0D,15,15,28,3C,CF,26,85,84,28,3C,E4,30,06,2E,28,3C,E4,30,05,FE,3C,90,70,38,00,40,28,3C,AE,0D,15,0E,28,3C,AF,06,82,ED,3C,90,AF,06,20,ED,28,3C,70,38,00,58,3C,90,AF,06,27,ED,28,3C,AE,0D,15,16,28,3C,E4,30,06,2F,28,3C,70,38,00,3F,28,3C,AF,06,B7,8F,28,3C,AE,0D,15,23,28,3C,AF,06,37,91,28,3C,AE,0D,15,21,3C,90,AF,06,29,92,3C,90,E5,09,09,4D,3C,90
+HKR,,BlueStretch_NA,%REG_SZ%,1
+HKLM,"Software\Wow6432Node\ATI\ACE\Settings\CLI",LazyStart,%REG_SZ%,True
+HKR,,DAL_DPMSAudioEndPointControl,%REG_DWORD%,0
+HKR,,DisableStaticGfxMGPowerGating,%REG_DWORD%,0
+HKR,,PP_SclkDeepSleepDisable,%REG_DWORD%,0
+HKR,,DisableCailLoadUcode,%REG_DWORD%,1
+HKR,,PP_DisableVoltageIsland,%REG_DWORD%,1
+HKR,,PP_DriverEnableNBDPM,%REG_DWORD%,1
+HKR,,DisableSAMUPowerGating,%REG_DWORD%,0
+HKR,,DalPSRFeatureEnable,%REG_DWORD%,0
+HKR,,KMD_GartCheck,%REG_DWORD%,0
+HKR,,DisablePowerGating,%REG_DWORD%,0
+HKR,,DisablePCIConfigAsicReset,%REG_DWORD%,0
+HKR,,KMD_CursorMagnificationThreshold,%REG_DWORD%,0xFFFFFFFF
+HKR,,DalWirelessDisplaySupport,%REG_DWORD%,1
+HKR,,DisableDynamicGfxMGPowerGating,%REG_DWORD%,1
+HKR,,EnableLBPWSupport,%REG_DWORD%,0
+HKR,,DisableRlcSmuPGHandshake,%REG_DWORD%,0
+HKR,,DisableSysClockGating,%REG_DWORD%,1
+HKR,,AsicRevForRlcFw,%REG_DWORD%,0xA1
+HKR,,DisableGfxClockGating,%REG_DWORD%,0
+HKR,,DalTravisPwDnPolling,%REG_DWORD%,1
+HKR,"UMD\DXVA",CameraShake_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",CameraShakeStrength_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeDelay_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeZoom_DEF,%REG_SZ%,95
+HKR,"UMD\DXVA",CameraShakeDisplayLogoVersion,%REG_SZ%,0
+HKR,,PP_ThermalAutoThrottlingEnable,%REG_DWORD%,1
+HKR,,Fleshtone_NA,%REG_SZ%,1
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_ENABLE_DEF,%REG_SZ%,0
+HKR,,MosquitoNoiseRemoval_NA,%REG_SZ%,0
+HKR,"UMD\DXVA",Deblocking_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",Deblocking_ENABLE_DEF,%REG_SZ%,0
+HKR,,Deblocking_NA,%REG_SZ%,0
+HKR,,EnableSlsSupport,%REG_DWORD%,0
+HKR,,EnableUlps,%REG_DWORD%,1
+HKR,"UMD\DXVA",DI_METHOD_DEF,%REG_SZ%,-1
+HKR,,DigitalHDTVDefaultUnderscan,%REG_DWORD%,0
+HKR,,PP_DeferFirstStateSwitch,%REG_DWORD%,1
+HKR,,DisableFBCSupport,%REG_DWORD%,0
+HKR,,EnableCrossFireAutoLink,%REG_DWORD%,1
+HKR,,ExtEvent_BIOSEventByInterrupt,%REG_DWORD%,1
+HKR,,TVM6Flag,%REG_DWORD%,0
+HKR,,TVDisableModes,%REG_DWORD%,0
+HKR,,LazyPreload,%REG_DWORD%,1
+HKR,UMD,Main3D_DEF,%REG_SZ%,3
+HKR,UMD,AntiAlias_DEF,%REG_SZ%,1
+HKR,UMD,AntiAliasSamples_DEF,%REG_SZ%,0
+HKR,UMD,AnisoType_DEF,%REG_SZ%,0
+HKR,UMD,AnisoDegree_DEF,%REG_SZ%,0
+HKR,UMD,TextureOpt_DEF,%REG_SZ%,0
+HKR,UMD,TextureLod_DEF,%REG_SZ%,0
+HKR,UMD,TruformMode_DEF,%REG_SZ%,0
+HKR,UMD,VSyncControl_DEF,%REG_SZ%,1
+HKR,UMD,SwapEffect_DEF,%REG_SZ%,0
+HKR,UMD,TemporalAAMultiplier_DEF,%REG_SZ%,0
+HKR,UMD,ExportCompressedTex_DEF,%REG_SZ%,1
+HKR,UMD,PixelCenter_DEF,%REG_SZ%,0
+HKR,UMD,ForceZBufferDepth_DEF,%REG_SZ%,0
+HKR,UMD,EnableTripleBuffering_DEF,%REG_SZ%,0
+HKR,UMD,CatalystAI_DEF,%REG_SZ%,1
+HKR,,ColourDesktopGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourDesktopBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourDesktopContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourFullscreenContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,3D_Refresh_Rate_Override_DEF,%REG_DWORD%,0
+HKR,,Display_Detection_DEF,%REG_DWORD%,0
+HKR,,Panning_Mode_DEF,%REG_DWORD%,0
+HKR,,Force_TV_Detection_DEF,%REG_DWORD%,0
+HKLM,"Software\AMD\EEU",MRUListPersistence,%REG_DWORD%,1
+HKR,,BD79C4EA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD79C4EA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD79C4EA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD79C4EA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD79C5EA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD79C5EA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD79C5EA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD79C5EA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7A41EA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7A41EA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7A41EA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7A41EA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7A42EA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7A42EA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7A42EA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7A42EA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7A9CEA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7A9CEA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7A9CEA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7A9CEA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7A9DEA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7A9DEA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7A9DEA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7A9DEA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7B2CEA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7B2CEA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7B2CEA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7B2DEA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7B2DEA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7B2DEA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7B50EA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7B50EA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7B50EA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7B50EA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7B51EA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7B51EA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7B51EA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7B51EA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7B5CEA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7B5CEA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7B5CEA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7B5CEA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7B5DEA22EFC3EFFD33, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7B5DEA22EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7B5DEA22EFC3EFFD3B, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7B5DEA22EFC3EFFD3C, %REG_BINARY%,DB,EF,0B,7B
+
+[ati2mtag_RavenDefault_SoftwareDeviceSettings]
+
+[ati2mtag_Picasso_SoftwareDeviceSettings]
+HKR,,WmAgpMaxIdleClk,%REG_DWORD%,0x20
+HKR,,MemInitLatencyTimer,%REG_DWORD%,0x775771BF
+HKR,,SMOOTHVISION_NAME,%REG_SZ%,""
+HKR,UMD,GI_DEF,%REG_SZ%,1
+HKR,UMD,ASTT_DEF,%REG_SZ%,0
+HKR,UMD,AreaAniso_DEF,%REG_SZ%,0
+HKR,,SameOnAllUsingStandardInVideoTheaterCloneMode,%REG_SZ%,"1"
+HKR,,3to2Pulldown_NA,%REG_SZ%,0
+HKR,,GI_NA,%REG_SZ%,1
+HKR,,VIDEO_NAME_SUFFIX,%REG_SZ%,"Avivo(TM)"
+HKR,,AAF_NA,%REG_SZ%,0
+HKR,,AreaAniso_NA,%REG_SZ%,"1"
+HKR,UMD,AAF_DEF,%REG_SZ%,0
+HKR,UMD,AAF_Mapping_SET,%REG_SZ%,"0(Standard:2,Edge-detect:12) 2(Standard:2) 4(Standard:4,Edge-detect:12) 8(Standard:8,Edge-detect:24) 16(Standard:16)"
+HKR,,TemporalAAMultiplier_NA,%REG_SZ%,"1"
+HKR,UMD,AAAMethod_DEF,%REG_SZ%,0
+HKR,UMD,ATMS_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",3to2Pulldown,%REG_SZ%,"1"
+HKR,"UMD\DXVA",3to2Pulldown_DEF,%REG_SZ%,"1"
+HKR,,Denoise_NA,%REG_SZ%,"0"
+HKR,,Detail_NA,%REG_SZ%,"0"
+HKR,,DynamicContrast_NA,%REG_SZ%,"0"
+HKR,"UMD\DXVA",StaticGamma,%REG_SZ%,"100"
+HKR,"UMD\DXVA",StaticGamma_DEF,%REG_SZ%,"100"
+HKR,,ASTT_NA,%REG_SZ%,"1"
+HKR,UMD,ASD_DEF,%REG_SZ%,0
+HKR,UMD,ASE_DEF,%REG_SZ%,0
+HKR,,DemoMode_NA,%REG_SZ%,"0"
+HKR,,SplitScreen_NA,%REG_SZ%,"0"
+HKR,,TheaterMode_NA,%REG_SZ%,1
+HKR,,DemoMode_DEF,%REG_SZ%,"0"
+HKR,,StaticGamma_NA,%REG_SZ%,0
+HKR,,Gamma_NA,%REG_SZ%,1
+HKR,,EQAA_NA,%REG_SZ%,0
+HKR,UMD,EQAA_DEF,%REG_SZ%,0
+HKR,UMD,EQAAMapping_SET,%REG_SZ%,"0(0:0,1:0) 2(0:2,1:2) 4(0:4,1:4) 8(0:8,1:8,2:16)"
+HKR,,MLF_NA,%REG_SZ%,0
+HKR,UMD,MLF_DEF,%REG_SZ%,0
+HKR,,SurfaceFormatReplacements_NA,%REG_SZ%,0
+HKR,UMD,SurfaceFormatReplacements_DEF,%REG_SZ%,1
+HKR,,TFQ_NA,%REG_SZ%,0
+HKR,UMD,TFQ_DEF,%REG_SZ%,1
+HKR,,CameraShakeMotionDetect_NA,%REG_SZ%,1
+HKR,,TextureLod_NA,%REG_SZ%,1
+HKR,, DALRestrictedModesBCD1, %REG_BINARY%,10,24,07,68,00,00,00,60
+HKR,"UMD\DXVA",W7VideoExperience_NA,%REG_SZ%,0
+HKR,"UMD\DXVA",EnableHLGSupport,%REG_SZ%,1
+HKR,"UMD\DXVA",EnableHDRLUT,%REG_SZ%,1
+HKR,,GIBenchmark,%REG_DWORD%,0
+HKR,,GamePerformanceAdviserEnabled,%REG_DWORD%,0
+HKR,,RSOptimizer_NA,%REG_DWORD%,1
+HKR,,EnableswVcnFwLoading,%REG_DWORD%,0
+HKR,,DalDCELogFilePath,%REG_SZ%,%24%\Program Files\AMD\atikmdag_dce.log
+HKR,UMD,NoOSPowerOptions,%REG_SZ%,0
+HKR,"UMD\DXVA",VForceUVDH265OEM,%REG_SZ%,1
+HKR,,DalMonitorSpecificDrrOverride,%REG_BINARY%,AF,06,22,ED,28,3C,E4,30,05,6E,28,3C,AE,0D,15,FA,28,3C,AF,06,23,ED,28,3C,AE,0D,15,FA,28,3C,AF,06,21,ED,28,3C,AE,0D,15,F5,28,3C,AE,0D,15,DD,28,3C,E4,30,05,BD,00,00,AF,06,61,ED,28,3C,AF,06,23,ED,28,3C,E5,09,07,FF,28,3C,AE,0D,15,02,28,3C,E4,30,05,CE,28,3C,E5,09,08,01,28,3C,E4,30,05,D2,28,3C,E5,09,07,D4,28,3C,AF,06,57,2D,28,3C,E4,30,05,EB,28,3C,70,38,00,32,28,3C,AF,06,ED,22,28,3C,AE,0D,15,03,28,3C,70,38,00,31,28,3C,10,4D,14,A9,28,3C,E5,09,08,52,28,3C,E5,09,08,51,28,3C,AE,0D,15,0d,28,3C,AE,0D,15,E8,28,3C,E4,30,05,FE,28,3C,AF,06,82,ED,28,3C,AF,06,F3,8C,28,3C,AE,0D,13,A8,28,3C,AF,06,5E,2D,28,3C,E4,30,06,27,28,3C,AF,06,DB,8C,28,3C,AE,0D,13,9D,28,3C,E5,09,08,A8,28,3C,AE,0D,15,12,28,3C,AE,0D,15,17,28,3C,E4,30,06,50,28,3C,AF,06,C4,8A,28,3C,AF,06,A0,8B,28,3C,E5,09,08,9D,28,3C,AE,0D,15,15,28,3C,CF,26,85,84,28,3C,E4,30,06,2E,28,3C,E4,30,05,FE,3C,90,70,38,00,40,28,3C,AE,0D,15,0E,28,3C,AF,06,82,ED,3C,90,AF,06,20,ED,28,3C,70,38,00,58,3C,90,AF,06,27,ED,28,3C,AE,0D,15,16,28,3C,E4,30,06,2F,28,3C,70,38,00,3F,28,3C,AF,06,B7,8F,28,3C,AE,0D,15,23,28,3C,AF,06,37,91,28,3C,AE,0D,15,21,3C,90,AF,06,29,92,3C,90,E5,09,09,4D,3C,90
+HKR,,BlueStretch_NA,%REG_SZ%,1
+HKLM,"Software\Wow6432Node\ATI\ACE\Settings\CLI",LazyStart,%REG_SZ%,True
+HKR,,DAL_DPMSAudioEndPointControl,%REG_DWORD%,0
+HKR,,DalPSRFeatureEnable,%REG_DWORD%,0
+HKR,,KMD_CursorMagnificationThreshold,%REG_DWORD%,0xFFFFFFFF
+HKR,,DalWirelessDisplaySupport,%REG_DWORD%,1
+HKR,,DalTravisPwDnPolling,%REG_DWORD%,1
+HKR,"UMD\DXVA",CameraShake_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",CameraShakeStrength_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeDelay_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeZoom_DEF,%REG_SZ%,95
+HKR,"UMD\DXVA",CameraShakeDisplayLogoVersion,%REG_SZ%,0
+HKR,,Fleshtone_NA,%REG_SZ%,1
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_ENABLE_DEF,%REG_SZ%,0
+HKR,,MosquitoNoiseRemoval_NA,%REG_SZ%,0
+HKR,"UMD\DXVA",Deblocking_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",Deblocking_ENABLE_DEF,%REG_SZ%,0
+HKR,,Deblocking_NA,%REG_SZ%,0
+HKR,,EnableSlsSupport,%REG_DWORD%,0
+HKR,,EnableUlps,%REG_DWORD%,1
+HKR,"UMD\DXVA",DI_METHOD_DEF,%REG_SZ%,-1
+HKR,,DigitalHDTVDefaultUnderscan,%REG_DWORD%,0
+HKR,,DisableFBCSupport,%REG_DWORD%,0
+HKR,,EnableCrossFireAutoLink,%REG_DWORD%,1
+HKR,,ExtEvent_BIOSEventByInterrupt,%REG_DWORD%,1
+HKR,,TVM6Flag,%REG_DWORD%,0
+HKR,,TVDisableModes,%REG_DWORD%,0
+HKR,,LazyPreload,%REG_DWORD%,1
+HKR,UMD,Main3D_DEF,%REG_SZ%,3
+HKR,UMD,AntiAlias_DEF,%REG_SZ%,1
+HKR,UMD,AntiAliasSamples_DEF,%REG_SZ%,0
+HKR,UMD,AnisoType_DEF,%REG_SZ%,0
+HKR,UMD,AnisoDegree_DEF,%REG_SZ%,0
+HKR,UMD,TextureOpt_DEF,%REG_SZ%,0
+HKR,UMD,TextureLod_DEF,%REG_SZ%,0
+HKR,UMD,TruformMode_DEF,%REG_SZ%,0
+HKR,UMD,VSyncControl_DEF,%REG_SZ%,1
+HKR,UMD,SwapEffect_DEF,%REG_SZ%,0
+HKR,UMD,TemporalAAMultiplier_DEF,%REG_SZ%,0
+HKR,UMD,ExportCompressedTex_DEF,%REG_SZ%,1
+HKR,UMD,PixelCenter_DEF,%REG_SZ%,0
+HKR,UMD,ForceZBufferDepth_DEF,%REG_SZ%,0
+HKR,UMD,EnableTripleBuffering_DEF,%REG_SZ%,0
+HKR,UMD,CatalystAI_DEF,%REG_SZ%,1
+HKR,,ColourDesktopGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourDesktopBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourDesktopContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourFullscreenContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,3D_Refresh_Rate_Override_DEF,%REG_DWORD%,0
+HKR,,Display_Detection_DEF,%REG_DWORD%,0
+HKR,,Panning_Mode_DEF,%REG_DWORD%,0
+HKR,,Force_TV_Detection_DEF,%REG_DWORD%,0
+HKLM,"Software\AMD\EEU",MRUListPersistence,%REG_DWORD%,1
+HKR,,BD7831EA27EFC3EFFD31, %REG_BINARY%,75,52,08,8D
+HKR,,BD7831EA27EFC3EFFD32, %REG_BINARY%,75,52,08,8D
+HKR,,BD7831EA27EFC3EFFD3B, %REG_BINARY%,75,52,08,8D
+HKR,,BD7860EA27EFC3EFFD31, %REG_BINARY%,75,52,08,8D
+HKR,,BD7860EA27EFC3EFFD32, %REG_BINARY%,75,52,08,8D
+HKR,,BD7860EA27EFC3EFFD3B, %REG_BINARY%,75,52,08,8D
+HKR,,BD7861EA27EFC3EFFD31, %REG_BINARY%,75,52,08,8D
+HKR,,BD7861EA27EFC3EFFD32, %REG_BINARY%,75,52,08,8D
+HKR,,BD7861EA27EFC3EFFD3B, %REG_BINARY%,75,52,08,8D
+HKR,,BD7864EA27EFC3EFFD31, %REG_BINARY%,75,52,08,8D
+HKR,,BD7864EA27EFC3EFFD32, %REG_BINARY%,75,52,08,8D
+HKR,,BD7864EA27EFC3EFFD3B, %REG_BINARY%,75,52,08,8D
+HKR,,BD7865EA27EFC3EFFD31, %REG_BINARY%,75,52,08,8D
+HKR,,BD7865EA27EFC3EFFD32, %REG_BINARY%,75,52,08,8D
+HKR,,BD7865EA27EFC3EFFD3B, %REG_BINARY%,75,52,08,8D
+HKR,,BD7868EA27EFC3EFFD31, %REG_BINARY%,75,52,08,8D
+HKR,,BD7868EA27EFC3EFFD32, %REG_BINARY%,75,52,08,8D
+HKR,,BD7868EA27EFC3EFFD3B, %REG_BINARY%,75,52,08,8D
+HKR,,BD7869EA27EFC3EFFD31, %REG_BINARY%,75,52,08,8D
+HKR,,BD7869EA27EFC3EFFD32, %REG_BINARY%,75,52,08,8D
+HKR,,BD7869EA27EFC3EFFD3B, %REG_BINARY%,75,52,08,8D
+HKR,,BD79C6EA27EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD79C6EA27EFC3EFFD3B, %REG_BINARY%,B4,91,0A,83
+HKR,,BD79C6EA27EFC3EFFD3C, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD79C6EA27EFC3EFFD3D, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD79C6EA27EFC3EFFD3E, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD79C7EA27EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD79C7EA27EFC3EFFD3B, %REG_BINARY%,B4,91,0A,83
+HKR,,BD79C7EA27EFC3EFFD3C, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD79C7EA27EFC3EFFD3D, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD79C7EA27EFC3EFFD3E, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7A13EA27EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7A13EA27EFC3EFFD3B, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7A13EA27EFC3EFFD3C, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7A13EA27EFC3EFFD3D, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7A13EA27EFC3EFFD3E, %REG_BINARY%,DB,EF,0B,7B
+HKR,,BD7A15EA27EFC3EFFD3A, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7A15EA27EFC3EFFD3B, %REG_BINARY%,B4,91,0A,83
+HKR,,BD7A15EA27EFC3EFFD3C, %REG_BINARY%,B4,BB,0A,86
+HKR,,BD7A15EA27EFC3EFFD3D, %REG_BINARY%,B4,D7,0A,88
+HKR,,BD7A15EA27EFC3EFFD3E, %REG_BINARY%,DB,EF,0B,7B
+
+[ati2mtag_PicassoDefault_SoftwareDeviceSettings]
+HKR,,ShowRSOverlay,%REG_SZ%,false
+HKR,,AsicRevForRlcFw,%REG_DWORD%,0xB1
+
+[ati2mtag_Stoney_SoftwareDeviceSettings]
+HKR,,WmAgpMaxIdleClk,%REG_DWORD%,0x20
+HKR,,MemInitLatencyTimer,%REG_DWORD%,0x775771BF
+HKR,,SMOOTHVISION_NAME,%REG_SZ%,""
+HKR,UMD,GI_DEF,%REG_SZ%,1
+HKR,UMD,ASTT_DEF,%REG_SZ%,0
+HKR,UMD,AreaAniso_DEF,%REG_SZ%,0
+HKR,,SameOnAllUsingStandardInVideoTheaterCloneMode,%REG_SZ%,"1"
+HKR,,3to2Pulldown_NA,%REG_SZ%,0
+HKR,,GI_NA,%REG_SZ%,1
+HKR,,VIDEO_NAME_SUFFIX,%REG_SZ%,"Avivo(TM)"
+HKR,,AAF_NA,%REG_SZ%,0
+HKR,,AreaAniso_NA,%REG_SZ%,"1"
+HKR,UMD,AAF_DEF,%REG_SZ%,0
+HKR,UMD,AAF_Mapping_SET,%REG_SZ%,"0(Standard:2,Edge-detect:12) 2(Standard:2) 4(Standard:4,Edge-detect:12) 8(Standard:8,Edge-detect:24) 16(Standard:16)"
+HKR,,TemporalAAMultiplier_NA,%REG_SZ%,"1"
+HKR,UMD,AAAMethod_DEF,%REG_SZ%,0
+HKR,UMD,ATMS_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",3to2Pulldown,%REG_SZ%,"1"
+HKR,"UMD\DXVA",3to2Pulldown_DEF,%REG_SZ%,"1"
+HKR,,Denoise_NA,%REG_SZ%,"0"
+HKR,,Detail_NA,%REG_SZ%,"0"
+HKR,,DynamicContrast_NA,%REG_SZ%,"0"
+HKR,"UMD\DXVA",StaticGamma,%REG_SZ%,"100"
+HKR,"UMD\DXVA",StaticGamma_DEF,%REG_SZ%,"100"
+HKR,,ASTT_NA,%REG_SZ%,"1"
+HKR,UMD,ASD_DEF,%REG_SZ%,0
+HKR,UMD,ASE_DEF,%REG_SZ%,0
+HKR,,DemoMode_NA,%REG_SZ%,"0"
+HKR,,SplitScreen_NA,%REG_SZ%,"0"
+HKR,,TheaterMode_NA,%REG_SZ%,1
+HKR,,DemoMode_DEF,%REG_SZ%,"0"
+HKR,,StaticGamma_NA,%REG_SZ%,0
+HKR,,Gamma_NA,%REG_SZ%,1
+HKR,,PP_Sumo_DisableGfxPowerGatingInUVD,%REG_DWORD%,0
+HKR,,EQAA_NA,%REG_SZ%,0
+HKR,UMD,EQAA_DEF,%REG_SZ%,0
+HKR,UMD,EQAAMapping_SET,%REG_SZ%,"0(0:0,1:0) 2(0:2,1:2) 4(0:4,1:4) 8(0:8,1:8,2:16)"
+HKR,,MLF_NA,%REG_SZ%,0
+HKR,UMD,MLF_DEF,%REG_SZ%,0
+HKR,,SurfaceFormatReplacements_NA,%REG_SZ%,0
+HKR,UMD,SurfaceFormatReplacements_DEF,%REG_SZ%,1
+HKR,,TFQ_NA,%REG_SZ%,0
+HKR,UMD,TFQ_DEF,%REG_SZ%,1
+HKR,,CameraShakeMotionDetect_NA,%REG_SZ%,1
+HKR,,TextureLod_NA,%REG_SZ%,1
+HKR,"UMD\DXVA",W7VideoExperience_NA,%REG_SZ%,0
+HKR,,GamePerformanceAdviserEnabled,%REG_DWORD%,0
+HKR,,RSOptimizer_NA,%REG_DWORD%,1
+HKR,,DalMPOSupport,%REG_DWORD%,0
+HKR,UMD,NoOSPowerOptions,%REG_SZ%,0
+HKR,"UMD\DXVA",VForceUVDH265OEM,%REG_SZ%,3
+HKR,,DalMonitorSpecificDrrOverride,%REG_BINARY%,AF,06,22,ED,28,3C,E4,30,05,6E,28,3C,AE,0D,15,FA,28,3C,AF,06,23,ED,28,3C,AE,0D,15,FA,28,3C,AF,06,21,ED,28,3C,AE,0D,15,F5,28,3C,AE,0D,15,DD,28,3C,E4,30,05,BD,00,00,AF,06,61,ED,28,3C,AF,06,23,ED,28,3C,E5,09,07,FF,28,3C,AE,0D,15,02,28,3C,E4,30,05,CE,28,3C,E5,09,08,01,28,3C,E4,30,05,D2,28,3C,E5,09,07,D4,28,3C,AF,06,57,2D,28,3C,E4,30,05,EB,28,3C,70,38,00,32,28,3C,AF,06,ED,22,28,3C,AE,0D,15,03,28,3C,70,38,00,31,28,3C,10,4D,14,A9,28,3C,E5,09,08,52,28,3C,E5,09,08,51,28,3C,AE,0D,15,0d,28,3C,AE,0D,15,E8,28,3C,E4,30,05,FE,28,3C,AF,06,82,ED,28,3C,AF,06,F3,8C,28,3C,AE,0D,13,A8,28,3C,AF,06,5E,2D,28,3C,E4,30,06,27,28,3C,AF,06,DB,8C,28,3C,AE,0D,13,9D,28,3C,E5,09,08,A8,28,3C,AE,0D,15,12,28,3C,AE,0D,15,17,28,3C,E4,30,06,50,28,3C,AF,06,C4,8A,28,3C,AF,06,A0,8B,28,3C,E5,09,08,9D,28,3C,AE,0D,15,15,28,3C,CF,26,85,84,28,3C,E4,30,06,2E,28,3C,E4,30,05,FE,3C,90,70,38,00,40,28,3C,AE,0D,15,0E,28,3C,AF,06,82,ED,3C,90,AF,06,20,ED,28,3C,70,38,00,58,3C,90,AF,06,27,ED,28,3C,AE,0D,15,16,28,3C,E4,30,06,2F,28,3C,70,38,00,3F,28,3C,AF,06,B7,8F,28,3C,AE,0D,15,23,28,3C,AF,06,37,91,28,3C,AE,0D,15,21,3C,90,AF,06,29,92,3C,90,E5,09,09,4D,3C,90
+HKR,,BlueStretch_NA,%REG_SZ%,1
+HKLM,"Software\Wow6432Node\ATI\ACE\Settings\CLI",LazyStart,%REG_SZ%,True
+HKR,,DAL_DPMSAudioEndPointControl,%REG_DWORD%,0
+HKR,,DisableStaticGfxMGPowerGating,%REG_DWORD%,0
+HKR,,PP_SclkDeepSleepDisable,%REG_DWORD%,0
+HKR,,DisableCailLoadUcode,%REG_DWORD%,0
+HKR,,PP_DisableVoltageIsland,%REG_DWORD%,1
+HKR,,DalTmdsCoherenceMode,%REG_DWORD%,1
+HKR,,PP_DriverEnableNBDPM,%REG_DWORD%,1
+HKR,,DisableSAMUPowerGating,%REG_DWORD%,0
+HKR,,DalEnableLBUnderflowInterupt,%REG_DWORD%,0
+HKR,,DalPSRFeatureEnable,%REG_DWORD%,0
+HKR,,KMD_GartCheck,%REG_DWORD%,0
+HKR,,DisablePowerGating,%REG_DWORD%,0
+HKR,,DisablePCIConfigAsicReset,%REG_DWORD%,1
+HKR,,KMD_CursorMagnificationThreshold,%REG_DWORD%,0xFFFFFFFF
+HKR,,DalWirelessDisplaySupport,%REG_DWORD%,1
+HKR,,DisableDynamicGfxMGPowerGating,%REG_DWORD%,1
+HKR,,DisableRlcSmuPGHandshake,%REG_DWORD%,1
+HKR,,DisableVCEPowerGating,%REG_DWORD%,0
+HKR,,DisableGfxCoarseGrainClockGating,%REG_DWORD%,0
+HKR,,DalTravisPwDnPolling,%REG_DWORD%,1
+HKR,"UMD\DXVA",CameraShake_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",CameraShakeStrength_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeDelay_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeZoom_DEF,%REG_SZ%,95
+HKR,"UMD\DXVA",CameraShakeDisplayLogoVersion,%REG_SZ%,0
+HKR,,PP_ThermalAutoThrottlingEnable,%REG_DWORD%,1
+HKR,,Fleshtone_NA,%REG_SZ%,1
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_ENABLE_DEF,%REG_SZ%,0
+HKR,,MosquitoNoiseRemoval_NA,%REG_SZ%,0
+HKR,"UMD\DXVA",Deblocking_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",Deblocking_ENABLE_DEF,%REG_SZ%,0
+HKR,,Deblocking_NA,%REG_SZ%,0
+HKR,,EnableSlsSupport,%REG_DWORD%,0
+HKR,,EnableUlps,%REG_DWORD%,1
+HKR,"UMD\DXVA",DI_METHOD_DEF,%REG_SZ%,-1
+HKR,,DigitalHDTVDefaultUnderscan,%REG_DWORD%,0
+HKR,,Gxo24HzTimingSupport,%REG_DWORD%,1
+HKR,,PP_DeferFirstStateSwitch,%REG_DWORD%,1
+HKR,,DisableFBCSupport,%REG_DWORD%,0
+HKR,,EnableCrossFireAutoLink,%REG_DWORD%,1
+HKR,,Gxo50HzTimingSupport,%REG_DWORD%,1
+HKR,,Gxo50HzTimmingSupport,%REG_DWORD%,1
+HKR,,ExtEvent_BIOSEventByInterrupt,%REG_DWORD%,1
+HKR,,TVM6Flag,%REG_DWORD%,0
+HKR,,TVDisableModes,%REG_DWORD%,0
+HKR,UMD,Main3D_DEF,%REG_SZ%,3
+HKR,UMD,AntiAlias_DEF,%REG_SZ%,1
+HKR,UMD,AntiAliasSamples_DEF,%REG_SZ%,0
+HKR,UMD,AnisoType_DEF,%REG_SZ%,0
+HKR,UMD,AnisoDegree_DEF,%REG_SZ%,0
+HKR,UMD,TextureOpt_DEF,%REG_SZ%,0
+HKR,UMD,TextureLod_DEF,%REG_SZ%,0
+HKR,UMD,TruformMode_DEF,%REG_SZ%,0
+HKR,UMD,VSyncControl_DEF,%REG_SZ%,1
+HKR,UMD,SwapEffect_DEF,%REG_SZ%,0
+HKR,UMD,TemporalAAMultiplier_DEF,%REG_SZ%,0
+HKR,UMD,ExportCompressedTex_DEF,%REG_SZ%,1
+HKR,UMD,PixelCenter_DEF,%REG_SZ%,0
+HKR,UMD,ForceZBufferDepth_DEF,%REG_SZ%,0
+HKR,UMD,EnableTripleBuffering_DEF,%REG_SZ%,0
+HKR,UMD,CatalystAI_DEF,%REG_SZ%,1
+HKR,,ColourDesktopGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourDesktopBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourDesktopContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourFullscreenContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,3D_Refresh_Rate_Override_DEF,%REG_DWORD%,0
+HKR,,Display_Detection_DEF,%REG_DWORD%,0
+HKR,,Panning_Mode_DEF,%REG_DWORD%,0
+HKR,,Force_TV_Detection_DEF,%REG_DWORD%,0
+HKLM,"Software\AMD\EEU",MRUListPersistence,%REG_DWORD%,1
+HKR,,BD79C2671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD79C2671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD79C2671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD79C2671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD79C3671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD79C3671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD79C3671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD79C3671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7A43671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7A43671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7A43671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7A43671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7A44671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7A44671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7A44671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7A44671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7A9E671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7A9E671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7A9E671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7A9E671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7A9F671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7A9F671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7A9F671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7A9F671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7B2E671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7B2E671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7B2E671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7B2E671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7B2F671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7B2F671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7B2F671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7B2F671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7B52671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7B52671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7B52671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7B52671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7B53671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7B53671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7B53671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7B53671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7B5E671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7B5E671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7B5E671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7B5E671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7B5F671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7B5F671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7B5F671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7B5F671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7CCE671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7CCE671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7CCE671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7CCE671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7CCE671BEFC3EFFD2D, %REG_BINARY%,8B,96,09,31
+HKR,,BD7CCE671BEFC3EFFD39, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7CCE671BEFC3EFFD3D, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7CCE671BEFC3EFFD3F, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7CCF671BEFC3EFFD15, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7CCF671BEFC3EFFD1D, %REG_BINARY%,8B,A4,09,32
+HKR,,BD7CCF671BEFC3EFFD25, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7CCF671BEFC3EFFD2B, %REG_BINARY%,8B,96,09,31
+HKR,,BD7CCF671BEFC3EFFD2D, %REG_BINARY%,8B,96,09,31
+HKR,,BD7CCF671BEFC3EFFD39, %REG_BINARY%,8B,C0,09,34
+HKR,,BD7CCF671BEFC3EFFD3D, %REG_BINARY%,8B,B2,09,33
+HKR,,BD7CCF671BEFC3EFFD3F, %REG_BINARY%,8B,B2,09,33
+
+[ati2mtag_Mobile_SoftwareDeviceSettings]
+HKR,,RemovableSources,%REG_DWORD%,2
+HKLM,"Software\AMD\EEU",HKPreferenceUseCCD,%REG_DWORD%,0
+HKR,,DalDisplayPreferredView,%REG_DWORD%,1
+HKR,,KMD_EnableBrightnessInterface2,%REG_DWORD%,1
+HKR,,DAL_LcdRestrictedModesBCD,%REG_BINARY%,07,20,04,80,00,00,00,00,08,00,04,80,00,00,00,00,10,24,04,80,00,00,00,00
+HKR,,PP_UserVariBrightLevel,%REG_DWORD%,2
+HKR,,Dal_UserVariBrightLevel,%REG_DWORD%,2
+HKR,,UserMustConfirm,%REG_DWORD%,1
+HKR,,DALOPTION_MinResBCD,%REG_BINARY%,00,00,00,00,00,00,00,60
+HKR,,ExtEvent_NonExtendedADCProfileOnHotKey,%REG_DWORD%,1
+HKR,,DALRULE_ADDEXTDESKTOPTOPROFILEKEY,%REG_DWORD%,1
+HKR,,ExtEvent_EnableAutoDisplayConfig,%REG_DWORD%,1
+
+[ati2mtag_Mobile_PX_SoftwareDeviceSettings]
+HKR,,ACPI_HKUseCCD,%REG_DWORD%,1
+HKR,,PXACAdapter,%REG_DWORD%,2
+HKR,,PXDCAdapter,%REG_DWORD%,1
+
+[ati2mtag_Mobile_PXAA_SoftwareDeviceSettings]
+HKR,,PX2HPDEnable,%REG_DWORD%,1
+HKR,,PX2HotkeySwitch,%REG_DWORD%,1
+HKR,,PX2EnableConnectivityAPI,%REG_DWORD%,1
+HKR,,PXSplashScreen,%REG_DWORD%,0
+
+[ati2mtag_MultiUVD_SoftwareDeviceSettings]
+HKR,,PP_DisableMultiUVDStates,%REG_DWORD%,0
+
+[ati2mtag_Mobile_NONPX_SoftwareDeviceSettings]
+HKR,,DMMEnableDDCPolling,%REG_DWORD%,1
+
+[ati2mtag_Topaz_SoftwareDeviceSettings]
+HKR,,WmAgpMaxIdleClk,%REG_DWORD%,0x20
+HKR,,MemInitLatencyTimer,%REG_DWORD%,0x775771BF
+HKR,,SMOOTHVISION_NAME,%REG_SZ%,""
+HKR,UMD,GI_DEF,%REG_SZ%,1
+HKR,UMD,ASTT_DEF,%REG_SZ%,0
+HKR,UMD,AreaAniso_DEF,%REG_SZ%,0
+HKR,,SameOnAllUsingStandardInVideoTheaterCloneMode,%REG_SZ%,"1"
+HKR,,3to2Pulldown_NA,%REG_SZ%,0
+HKR,,GI_NA,%REG_SZ%,1
+HKR,,VIDEO_NAME_SUFFIX,%REG_SZ%,"Avivo(TM)"
+HKR,,AAF_NA,%REG_SZ%,0
+HKR,,AreaAniso_NA,%REG_SZ%,"1"
+HKR,UMD,AAF_DEF,%REG_SZ%,0
+HKR,UMD,AAF_Mapping_SET,%REG_SZ%,"0(Standard:2,Edge-detect:12) 2(Standard:2) 4(Standard:4,Edge-detect:12) 8(Standard:8,Edge-detect:24) 16(Standard:16)"
+HKR,,TemporalAAMultiplier_NA,%REG_SZ%,"1"
+HKR,UMD,AAAMethod_DEF,%REG_SZ%,0
+HKR,UMD,ATMS_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",3to2Pulldown,%REG_SZ%,"1"
+HKR,"UMD\DXVA",3to2Pulldown_DEF,%REG_SZ%,"1"
+HKR,,Denoise_NA,%REG_SZ%,"0"
+HKR,,Detail_NA,%REG_SZ%,"0"
+HKR,,DynamicContrast_NA,%REG_SZ%,"0"
+HKR,"UMD\DXVA",StaticGamma,%REG_SZ%,"100"
+HKR,"UMD\DXVA",StaticGamma_DEF,%REG_SZ%,"100"
+HKR,,ASTT_NA,%REG_SZ%,"1"
+HKR,UMD,ASD_DEF,%REG_SZ%,0
+HKR,UMD,ASE_DEF,%REG_SZ%,0
+HKR,,DemoMode_NA,%REG_SZ%,"0"
+HKR,,SplitScreen_NA,%REG_SZ%,"0"
+HKR,,TheaterMode_NA,%REG_SZ%,1
+HKR,,DemoMode_DEF,%REG_SZ%,"0"
+HKR,,StaticGamma_NA,%REG_SZ%,0
+HKR,,Gamma_NA,%REG_SZ%,1
+HKR,,EQAA_NA,%REG_SZ%,0
+HKR,UMD,EQAA_DEF,%REG_SZ%,0
+HKR,UMD,EQAAMapping_SET,%REG_SZ%,"0(0:0,1:0) 2(0:2,1:2) 4(0:4,1:4) 8(0:8,1:8,2:16)"
+HKR,,MLF_NA,%REG_SZ%,0
+HKR,UMD,MLF_DEF,%REG_SZ%,0
+HKR,,EnableUlps_NA,%REG_SZ%,1
+HKR,,SurfaceFormatReplacements_NA,%REG_SZ%,0
+HKR,UMD,SurfaceFormatReplacements_DEF,%REG_SZ%,1
+HKR,,TFQ_NA,%REG_SZ%,0
+HKR,UMD,TFQ_DEF,%REG_SZ%,1
+HKR,,AntiAlias_NA,%REG_SZ%,0
+HKR,UMD,AntiAliasSamples_SET,%REG_SZ%,"0 2 4 8"
+HKR,,TextureLod_NA,%REG_SZ%,1
+HKR,UMD,AntiAlias_DEF,%REG_SZ%,1
+HKR,UMD,AntiAliasSamples_DEF,%REG_SZ%,0
+HKR,UMD,AntiAliasMapping_SET,%REG_SZ%,"0(0:0,1:0) 2(0:2,1:2) 4(0:4,1:4) 8(0:8,1:8,2:16)"
+HKR,,TestOnceRequest_NA,%REG_SZ%,1
+HKR,,AutoTuneRequest_NA,%REG_SZ%,1
+HKR,,CameraShakeMotionDetect_NA,%REG_SZ%,1
+HKR,,DisableEarlySamuInit,%REG_DWORD%,1
+HKR,UMD,NoOSPowerOptions,%REG_SZ%,1
+HKR,,PP_SclkDeepSleepDisable,%REG_DWORD%,0
+HKR,,PP_DisableULPS,%REG_DWORD%,1
+HKR,,EnableAspmL1,%REG_DWORD%,0
+HKR,,EnableAspmL0s,%REG_DWORD%,0
+HKR,,KMD_EnableLPT,%REG_DWORD%,0
+HKR,,PP_MCLKStutterModeThreshold,%REG_DWORD%,0x7530
+HKR,,DisablePCIEGen3Support,%REG_DWORD%,0
+HKR,,DisableGmcPowerGating,%REG_DWORD%,1
+HKR,,DisableDrmdmaPowerGating,%REG_DWORD%,0
+HKR,,DisableStaticGfxMGPowerGating,%REG_DWORD%,1
+HKR,,PP_DisableVddcPhaseShedding,%REG_DWORD%,1
+HKR,,EnableLBPWSupport,%REG_DWORD%,0
+HKR,"UMD\DXVA",CameraShake_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",CameraShakeStrength_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeDelay_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeZoom_DEF,%REG_SZ%,95
+HKR,"UMD\DXVA",CameraShakeDisplayLogoVersion,%REG_SZ%,0
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_ENABLE_DEF,%REG_SZ%,0
+HKR,,MosquitoNoiseRemoval_NA,%REG_SZ%,0
+HKR,"UMD\DXVA",Deblocking_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",Deblocking_ENABLE_DEF,%REG_SZ%,0
+HKR,,Deblocking_NA,%REG_SZ%,0
+HKR,,EnableSlsSupport,%REG_DWORD%,0
+HKR,,EnableUlps,%REG_DWORD%,1
+HKR,"UMD\DXVA",DI_METHOD_DEF,%REG_SZ%,-1
+HKR,,DigitalHDTVDefaultUnderscan,%REG_DWORD%,0
+HKR,,Gxo24HzTimingSupport,%REG_DWORD%,1
+HKR,,PP_DeferFirstStateSwitch,%REG_DWORD%,1
+HKR,,EnableCrossFireAutoLink,%REG_DWORD%,1
+HKR,,Gxo50HzTimingSupport,%REG_DWORD%,1
+HKR,,ExtEvent_BIOSEventByInterrupt,%REG_DWORD%,1
+HKR,,TVM6Flag,%REG_DWORD%,0
+HKR,,TVDisableModes,%REG_DWORD%,0
+HKR,UMD,Main3D_DEF,%REG_SZ%,3
+HKR,UMD,AnisoType_DEF,%REG_SZ%,0
+HKR,UMD,AnisoDegree_DEF,%REG_SZ%,0
+HKR,UMD,TextureOpt_DEF,%REG_SZ%,0
+HKR,UMD,TextureLod_DEF,%REG_SZ%,0
+HKR,UMD,TruformMode_DEF,%REG_SZ%,0
+HKR,UMD,VSyncControl_DEF,%REG_SZ%,1
+HKR,UMD,SwapEffect_DEF,%REG_SZ%,0
+HKR,UMD,TemporalAAMultiplier_DEF,%REG_SZ%,0
+HKR,UMD,ExportCompressedTex_DEF,%REG_SZ%,1
+HKR,UMD,PixelCenter_DEF,%REG_SZ%,0
+HKR,UMD,ForceZBufferDepth_DEF,%REG_SZ%,0
+HKR,UMD,EnableTripleBuffering_DEF,%REG_SZ%,0
+HKR,UMD,CatalystAI_DEF,%REG_SZ%,1
+HKR,,ColourDesktopGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourDesktopBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourDesktopContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourFullscreenContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,3D_Refresh_Rate_Override_DEF,%REG_DWORD%,0
+HKR,,Display_Detection_DEF,%REG_DWORD%,0
+HKR,,Panning_Mode_DEF,%REG_DWORD%,0
+HKR,,Force_TV_Detection_DEF,%REG_DWORD%,0
+HKLM,"Software\AMD\EEU",MRUListPersistence,%REG_DWORD%,1
+HKR,,BD786096FFEFC3EFFD3C, %REG_BINARY%,7F,9E,08,9F
+HKR,,BD786096FFEFC3EFFD3E, %REG_BINARY%,7F,DA,08,A4
+HKR,,BD786496FFEFC3EFFD3C, %REG_BINARY%,7F,9E,08,9F
+HKR,,BD786496FFEFC3EFFD3E, %REG_BINARY%,7F,DA,08,A4
+HKR,,BD786896FFEFC3EFFD3C, %REG_BINARY%,7F,9E,08,9F
+HKR,,BD786896FFEFC3EFFD3E, %REG_BINARY%,7F,DA,08,A4
+HKR,,BD79C296FFEFC3EFFD3C, %REG_BINARY%,34,D2,05,02
+HKR,,BD79C296FFEFC3EFFD3E, %REG_BINARY%,21,94,04,15
+HKR,,BD79C496FFEFC3EFFD3C, %REG_BINARY%,34,D2,05,02
+HKR,,BD79C496FFEFC3EFFD3E, %REG_BINARY%,34,EB,05,07
+HKR,,BD79C696FFEFC3EFFD3C, %REG_BINARY%,7F,9E,08,9F
+HKR,,BD79C696FFEFC3EFFD3E, %REG_BINARY%,7F,DA,08,A4
+HKR,,BD7A1396FFEFC3EFFD3C, %REG_BINARY%,7F,9E,08,9F
+HKR,,BD7A1396FFEFC3EFFD3E, %REG_BINARY%,7F,DA,08,A4
+HKR,,BD7A4196FFEFC3EFFD3C, %REG_BINARY%,21,7B,04,10
+HKR,,BD7A4196FFEFC3EFFD3E, %REG_BINARY%,21,94,04,15
+HKR,,BD7A4396FFEFC3EFFD3C, %REG_BINARY%,21,7B,04,10
+HKR,,BD7A4396FFEFC3EFFD3E, %REG_BINARY%,21,94,04,15
+HKR,,BD7B2C96FFEFC3EFFD3C, %REG_BINARY%,34,D2,05,02
+HKR,,BD7B2C96FFEFC3EFFD3E, %REG_BINARY%,34,D2,05,02
+HKR,,BD7B2E96FFEFC3EFFD3C, %REG_BINARY%,34,D2,05,02
+HKR,,BD7B2E96FFEFC3EFFD3E, %REG_BINARY%,34,D2,05,02
+HKR,,BD7B5096FFEFC3EFFD3C, %REG_BINARY%,34,D2,05,02
+HKR,,BD7B5096FFEFC3EFFD3E, %REG_BINARY%,34,EB,05,07
+HKR,,BD7B5296FFEFC3EFFD3C, %REG_BINARY%,34,D2,05,02
+HKR,,BD7B5296FFEFC3EFFD3E, %REG_BINARY%,21,94,04,15
+HKR,,BD7CCC96FFEFC3EFFD7C, %REG_BINARY%,5A,F8,06,B5
+HKR,,BD7CCE96FFEFC3EFFD7C, %REG_BINARY%,4D,59,06,14
+
+[ati2mtag_R503_SoftwareDeviceSettings]
+HKR,,WmAgpMaxIdleClk,%REG_DWORD%,0x20
+HKR,,MemInitLatencyTimer,%REG_DWORD%,0x775771BF
+HKR,,SMOOTHVISION_NAME,%REG_SZ%,""
+HKR,UMD,GI_DEF,%REG_SZ%,1
+HKR,UMD,ASTT_DEF,%REG_SZ%,0
+HKR,UMD,AreaAniso_DEF,%REG_SZ%,0
+HKR,,SameOnAllUsingStandardInVideoTheaterCloneMode,%REG_SZ%,"1"
+HKR,,3to2Pulldown_NA,%REG_SZ%,0
+HKR,,GI_NA,%REG_SZ%,1
+HKR,,VIDEO_NAME_SUFFIX,%REG_SZ%,"Avivo(TM)"
+HKR,,AAF_NA,%REG_SZ%,0
+HKR,,AreaAniso_NA,%REG_SZ%,"1"
+HKR,UMD,AAF_DEF,%REG_SZ%,0
+HKR,UMD,AAF_Value_SET,%REG_SZ%,"Standard:0,Edge-detect:3"
+HKR,UMD,AAF_Mapping_SET,%REG_SZ%,"0(Standard:2,Edge-detect:12) 2(Standard:2) 4(Standard:4,Edge-detect:12) 8(Standard:8,Edge-detect:24) 16(Standard:16)"
+HKR,,TemporalAAMultiplier_NA,%REG_SZ%,"1"
+HKR,UMD,AAAMethod_DEF,%REG_SZ%,0
+HKR,UMD,ATMS_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",3to2Pulldown,%REG_SZ%,"1"
+HKR,"UMD\DXVA",3to2Pulldown_DEF,%REG_SZ%,"1"
+HKR,,Denoise_NA,%REG_SZ%,"0"
+HKR,,Detail_NA,%REG_SZ%,"0"
+HKR,,DynamicContrast_NA,%REG_SZ%,"0"
+HKR,"UMD\DXVA",StaticGamma,%REG_SZ%,"100"
+HKR,"UMD\DXVA",StaticGamma_DEF,%REG_SZ%,"100"
+HKR,,ASTT_NA,%REG_SZ%,"1"
+HKR,UMD,ASD_DEF,%REG_SZ%,0
+HKR,UMD,ASE_DEF,%REG_SZ%,0
+HKR,,DemoMode_NA,%REG_SZ%,"0"
+HKR,,SplitScreen_NA,%REG_SZ%,"0"
+HKR,,TheaterMode_NA,%REG_SZ%,1
+HKR,,DemoMode_DEF,%REG_SZ%,"0"
+HKR,,StaticGamma_NA,%REG_SZ%,0
+HKR,,Gamma_NA,%REG_SZ%,1
+HKR,,EQAA_NA,%REG_SZ%,0
+HKR,UMD,EQAA_DEF,%REG_SZ%,0
+HKR,UMD,EQAAMapping_SET,%REG_SZ%,"0(0:0,1:0) 2(0:2,1:2) 4(0:4,1:4) 8(0:8,1:8,2:16)"
+HKR,,MLF_NA,%REG_SZ%,0
+HKR,UMD,MLF_DEF,%REG_SZ%,0
+HKR,,EnableUlps_NA,%REG_SZ%,1
+HKR,,SurfaceFormatReplacements_NA,%REG_SZ%,0
+HKR,UMD,SurfaceFormatReplacements_DEF,%REG_SZ%,1
+HKR,,TFQ_NA,%REG_SZ%,0
+HKR,UMD,TFQ_DEF,%REG_SZ%,1
+HKR,,AntiAlias_NA,%REG_SZ%,0
+HKR,UMD,AntiAliasSamples_SET,%REG_SZ%,"0 2 4 8"
+HKR,,TextureLod_NA,%REG_SZ%,1
+HKR,UMD,AntiAlias_DEF,%REG_SZ%,1
+HKR,UMD,AntiAliasSamples_DEF,%REG_SZ%,0
+HKR,UMD,AntiAliasMapping_SET,%REG_SZ%,"0(0:0,1:0) 2(0:2,1:2) 4(0:4,1:4) 8(0:8,1:8,2:16)"
+HKR,,TestOnceRequest_NA,%REG_SZ%,1
+HKR,,AutoTuneRequest_NA,%REG_SZ%,1
+HKR,,CameraShakeMotionDetect_NA,%REG_SZ%,1
+HKR,,MMVideo_NA,%REG_SZ%,1
+HKR,,Radeon3D_NA,%REG_SZ%,0
+HKR,,DisableEarlySamuInit,%REG_DWORD%,1
+HKR,,DAL_DPMSAudioEndPointControl,%REG_DWORD%,0
+HKR,,EnableAspmL1,%REG_DWORD%,0
+HKR,,EnableAspmL0s,%REG_DWORD%,0
+HKR,,DisableClkReqSupport,%REG_DWORD%,1
+HKR,,StutterMode,%REG_DWORD%,2
+HKR,,PP_MCLKStutterModeThreshold,%REG_DWORD%,0x7530
+HKR,,DisablePCIEGen3Support,%REG_DWORD%,0
+HKR,,DisableGmcPowerGating,%REG_DWORD%,1
+HKR,,DisableDrmdmaPowerGating,%REG_DWORD%,0
+HKR,,DisableStaticGfxMGPowerGating,%REG_DWORD%,1
+HKR,,PP_DisableVddcPhaseShedding,%REG_DWORD%,1
+HKR,,PP_SCLKDEEPSLEEPDISABLE,%REG_DWORD%,0
+HKR,,EnableLBPWSupport,%REG_DWORD%,0
+HKR,,KMD_EnableLPT,%REG_DWORD%,0
+HKR,"UMD\DXVA",CameraShake_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",CameraShakeStrength_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeDelay_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",CameraShakeZoom_DEF,%REG_SZ%,95
+HKR,"UMD\DXVA",CameraShakeDisplayLogoVersion,%REG_SZ%,0
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",MosquitoNoiseRemoval_ENABLE_DEF,%REG_SZ%,0
+HKR,,MosquitoNoiseRemoval_NA,%REG_SZ%,0
+HKR,"UMD\DXVA",Deblocking_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",Deblocking_ENABLE_DEF,%REG_SZ%,0
+HKR,,Deblocking_NA,%REG_SZ%,0
+HKR,,EnableSlsSupport,%REG_DWORD%,0
+HKR,,EnableUlps,%REG_DWORD%,1
+HKR,"UMD\DXVA",DI_METHOD_DEF,%REG_SZ%,-1
+HKR,,DigitalHDTVDefaultUnderscan,%REG_DWORD%,0
+HKR,,Gxo24HzTimingSupport,%REG_DWORD%,1
+HKR,,PP_DeferFirstStateSwitch,%REG_DWORD%,1
+HKR,,EnableCrossFireAutoLink,%REG_DWORD%,1
+HKR,,Gxo50HzTimingSupport,%REG_DWORD%,1
+HKR,,ExtEvent_BIOSEventByInterrupt,%REG_DWORD%,1
+HKR,,TVM6Flag,%REG_DWORD%,0
+HKR,,TVDisableModes,%REG_DWORD%,0
+HKR,UMD,Main3D_DEF,%REG_SZ%,3
+HKR,UMD,AnisoType_DEF,%REG_SZ%,0
+HKR,UMD,AnisoDegree_DEF,%REG_SZ%,0
+HKR,UMD,TextureOpt_DEF,%REG_SZ%,0
+HKR,UMD,TextureLod_DEF,%REG_SZ%,0
+HKR,UMD,TruformMode_DEF,%REG_SZ%,0
+HKR,UMD,VSyncControl_DEF,%REG_SZ%,1
+HKR,UMD,SwapEffect_DEF,%REG_SZ%,0
+HKR,UMD,TemporalAAMultiplier_DEF,%REG_SZ%,0
+HKR,UMD,ExportCompressedTex_DEF,%REG_SZ%,1
+HKR,UMD,PixelCenter_DEF,%REG_SZ%,0
+HKR,UMD,ForceZBufferDepth_DEF,%REG_SZ%,0
+HKR,UMD,EnableTripleBuffering_DEF,%REG_SZ%,0
+HKR,UMD,CatalystAI_DEF,%REG_SZ%,1
+HKR,,ColourDesktopGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourDesktopBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourDesktopContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenGamma_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,ColourFullscreenBrightness_DEF,%REG_SZ%,0 0 0
+HKR,,ColourFullscreenContrast_DEF,%REG_SZ%,1.0 1.0 1.0
+HKR,,3D_Refresh_Rate_Override_DEF,%REG_DWORD%,0
+HKR,,Display_Detection_DEF,%REG_DWORD%,0
+HKR,,Panning_Mode_DEF,%REG_DWORD%,0
+HKR,,Force_TV_Detection_DEF,%REG_DWORD%,0
+HKLM,"Software\AMD\EEU",MRUListPersistence,%REG_DWORD%,1
+HKR,,BD79C2999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD79C4999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD7A41999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD7A43999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD7A9C999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD7A9E999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD7B50999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD7B52999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD7B52999FEFC3EFFD7C, %REG_BINARY%,68,63,07,06
+HKR,,BD7B5C999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD7B5E999AEFC3EFFD3C, %REG_BINARY%,34,CC,05,01
+HKR,,BD7CCC999FEFC3EFFD7C, %REG_BINARY%,5A,F0,06,B4
+HKR,,BD7CCE999FEFC3EFFD7C, %REG_BINARY%,4D,53,06,13
+
+[ati2mtag_SoftwareDeviceSettings]
+HKR,,DDC2Disabled,%REG_DWORD%,0
+HKR,,MultiFunctionSupported,%REG_DWORD%,0
+HKR,,TimingSelection,%REG_DWORD%,0
+HKR,,VgaCompatible,%REG_DWORD%,0
+HKR,,"Adaptive De-interlacing",%REG_DWORD%,1
+HKR,,"VPE Adaptive De-interlacing",%REG_DWORD%,1
+HKR,,GCOOPTION_DisableGPIOPowerSaveMode,%REG_DWORD%,1
+HKLM,"Software\ATI Technologies\CBT",ReleaseVersion,,"19.40.50-200505a-357018C-HP"
+HKR,,ReleaseVersion,,"19.40.50-200505a-357018C-HP"
+HKR,,BuildNumber,,"09700"
+HKR,,UserModeDriverGUID,%REG_SZ%,{"4242B984-6C36-4FC8-8626-DE5E8B11886D"}
+HKR,,DALGameGammaScale,%REG_DWORD%,0x00646464
+HKLM,"Software\CLASSES\CLSID\{EBB5845F-CA80-11CF-BD3C-008029E89281}\InProcServer32",ThreadingModel,,"Both"
+HKLM,"SOFTWARE\Microsoft\Windows Media Foundation",EMUOPM,%REG_DWORD%,0
+HKR,"UMD\DXVA",OvlTheaterMode_DEF,%REG_SZ%,"0"
+HKR,"UMD\DXVA",TrueWhite_DEF,%REG_SZ%,"0"
+HKR,"UMD\DXVA",LRTCCoef_DEF,%REG_SZ%,"100"
+HKR,,DXVA_WMV_NA,%REG_SZ%,"1"
+HKR,,DI_METHOD_NA,%REG_SZ%,"0"
+HKR,"UMD\DXVA",OvlTheaterModeType_DEF,%REG_SZ%,"0"
+HKR,"UMD\DXVA",LRTCEnable,%REG_SZ%,"0"
+HKR,"UMD\DXVA",LRTCEnable_DEF,%REG_SZ%,"0"
+HKR,UMD,MainVideo_SET,%REG_SZ%,"0 1 2 3 4"
+HKR,UMD,MainVideo_TBL,%REG_SZ%,"1:Brightness=0.0,Contrast=1.0,Saturation=1.0,Gamma=0.0,Hue=0.0;2:Brightness=-3.0,Contrast=1.16,Saturation=1.25,Gamma=0.0,Hue=0.0;3:Brightness=-3.0,Contrast=1.07,Saturation=1.10,Gamma=0.0,Hue=0.0;4:Brightness=7.0,Contrast=1.25,Saturation=0.96,Gamma=0.0,Hue=0.0"
+HKR,UMD,ATMS_NA,%REG_SZ%,1
+HKR,,Force_CV_Detection_DEF,%REG_DWORD%,0
+HKR,,LDA_ChainDescriptor,%REG_SZ%,""
+HKR,"UMD\DXVA",WhiteBalanceCorrection_DEF,%REG_SZ%,"0"
+HKR,"UMD\DXVA",BlueStretch_DEF,%REG_SZ%,"1"
+HKR,"UMD\DXVA",StaticGamma_ENABLE_DEF,%REG_SZ%,"0"
+HKR,"UMD\DXVA",DemoMode_DEF,%REG_SZ%,"0"
+HKR,,PowerXpressLoad,%REG_DWORD%,0xFFFFFFFF
+HKR,,KMD_UVDVideoStopDelay,%REG_DWORD%,0x7D0
+HKR,UMD,EnableCrossfireForNonProfileApps_DEF,%REG_SZ%,0
+HKR,UMD,EnableCrossfireForNonProfileApps,%REG_SZ%,0
+HKR,"UMD\DXVA",DI_METHOD,%REG_BINARY%,2d,00,31,00,00,00
+HKLM,"Software\AMD\CN",Notify_DriverUpdate_hide,%REG_SZ%,true
+HKR,,PreloadDelay,%REG_DWORD%,0x12C
+HKR,,NotifySubscription,%REG_DWORD%,1
+HKR,,color_mapping_runtime_component_NA,%REG_SZ%,true
+HKR,,AllowSubscription,%REG_DWORD%,1
+HKR,,10BitPixelFormat_NA,%REG_SZ%,0
+HKR,,ShowReleaseNotes,%REG_DWORD%,0
+HKR,,AllowSkins,%REG_SZ%,true
+HKR,UMD,GLPBMode_DEF,%REG_SZ%,0
+HKR,,DVRInstallEligible,%REG_DWORD%,0
+HKR,,DVRAnalytics,%REG_DWORD%,0
+HKR,,PP_WaitOnRegisterTimeout,%REG_DWORD%,0x2710
+HKR,"UMD\DXVA",EnablePCOMShaders,%REG_SZ%,1
+HKR,"UMD\DXVA",EnableOCLShaders,%REG_SZ%,1
+HKLM,"Software\AMD\CN",mobile_runtime_component_NA,%REG_SZ%,true
+HKR,,Distribution,%REG_SZ%,AMD
+HKLM,"Software\AMD\CN",HideDisplayColor,%REG_SZ%,false
+HKLM,"Software\AMD\CN",StageTen_hide,%REG_SZ%,false
+HKR,"UMD\DXVA",VForceOCLVP9,%REG_SZ%,0
+HKLM,"Software\AMD\Chill",GlobalEnable,%REG_DWORD%,0x0
+HKLM,"Software\AMD\Chill",ChillLevelDefault,%REG_DWORD%,0x2
+HKLM,"Software\AMD\Chill",LoadingScreenDrawsThreshDefault_DXC,%REG_DWORD%,0xC8
+HKLM,"Software\AMD\Chill",LoadingScreenDrawsThreshDefault_DXX,%REG_DWORD%,0x96
+HKLM,"Software\AMD\Chill",LoadingScreenDrawsThreshDefault_MTL,%REG_DWORD%,0xC8
+HKLM,"Software\AMD\Chill",LoadingScreenDrawsThreshDefault_OGL,%REG_DWORD%,0x64
+HKLM,"Software\AMD\Chill",LoadingScreenDrawsThreshDefault_UDX,%REG_DWORD%,0x64
+HKLM,"Software\AMD\Chill",LoadingScreenDrawsThreshDefault_VUL,%REG_DWORD%,0xC8
+HKLM,"Software\AMD\Chill",MaxFramerateDefault,%REG_DWORD%,0x90
+HKLM,"Software\AMD\Chill",MinFramerateDefault,%REG_DWORD%,0x46
+HKLM,"Software\AMD\Chill",MaxFramerateRange,%REG_DWORD%,0x12C
+HKLM,"Software\AMD\Chill",MinFramerateRange,%REG_DWORD%,0x1E
+HKLM,"Software\AMD\Chill",ProfileEnableDefault,%REG_DWORD%,0x0
+HKLM,"Software\AMD\Chill",ToggleKey,%REG_DWORD%,0x7A
+HKLM,"Software\AMD\Chill",CONTR_LOOK_EVENT_ALPHA,%REG_SZ%,16
+HKLM,"Software\AMD\Chill",CONTR_WALK_EVENT_ALPHA,%REG_SZ%,32
+HKLM,"Software\AMD\Chill",DIR_CHANGE_EVENT_ALPHA,%REG_SZ%,16
+HKLM,"Software\AMD\Chill",DIR_CHANGE_HOLD_TIME_DIV,%REG_SZ%,125
+HKLM,"Software\AMD\Chill",FAST_MOUSE_MOTION,%REG_SZ%,20
+HKLM,"Software\AMD\Chill",IDLE_FRAMERATE,%REG_SZ%,30
+HKLM,"Software\AMD\Chill",KEY_HELD_EVENT_ALPHA,%REG_SZ%,32
+HKLM,"Software\AMD\Chill",KEY_HELD_SLEEP_COEFF,%REG_SZ%,128
+HKLM,"Software\AMD\Chill",KEY_PRESSED_EVENT_ALPHA,%REG_SZ%,8
+HKLM,"Software\AMD\Chill",LOADINGS_CREEN_DRAWS_THRESH,%REG_SZ%,150
+HKLM,"Software\AMD\Chill",MOTION_START_TIMEOUT_DIVIDER,%REG_SZ%,20
+HKLM,"Software\AMD\Chill",MOUSE_SPEED_ESTIMATION_OPT,%REG_SZ%,0
+HKLM,"Software\AMD\Chill",NUM_DIR_CHANGE_HOLD_FRAMES,%REG_SZ%,0
+HKLM,"Software\AMD\Chill",NUM_MOUSE_SPEED_SAMPLES,%REG_SZ%,16
+HKLM,"Software\AMD\Chill",SPEED_TAIL_EVENT_ALPHA,%REG_SZ%,16
+HKR,,DalAllowAutoVSROnEmbeddedDisplay,%REG_DWORD%,0
+HKLM,"Software\AMD\CN",driverupdate_ui_component_na,%REG_SZ%,true
+HKLM,"Software\AMD\CN",SystemTray,%REG_SZ%,false
+HKR,"UMD\DXVA",VForceUVDH265,%REG_SZ%,0
+HKR,UMD,CFM_SET,%REG_SZ%,"0,1,2,3,5"
+HKR,UMD,CFM_DEF,%REG_SZ%,1
+HKR,,MiscControl,%REG_DWORD%,1
+HKR,,PP_BACODelayIntervalInMilliSeconds,%REG_DWORD%,0
+HKR,UMD,AAF_Value_SET,%REG_SZ%,"Standard:0,Edge-detect:3"
+HKLM,"SYSTEM\CurrentControlSet\services\amdkmdap",PciFilterDriverInstallEnabled,%REG_DWORD%,0
+HKR,,AMDKMPFD,%REG_EXPAND_SZ%,%%SystemDrive%%\Program Files\AMD\AMDKMPFD
+HKR,,DalWFDEnable,%REG_DWORD%,1
+HKR,,DalEnableRemoteDisplayPath,%REG_DWORD%,1
+HKR,"UMD\DXVA",ColorVibrance_DEF,%REG_SZ%,40
+HKR,"UMD\DXVA",ColorVibrance_ENABLE_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",Denoise_DEF,%REG_SZ%,64
+HKR,"UMD\DXVA",Denoise_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",DynamicContrast_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",OverridePA_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",Detail_DEF,%REG_SZ%,10
+HKR,"UMD\DXVA",Detail_ENABLE_DEF,%REG_SZ%,0
+HKR,UMD,EPVD,%REG_DWORD%,1
+HKR,,DalAsicFIDOSForcedModeSupport,%REG_DWORD%,3
+HKLM,"Software\AMD\EEU",LogOutputERecord,%REG_DWORD%,1
+HKR,,OpenGLDriverName,%REG_MULTI_SZ%,atio6axx.dll
+HKR,,OpenGLFlags,%REG_DWORD%,3
+HKR,,OpenGLVersion,%REG_DWORD%,1
+HKR,,OpenGLFlagsWow,%REG_DWORD%,3
+HKR,,OpenGLVersionWow,%REG_DWORD%,1
+HKR,,OpenGLDriverNameWow,%REG_MULTI_SZ%,atioglxx.dll
+HKR,,AutoColorDepthReduction_NA,%REG_DWORD%,1
+HKLM,"SYSTEM\CurrentControlSet\Services\Atierecord",eRecordEnable,%REG_DWORD%,1
+HKLM,"SYSTEM\CurrentControlSet\Services\Atierecord",eRecordEnablePopups,%REG_DWORD%,1
+HKR,,DALRULE_ALLOWMONITORRANGELIMITMODESCRT,%REG_DWORD%,0
+HKR,,PP_ULPSDelayIntervalInMilliSeconds,%REG_DWORD%,30000
+HKR,,TVEnableOverscan,%REG_DWORD%,1
+HKR,,TVForceDetection,%REG_DWORD%,0
+HKLM,"Software\Wow6432Node\ATI\ACE\Backup\Dismissables\Eeu\Graphics",HideLDSDisplayWarning,%REG_SZ%,true
+HKR,,AllowSnapshot,%REG_DWORD%,1
+HKLM,"Software\AMD\DVR",ToggleRsHotkey,%REG_SZ%,none
+HKR,,AllowRSOverlay,%REG_SZ%,false
+HKR,,LCDFreeSyncDefault,%REG_DWORD%,0
+HKR,,FireproSoftwareEdition,,"Enterprise"
+HKR,,FireproSoftwareVersion,,"19.40.50"
+HKR,,RadeonSoftwareEdition,,"Adrenalin"
+HKR,,RadeonSoftwareVersion,,"19.40.50"
+
+[atikmdag_MSI_HardwareDeviceSettings]
+HKR,"Interrupt Management\MessageSignaledInterruptProperties",MSISupported,0x00010001,1
+
+[ati2mtag_PX_DGPU_Only_2ID]
+HKR,,PP_GPUPowerDownEnabled,%REG_DWORD%,1
+
+;
+; Device settings to remove
+;
+ 
+[ati2mtag_ProxySettings_DX10]
+
+[ati2mtag_ProxySettings_DX10_PXAA]
+HKR,,OpenGLDriverName,%REG_MULTI_SZ%,atig6pxx.dll
+HKR,,OpenGLDriverNameWoW,%REG_MULTI_SZ%,atiglpxx.dll
+HKR,,OpenGLVendorName,%REG_MULTI_SZ%,atio6axx.dll,atio6axx.dll
+HKR,,OpenGLVendorNameWoW,%REG_MULTI_SZ%,atioglxx.dll,atioglxx.dll
+HKR,,UserModeDListDriverName,%REG_SZ%,amdhdl64.dll
+HKR,,UserModeDListDriverNameWow,%REG_SZ%,amdhdl32.dll
+HKLM,"SOFTWARE\Khronos\OpenCL\Vendors",amdocl64.dll,%REG_DWORD%,0
+HKLM,"SOFTWARE\Wow6432Node\Khronos\OpenCL\Vendors",amdocl.dll,%REG_DWORD%,0
+HKR,,OpenGLDynamicPX,%REG_DWORD%,1
+HKR,,EnableXDSupport,%REG_DWORD%,1
+
+[ati2mtag_ProxySettings_DX10_PXAA_common]
+HKR,,InstalledDisplayDrivers,%REG_MULTI_SZ%,aticfx64,aticfx64,aticfx64,amdxc64,aticfx32,aticfx32,aticfx32,amdxc32,atiumd64,atidxx64,atidxx64,atiumdag,atidxx32,atidxx32,atiumdva,atiumd6a,atitmm64
+HKR,,D3DVendorName,%REG_MULTI_SZ%,atiumd64.dll,atiumd64.dll,atidxx64.dll,atidxx64.dll
+HKR,,D3DVendorNameWoW,%REG_MULTI_SZ%,atiumdag.dll,atiumdag.dll,atidxx32.dll,atidxx32.dll
+
+[ati2mtag_PXAA]
+HKR,,PXProfileSync,%REG_DWORD%,1
+
+[ati2mtag_PXAA_IGPU_Only_2ID]
+
+[ati2mtag_PXService_2ID]
+
+[ati2mtag_Manhattan_PX]
+
+[ati2mtag_R503_PX]
+
+[ati2mtag_Topaz_PX]
+
+[ati2mtag_Post_EG]
+HKR,UMD,Tessellation_OPTION_DEF,%REG_SZ%,"0"
+HKR,UMD,Tessellation_DEF,%REG_SZ%,"64"
+HKLM,"Software\Wow6432Node\ATI\ACE\Backup\Dismissables\Eeu\Graphics",HideAudioDisplayWarning,%REG_SZ%,False
+HKR,"UMD\DXVA",BlueStretch_ENABLE_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",BlueStretch_DEF,%REG_SZ%,1
+HKR,"UMD\DXVA",DynamicRange_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",DynamicRange_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",Fleshtone_DEF,%REG_SZ%,50
+HKR,"UMD\DXVA",Fleshtone_ENABLE_DEF,%REG_SZ%,0
+HKR,"UMD\DXVA",InternetVideo_DEF,%REG_SZ%,0
+
+[ati2mtag_CI_SoftwareDeviceSettings]
+HKR,,GIBenchmark,%REG_DWORD%,0
+HKR,,DalDCELogFilePath,%REG_SZ%,%24%\Program Files\AMD\atikmdag_dce.log
+HKR,UMD,NoOSPowerOptions,%REG_SZ%,1
+HKR,,ContentProtectionDriverName,%REG_SZ%,amdmiracast.dll
+HKR,,KMD_EnableOPM2Interface,%REG_DWORD%,1
+HKR,,DalFreeSyncNoStaticForInternal,%REG_DWORD%,1
+HKLM,"SYSTEM\CurrentControlSet\services\amdkmdap",KMD_MgpuSlsWsSupport,%REG_DWORD%,0
+HKR,,KMD_EnableContextBasedPowerManagement,%REG_DWORD%,1
+HKR,"UMD\DXVA",Cm_EnableContextBasedPowerManagement,%REG_SZ%,1
+
+[ati2mtag_VI_SoftwareDeviceSettings]
+HKR,,GIBenchmark,%REG_DWORD%,0
+HKR,,DalDCELogFilePath,%REG_SZ%,%24%\Program Files\AMD\atikmdag_dce.log
+HKR,,ContentProtectionDriverName,%REG_SZ%,amdmiracast.dll
+HKR,,KMD_EnableOPM2Interface,%REG_DWORD%,1
+HKR,,DalFreeSyncNoStaticForInternal,%REG_DWORD%,1
+HKLM,"SYSTEM\CurrentControlSet\services\amdkmdap",KMD_MgpuSlsWsSupport,%REG_DWORD%,0
+HKR,,KMD_EnableContextBasedPowerManagement,%REG_DWORD%,1
+HKR,"UMD\DXVA",Cm_EnableContextBasedPowerManagement,%REG_SZ%,1
+
+[ati2mtag_AI_SoftwareDeviceSettings]
+HKR,"UMD\DXVA",VForceUVDH265OEM,%REG_SZ%,3
+HKR,,ContentProtectionDriverName,%REG_SZ%,amdmiracast.dll
+HKR,,KMD_EnableOPM2Interface,%REG_DWORD%,1
+HKR,,DalFreeSyncNoStaticForInternal,%REG_DWORD%,1
+HKLM,"SYSTEM\CurrentControlSet\services\amdkmdap",KMD_MgpuSlsWsSupport,%REG_DWORD%,0
+
+[Delreg_services]
+HKR,,KMD_PXDefaultScheme
+HKR,,KMD_PXForceDynamicSchemeSupport
+HKR,,PXRemovableDeviceInfo
+HKR,,PXScheme
+HKR,,PXVgaDeviceInfo
+HKR,,KMD_PXForceVideoPlaybackToIntegrated
+HKR,,KMD_APlusISharedMiniSegmentSize
+HKR,,KMD_APlusISharedMiniSegmentOptions
+HKR,,OpenGLDynamicPX
+HKR,,KMD_PXDefaultGpuForDynamicScheme
+HKR,,PXDPPEFixedControl
+
+
+[Addreg_PX_Services_2ID]
+HKR,,KMD_LongIdleDetectionDefault,%REG_DWORD%,1
+HKR,,KMD_LongIdleDetectionDisabled,%REG_DWORD%,0
+HKR,,KMD_PXDPPEDynamicPowerStates,%REG_DWORD%,0
+HKR,,KMD_PXDPPEEnableDynamicPowerStates,%REG_DWORD%,1
+
+[ati2mtag_RemoveDeviceSettings]
+HKR,,"Adaptive De-interlacing"
+HKR,,AgpLevel
+HKR,,AntiAlias
+HKR,,DALCurrentObjectData
+HKR,,DALLastConnected
+HKR,,DALLastSelected
+HKR,,DALLastTypes
+HKR,,DALNonStandardModesBCD
+HKR,,DALObjectData
+HKR,,DALObjectData0
+HKR,,DALObjectData1
+HKR,,"DALR6 CRT2_MaxModeInfo"
+HKR,,"DALR6 DFP_MaxModeInfo"
+HKR,,"DALR6 DFPx_MaxModeInfo"
+HKR,,"DALR6 GCO_Index0"
+HKR,,DALRestrictedModesBCD
+HKR,,DALRULE_ADDNATIVEMODESTOMODETABLE
+HKR,,DALRULE_CRTSUPPORTSALLMODES
+HKR,,DALRULE_DISABLEBANDWIDTH
+HKR,,DALRULE_DISPLAYSRESTRICTMODES
+HKR,,DALRULE_NOCRTANDLCDONSAMECONTROLLER
+HKR,,DALRULE_NOFORCEBOOT
+HKR,,DALRULE_NOTVANDCRTONSAMECONTROLLER
+HKR,,DALRULE_RESTRICTUNKNOWNMONITOR
+HKR,,DALRULE_SAVEPANLOCK
+HKR,,DALSelectObjectData0
+HKR,,DALSelectObjectData1
+HKR,,DDC2Disabled
+HKR,,DefaultMode
+HKR,,DFPRULE_HotplugSupported
+HKR,,DisableAGP
+HKR,,DisableAGPPM4
+HKR,,DisableDMA
+HKR,,DisableDrvStretchBlt
+HKR,,DisableDynamicEnableMode
+HKR,,DisableEnumAllChilds
+HKR,,DisableHierarchicalZ
+HKR,,DisableLCD
+HKR,,DisableMMLIB
+HKR,,DisableOpenGLScrAccelerate
+HKR,,DisablePllInit
+HKR,,DisablePrimaryTiling
+HKR,,DisableTCL
+HKR,,DisableTimeStampWriteBack
+HKR,,DisableUSWC
+HKR,,DisableVPE
+HKR,,EnableWaitUntilIdxTriList2
+HKR,,GCORULE_HIGHDISPRI
+HKR,,GCORULE_R200TVPLLWA
+HKR,,KD_TilingMode
+HKR,,LVB
+HKR,,MaxAgpVb
+HKR,,MaxAGPVB
+HKR,,MaxLocalVb
+HKR,,MaxLocalVB
+HKR,,SubmitOnDraw
+HKR,,TimingSelection
+HKR,,TVR200Flag
+HKR,,VgaCompatible
+HKR,,"VPE Adaptive De-interlacing"
+HKR,,ATIPoll
+HKR,,TVM6Flag
+HKR,,DALNonStandardModesBCD1
+HKR,,DALNonStandardModesBCD2
+HKR,,DALNonStandardModesBCD3
+HKR,,DALNonStandardModesBCD4
+HKR,,DALNonStandardModesBCD5
+HKR,,DALRestrictedModesBCD1
+HKR,,DALRestrictedModesBCD2
+HKR,,DALRestrictedModesBCD3
+HKR,,DALRestrictedModesBCD4
+HKR,,DALRestrictedModesBCD5
+HKR,,RemovableSources
+HKR,,TheaterMode_NA
+HKR,,AreaAniso_DEF
+HKR,,ASTT_DEF
+HKR,,ASD_DEF
+HKR,,GI_DEF
+HKR,,CatalystAI_DEF
+HKR,,ASTT_NA
+HKR,,DALPowerPlayOptions
+HKR,,OGL_Specific_NA
+HKR,,APISpecific_NA
+HKR,,TemporalAAMultiplier_NA
+HKR,,Main3D_NA
+HKR,,CatalystAI_NA
+HKR,,NoPreview_NA
+HKR,,3to2Pulldown_NA
+HKR,,Transcode_NA
+HKR,,GxoDisable8bppMode
+HKR,"UMD\DXVA",SORTOverrideFPSCaps
+HKR,"UMD\DXVA",SORTOverrideVidSizeCaps
+HKR,"UMD\DXVA",DXVA_Only24FPS1080MPEG2
+HKR,"UMD\DXVA",DXVA_Only24FPS1080H264
+HKR,"UMD\DXVA",DXVA_Only24FPS1080VC1
+HKR,"UMD\DXVA",HWUVD_DisableH264
+HKR,"UMD\DXVA",HWUVD_DisableVC1
+HKR,,DisableVForceMode
+HKR,UMD,ATMS_DEF
+HKR,UMD,AAAMethod_DEF
+HKR,,PP_DisablePPLib
+HKR,,FrameBufferMode
+HKR,,EnableUnifiedGartSegment
+HKR,,EnablePDMA
+HKR,,PrimaryTiling
+HKR,,LogicalMemCfg
+HKR,,AdjustFBSegment
+HKR,,DisableRejectCf
+HKR,,PP_GFXClockGatingEnabled
+HKR,,DisablePCIEGen2Support
+HKR,,DisableVPURecover
+HKR,,DynamicContrast_ENABLE_DEF
+HKR,,DynamicContrast_NA
+HKR,"UMD\DXVA",DynamicContrast_DEF
+HKR,,DP_EnableSSByDefault
+HKR,,DXVA_WMV_DEF
+HKR,,DXVA_WMV
+HKR,,DisableCfSpSupport
+HKR,UMD,ForceDX10Only
+HKR,,DisableNonPOSTDevice
+HKR,,DALRULE_PHYSICAL_DETECTION_AT_RESUME
+HKR,,UserModeDriverGUID
+HKR,,DisableLoadBalancing
+HKR,,ProxyLDA_ChainID
+HKR,,ProxyLDA_ChainLength
+HKR,,ProxyLDA_DeviceID
+HKR,,ProxyLDA_Status
+HKR,,ProxyLDA_Support
+HKR,,LDA_Support
+HKR,,PX_Bypass
+HKR,,PX_PnP_HighPerformance
+HKR,,PX_PnP_PowerSaving
+HKR,,DalInstallFlag
+HKR,,"DALR6 DFP"
+HKR,,"DALR6 DFPI 2"
+HKR,,"DALR6 DFPI 3"
+HKR,,"DALR6 DFPI 4"
+HKR,,"DALR6 DFPI 5"
+HKR,,"GDOADJR6 DFP"
+HKR,,"GDOADJR6 DFPI 2"
+HKR,,"GDOADJR6 DFPI 3"
+HKR,,"GDOADJR6 DFPI 4"
+HKR,,"GDOADJR6 DFPI 5"
+HKR,,DemoMode_DEF
+HKR,,DemoMode_NA
+HKR,,DisableOGL10BitPixelFormats
+HKR,,DALRULE_AllowNativeModeAsDefaultModes
+HKR,,VisualEnhancements_Capabilities
+HKR,,VisualEnhancements_Capabilities_DEF
+HKR,UMD,EnableUlps_DEF
+HKR,,InternetVideo_NA
+HKR,,PP_PhmSoftPowerPlayTable
+HKR,,PP_SCLKDEEPSLEEPDISABLE
+HKR,,PP_MCLKStutterModeThreshold
+HKR,,StutterMode
+HKR,"UMD\DXVA",CameraShake_NA
+HKR,,CameraShake_NA
+HKR,,AdapterDesc
+HKR,,Activity_NA
+HKR,,OpenGLVendorName
+HKR,,OpenGLVendorNameWoW
+HKR,,PP_Sumo_DisableGfxPowerGatingInUVD
+HKR,"UMD\DXVA",W7VideoExperience_NA
+HKR,,HDTVRULE_HDTVGDOENABLE
+HKR,,HDTVRULE_HDTVSIGNALFORMAT
+HKLM,"Software\AMD\CN",Notify_DriverUpdate_hide
+HKR,,DisableAllClockGating
+HKR,,EnableCPLib
+HKR,,DalForceNumOfUnderlayPipes
+HKLM,"SYSTEM\CurrentControlSet\Services\AMDKMDAG",DCHUVen
+HKLM,"SYSTEM\CurrentControlSet\Services\AMDKMDAP",DCHUVen
+HKLM,"SYSTEM\CurrentControlSet\Services\amdkmdag",DCHUVen
+HKLM,"SYSTEM\CurrentControlSet\Services\amdkmdap",DCHUVen
+HKR,,EnableswVcnFwLoading
+HKR,,PP_CNEscapeInput
+HKR,,PP_CNEscapeInputBlockchain
+HKR,,DalFeatureForceLidOpen
+HKR,,KMD_TurboSyncControl
+HKLM,"Software\AMD\CN",driverupdate_ui_component_na
+HKR,,InstType
+HKR,DRV_SDWM,391D1B_DEF
+HKR,,BigSoftwareMajorVersion
+HKR,,BigSoftwareMinorVersion
+HKR,,PP_AllGraphicLevel_FRTC_DownHyst
+HKR,,MiracastDriverName
+HKR,,ContentProtectionDriverName
+HKR,,KMD_EnableOPM2Interface
+HKR,,PP_BACODelayIntervalInMilliSeconds
+HKR,,PP_EnableLoadFalconSmcFirmware
+HKR,,KMD_ForceWDDMv1.3
+HKR,,PP_EnableLoadPostProductionFirmware
+HKR,,DalOverrideDownScaleLimit
+HKR,,DalSupportExternalPanelDrr
+HKR,,DisableUVDPowerGating
+HKR,,DisableUVDPowerGatingDynamic
+HKR,,KMD_EnableContextBasedPowerManagement
+HKR,,Catalyst_Version
+HKR,,DalTmdsCoherenceMode
+HKR,,DalEnableLBUnderflowInterupt
+HKR,,DisablePowerGating
+HKR,,EnableAspmL1
+HKR,,EnableAspmL0s
+HKR,,PP_FPSFeatureEnable
+HKR,,KMD_CursorMagnificationThreshold
+HKR,,EnablePllOffInL1
+HKR,,KMD_EnableDesktopTexture
+HKR,,KMD_EnableBrightnessInterface2
+HKR,,DalNumOfPathPerDpMstConnector
+HKR,,PP_DisableULV
+HKR,,DisableForceUvdToSclk
+HKR,,EnableLBPWSupport
+HKR,,EnableUvdClockGating
+HKR,,KMD_FRTEnabled
+HKR,,KMD_MaxFrameRateRequested
+HKR,,KMD_PowerSliderVariBrightLevel
+HKR,,KMD_EnablePowerSliderRefreshRateCap
+HKR,,KMD_SlsConfigCount
+HKR,,KMD_FRTCInitialStatus
+HKR,,KMD_UVDVideoStopDelay
+HKR,,PP_StaticMappingInfo1
+HKR,,PP_StaticMappingInfo2
+HKR,,PP_StaticMappingInfo3
+HKR,,PP_StaticMappingInfo4
+HKR,,PP_StaticMappingInfo5
+HKR,,PP_StaticMappingInfo6
+HKR,,PP_StaticMappingInfo7
+HKR,,PP_StaticMappingInfo8
+HKR,,PP_StaticMappingInfo9
+HKR,,PP_StaticMappingInfo10
+HKR,,PP_StaticMappingInfo11
+HKR,,PP_StaticMappingInfo12
+HKR,,PP_StaticMappingInfo13
+HKR,,PP_StaticMappingInfo14
+HKR,,PP_StaticMappingInfo15
+HKR,,PP_StaticMappingInfo16
+HKR,,PP_StaticMappingInfo17
+HKR,,PP_StaticMappingInfo18
+HKR,,PP_ACPowerSourceUIMapping
+HKR,,PP_DCPowerSourceUIMapping
+HKR,,DisableGfxCGPowerGating
+HKR,,DALDefaultModeNonDdcVga
+HKR,,PP_ThermalAutoThrottlingEnable
+HKR,,PP_EnableDualACTemplateForOD
+HKR,,GXODFP2ReducedBlanking
+HKR,,DalForceTimingResync
+HKR,,KMD_DisableAspectRatioSupport
+HKR,,PXReducePopUps
+HKR,,PXUseAPLForSwitch
+HKR,"UMD\DXVA",VForceUVDH264MVC
+HKR,,PXIGPUDisplaysBlockSwitch
+HKR,,PP_EnableCFULPSPolicy
+HKR,,DalFID9204Enable
+HKR,,DP_NotSendingLTMessage
+HKR,,DalReportSingleSelectedTiming
+HKR,"UMD\DXVA",HWUVD_H264Level51Support
+HKR,,FID10284_DisableRotation
+HKR,,DalAllowOptimizedModeAsDefault
+HKR,,DalAsicFIDMaxNC
+HKR,,EnableCpuMemCpy
+HKR,,PP_ABMFeatureEnable
+HKR,,ATIFSpecificSupport
+HKR,,EnableSLSBezelSupport
+HKR,,EnableSlsSupport
+HKR,,GXODisablePFREQCHG
+HKR,,DisableMultiSlsGridSupport
+HKR,,EnableSixCloneSupport
+HKR,,HdmiDefaultColorDepth
+HKR,,DALRULE_FORCE_DISABLE_DP_AUDIO
+HKR,,EnablePartialBlitForPaging
+HKR,"UMD\DXVA",VForceMPEG2SDOnly
+HKR,,SKIPAZALIAINBLANK
+HKR,,DisableFireGLCrossfire
+HKR,,LCDOverdrivePerPowerSource
+HKR,,PP_DynamicPCIEGen2Enabled
+HKR,,LcdPixelClockFrequencySpreadPercentage
+HKR,,EnableLassoSupport
+HKR,,GxoAdjustVBlankForHTLinkChange
+HKR,,SUPPORTHPDMISSINGDVI
+HKR,,PP_DisableDCODT
+HKR,,PP_DCPowerSourceUIMapping_Default
+HKR,,MaxDPMClock
+HKR,,PXandHCF
+HKR,,Disable8435
+HKR,,GCOOPTION_MaxOverlayBandwidth
+HKR,,Gxo_AdapterOverlayBandwidth
+HKR,,GXODFPDefaultCoherentMode
+HKR,,GXODFP2DefaultCoherentMode
+HKR,,GXODFPXDefaultCoherentMode
+HKR,,UserMustConfirm
+HKR,,PXACAutoSwitch
+HKR,,PXDCAutoSwitch
+HKR,,PXACAdapter
+HKR,,PXDCAdapter
+HKR,,PowerXpressLoad
+HKR,,D3DVendorName
+HKR,,D3DVendorNameWoW
+HKR,UMD,DisplayCrossfireLogo_DEF
+HKR,,DALRULE_SkipEDIDReadForNoSink
+HKR,,DisablePCIEx1LaneUVD
+HKR,,GxoAllCvFormatSupportedAtBoot
+HKR,,Gxo30BppPanels
+HKLM,"Software\AMD\EEU",SaveProfileGlobally
+HKR,,DALRULE_NOTSHOWRANGELIMITMODEINCLONE
+HKR,,ExtEvent_ApplyBootupProfileForOEMSpecification
+HKR,,PO_SwRi
+HKR,,DALPanelPatchByID
+HKR,,GXOTwoDigitalPanelPLLWa
+HKR,,DMMRecommendNonDDCCRTModes
+HKR,,PXBlockCrtSwitch
+HKR,,GXOUseSclkforProgrammableDispClk
+HKR,,DALDefaultACPowerState
+HKR,,DALDCLowThresholdValue
+HKR,"UMD\DXVA",DynamicContrast_ENABLE_DEF
+HKR,,DALRULE_NOTSHOWFORCEMODEINCLONE
+HKR,,DALRULE_AllowNonCEModes
+HKR,,EnableGPUVirtulizationFeature
+HKR,,MemorySizeReservedForHostOS
+HKR,,ExtEvent_ADCNoDetectionAtHotKey
+HKR,,PP_VariBrightFeatureEnable
+HKR,,GXODFPxDVODDRSupport
+HKR,,DMMReportCurrentScalingSupport
+HKR,,PlatformConfig
+HKR,,DisableVLDForSingleFireMVAsic
+HKR,,ExtEvent_EnablePolling
+HKR,,TMDS_DisableDither
+HKR,,Gxo24HzTimingSupport
+HKR,,GXODontDisableVGAAtResume
+HKR,,FBCSupportLevel
+HKR,,PP_RS780CGINTGFXMISC2
+HKR,UMD,R600DB_DEBUG
+HKR,,EnableGeminiAutoLink
+HKR,,ForceHigh3DClocks_NA
+HKR,,LEDSamplePeriodMs
+HKR,,LEDSampleHeight
+HKR,,LEDSampleWidth
+HKCU,"Software\AMD\Install","Command Line option for DAL"
+HKR,,DALRULE_DoNotReportPALHDTVModes
+HKR,,EnablePPSMSupport
+HKR,,PPSMSupportLevel
+HKR,,EnableSPSurface
+HKR,,ExtEvent_ApplyBootupProfile
+HKR,,PP_ForceReportOverdrive4
+HKR,,DALRULE_LIMITEDGREYSCALESUPPORT
+HKR,,DAL_TVRestrictedModesBCD
+HKR,,GXOM5XDisableLaneSwitch
+HKR,,Gxo50HzTimingSupport
+HKR,,Gxo50HzTimmingSupport
+HKR,,Extevent_HotplugUseCurrentMapping
+HKR,,DAL_CvRestrictedModesBCD
+HKR,,AutoClockConfig_NA
+HKR,,DALRULE_DISABLEVARIBRIGHTBYDEFAULT
+HKR,,DALRULE_HIDEVARIBRIGHT
+HKR,,PP_UserVariBrightEnable
+HKR,,GCORULE_CvImproveClkPrecision
+HKR,,DALDefaultCvModeBCD
+HKR,,DALRULE_CVUSEOPTIMODEASDEFAULT
+HKR,,PP_ForceHighDPMLevel
+HKR,,GCORULE_ExtTMDSReduceBlankTiming
+HKR,,GCOOPTION_ExtTMDSMaxTMDSClockSpeed
+HKR,,OverDrive3_NA
+HKR,,OverDrive2_NA
+HKR,,TVDACSettings
+HKR,,GCOOPTION_DefaultOvlBrightness
+HKR,,GCOOPTION_DefaultOvlSaturation
+HKR,,GCOOPTION_DefaultOvlContrast
+HKR,,DAL_CRTRestrictedModesBCD
+HKR,,DisableCrossFire
+HKR,,LDA_Status
+HKR,,LDA_ChainID
+HKR,,LDA_ChainLength
+HKR,,LDA_DeviceID
+HKR,,MMLibSupport
+HKR,,VForceModeSize
+HKR,,PipeChannels
+HKR,,MVPUMemoryDowngrade
+HKR,,MVPULimitVisibleMemory
+HKR,,MemoryBankDowngrade
+HKR,UMD,MVPU
+HKR,,DFPOption_SingleLink
+HKR,,DFPXOption_SingleLink
+HKR,,TVContrastDefaultNTSCJ
+HKR,,TVContrastDefaultPAL
+HKR,,R6LCD_ALLOWDISABLELOWREFRESHBYUSER
+HKR,,DALRULE_PROFILEPREFERREDMODEBASEDONEXTDEVICE
+HKR,,GCORULE_TMDSReducedBlankingUseCVT
+HKR,,DFPOption_MaxFreq
+HKR,,DALRULE_USERESTRICTEDNATIVETIMING
+HKR,,DisableAGPFW
+HKR,,UseBT601CSC
+HKR,,CRTRULE_FORCECRTDAC1DETECTED
+HKR,,CRTRULE_FORCECRTDAC2DETECTED
+HKR,,CRTRULE_FORCECRTDACTYPESDETECTED
+HKR,,DALRULE_GETDEFAULTTVFORMATATBOOT
+HKR,,DisableCursor
+HKR,,TVLumaFlicker
+HKR,,TVDotCrawl
+HKR,,TVCompositeFilter
+HKR,,DALDisplayPrioritySequence
+HKR,,ExtEvent_SaveADCProfileGlobally
+HKR,,DALRULE_RESTRICTNONDDCCRTTO1024x768
+HKR,,DALRULE_ALLOWNONDDCCRTALLMODESUPTO1024x768
+HKR,,DALRULE_ALLOWNONDDCCRTALLMODESUPTO1920x1200
+HKR,,DALRULE_POWERPLAYOPTIONENABLEDBYDEFAULT
+HKR,,TVContrastDefaultNTSC
+HKLM,"Software\AMDBranding",simple_eyefinity_ui_component_NA
+HKR,,PP_AutoOCMemoryClock
+HKR,,PP_AutoOCEngineClock
+HKR,,PP_AutoODActive
+HKR,,RAS_CurrentModeRasFeatures
+HKR,,KMD_BlockchainMode
+
+[ati2mtag_Carrizo.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_Raven.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_Picasso.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_Stoney.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_Topaz.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_R503.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[SourceDisksNames.amd64]
+1 = %DiskId%,,,.\B354982
+
+[SourceDisksFiles]
+atikmdag.sys=1
+atikmpag.sys=1
+amd-vulkan32.json=1
+amd-vulkan64.json=1
+amd_comgr.dll=1
+amd_comgr32.dll=1
+amd_opencl32.dll=1
+amd_opencl64.dll=1
+amdave32.dll=1
+amdave64.dll=1
+amde31a.dat=1
+amde34a.dat=1
+amde34b.dat=1
+amde40a.dat=1
+amdefctb.dat=1
+amdgfxinfo32.dll=1
+amdgfxinfo64.dll=1
+amdh264enc32.dll=1
+amdh264enc64.dll=1
+amdh265enc32.dll=1
+amdh265enc64.dll=1
+amdhdl32.dll=1
+amdhdl64.dll=1
+amdhip64.dll=1
+amdhwdecoder_32.dll=1
+amdhwdecoder_64.dll=1
+amdicdxx.dat=1
+amdihk32.dll=1
+amdihk64.dll=1
+amdkernelevents.mc=1
+amdkmpfd.ctz=1
+amdkmpfd.itz=1
+amdkmpfd.stz=1
+amdlogum.exe=1
+amdlvr32.dll=1
+amdlvr64.dll=1
+amdmantle32.dll=1
+amdmantle64.dll=1
+amdmcl32.dll=1
+amdmcl64.dll=1
+amdmiracast.dll=1
+amdmmcl.dll=1
+amdmmcl6.dll=1
+amdocl.dll=1
+amdocl12cl.dll=1
+amdocl12cl64.dll=1
+amdocl64.dll=1
+amdpcom32.dll=1
+amdpcom64.dll=1
+amduve32.dll=1
+amduve64.dll=1
+amdvlk32.dll=1
+amdvlk64.dll=1
+amdxc32.dll=1
+amdxc64.dll=1
+amdxcstub32.dll=1
+amdxcstub64.dll=1
+amdxn32.dll=1
+amdxn64.dll=1
+amf-mft-mjpeg-decoder32.dll=1
+amf-mft-mjpeg-decoder64.dll=1
+amfrt32.dll=1
+amfrt64.dll=1
+ati2erec.dll=1
+atiadlxx.dll=1
+atiadlxy.dll=1
+atiapfxx.blb=1
+aticfx32.dll=1
+aticfx64.dll=1
+aticfxstub32.dll=1
+aticfxstub64.dll=1
+atidemgy.dll=1
+atidxx32.dll=1
+atidxx64.dll=1
+atidxxstub32.dll=1
+atidxxstub64.dll=1
+atieah32.exe=1
+atieah64.exe=1
+atieclxx.exe=1
+atiesrxx.exe=1
+atig6pxx.dll=1
+atig6txx.dll=1
+atigktxx.dll=1
+atiglpxx.dll=1
+atiicdxx.dat=1
+atimpc32.dll=1
+atimpc64.dll=1
+atimuixx.dll=1
+atio6axx.dll=1
+atiodcli.exe=1
+atiode.exe=1
+atioglxx.dll=1
+atisamu32.dll=1
+atisamu64.dll=1
+atiu9p64.dll=1
+atiu9pag.dll=1
+atiumd64.dll=1
+atiumd6a.cap=1
+atiumd6a.dll=1
+atiumdag.dll=1
+atiumdva.cap=1
+atiumdva.dll=1
+atiuxp64.dll=1
+atiuxpag.dll=1
+ativce02.dat=1
+ativce03.dat=1
+ativvaxy_cik.dat=1
+ativvaxy_cik_nd.dat=1
+ativvaxy_cz_nd.dat=1
+ativvaxy_el_nd.dat=1
+ativvaxy_fj.dat=1
+ativvaxy_fj_nd.dat=1
+ativvaxy_gl_nd.dat=1
+ativvaxy_nv.dat=1
+ativvaxy_rv.dat=1
+ativvaxy_stn_nd.dat=1
+ativvaxy_vg20.dat=1
+ativvaxy_vg20_nd.dat=1
+ativvaxy_vi.dat=1
+ativvaxy_vi_nd.dat=1
+ativvsva.dat=1
+ativvsvl.dat=1
+ccc2_install.exe=1
+clinfo.exe=1
+coinst_19.40.dll=1
+detoured32.dll=1
+detoured64.dll=1
+dgtrayicon.exe=1
+gamemanager32.dll=1
+gamemanager64.dll=1
+kapp_ci.sbin=1
+kapp_si.sbin=1
+mantle32.dll=1
+mantle64.dll=1
+mantleaxl32.dll=1
+mantleaxl64.dll=1
+mcl32.dll=1
+mcl64.dll=1
+rapidfire.dll=1
+rapidfire64.dll=1
+rapidfireserver.dll=1
+rapidfireserver64.dll=1
+samu_krnl_ci.sbin=1
+samu_krnl_isv_ci.sbin=1
+vulkan32.dll=1
+vulkan64.dll=1
+vulkaninfo32.exe=1
+vulkaninfo64.exe=1
+
+[Strings]
+;
+; Non-Localizable Strings
+;
+REG_SZ         = 0x00000000
+REG_MULTI_SZ   = 0x00010000
+REG_EXPAND_SZ  = 0x00020000
+REG_BINARY     = 0x00000001
+REG_DWORD      = 0x00010001
+SERVICEROOT    = "System\CurrentControlSet\Services"
+;
+; Localizable Strings
+;
+DiskId       = "Advanced Micro Devices, Inc. Installation DISK (VIDEO)"
+GraphAdap    = "Graphics Adapter"
+ATI          = "Advanced Micro Devices, Inc."
+InstallDir   = "AMD\CCC2\Install"
+DisplayUninstall = "AMD Display Component Uninstall"
+ATIR300="WDDM (R300)"
+GUID_MAX_POWER_SAVINGS = {a1841308-3541-4fab-bc81-f71556f20b4a}
+GUID_TYPICAL_POWER_SAVINGS = {381b4222-f694-41f0-9685-ff5bb260df2e}
+GUID_MIN_POWER_SAVINGS = {8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c}
+GUID_BETTER_BATTERY = {961CC777-2547-4F9D-8174-7D86181b8A7A}
+GUID_BEST_PERFORMANCE = {DED574B5-45A0-4F42-8737-46345C09C238}
+POWERSLIDER_AC = 0
+POWERSLIDER_DC = 1
+FLG_ADDREG_TYPE_DWORD = 0x00010001
+GUID_BETTER_PERFORMANCE = {3af9B8d9-7c97-431d-ad78-34a8bfea439f}
+AMD9400.1 = "ATI Radeon HD 2900 XT"
+AMD9403.1 = "ATI Radeon HD 2900 PRO"
+AMD9405.1 = "ATI Radeon HD 2900 GT"
+AMD940A.1 = "ATI FireGL V8650"
+AMD940B.1 = "ATI FireGL V8600"
+AMD940F.1 = "ATI FireGL V7600"
+AMD9440.1 = "ATI Radeon HD 4800 Series"
+AMD9441.1 = "ATI Radeon HD 4870 X2"
+AMD9442.1 = "ATI Radeon HD 4800 Series"
+AMD9443.1 = "ATI Radeon HD 4850 X2"
+AMD9444.1 = "ATI FirePro V8750 (FireGL)"
+AMD944A.1 = "ATI Mobility Radeon HD 4850"
+AMD944C.1 = "ATI Radeon HD 4800 Series"
+AMD944E.1 = "ATI Radeon HD 4700 Series"
+AMD9450.1 = "AMD FireStream 9270"
+AMD9452.1 = "AMD FireStream 9250"
+AMD9456.1 = "ATI FirePro V8700 (FireGL)"
+AMD945A.1 = "ATI Mobility Radeon HD 4870"
+AMD9460.1 = "ATI Radeon HD 4800 Series"
+AMD9462.1 = "ATI Radeon HD 4800 Series"
+AMD9480.1 = "ATI Mobility Radeon HD 4650"
+AMD9488.1 = "ATI Mobility Radeon HD 4670"
+AMD9490.1 = "ATI Radeon HD 4600 Series"
+AMD9491.1 = "ATI RADEON E4690"
+AMD9495.1 = "ATI Radeon HD 4600 Series"
+AMD9498.1 = "ATI Radeon HD 4600 Series"
+AMD949C.1 = "ATI FirePro V7750 (FireGL)"
+AMD949E.1 = "ATI FirePro V5700 (FireGL)"
+AMD949F.1 = "ATI FirePro V3750 (FireGL)"
+AMD94A0.1 = "ATI Mobility Radeon HD 4830"
+AMD94A1.1 = "ATI Mobility Radeon HD 4860"
+AMD94A3.1 = "ATI FirePro M7740"
+AMD94B3.1 = "ATI Radeon HD 4770"
+AMD94B4.1 = "ATI Radeon HD 4700 Series"
+AMD94B5.1 = "ATI Radeon HD 4770"
+AMD94C1.1 = "ATI Radeon HD 2400 XT"
+AMD94C3.1 = "ATI Radeon HD 2400 PRO"
+AMD94C4.1 = "ATI Radeon HD 2400 PRO AGP"
+AMD94C6.1 = "RV610 94C6"
+AMD94C7.1 = "ATI Radeon HD 2350"
+AMD94C8.1 = "ATI Mobility Radeon HD 2400 XT"
+AMD94C9.1 = "ATI Mobility Radeon HD 2400"
+AMD94CB.1 = "ATI RADEON E2400"
+AMD94CC.1 = "ATI Radeon HD 2400"
+AMD9501.1 = "ATI Radeon HD 3870"
+AMD9504.1 = "ATI Mobility Radeon HD 3850"
+AMD9505.1 = "ATI Radeon HD 3850"
+AMD9506.1 = "ATI Mobility Radeon HD 3850 X2"
+AMD9507.1 = "ATI Radeon HD 3830"
+AMD9508.1 = "ATI Mobility Radeon HD 3870"
+AMD9509.1 = "ATI Mobility Radeon HD 3870 X2"
+AMD950F.1 = "ATI Radeon HD 3870 X2"
+AMD9511.1 = "ATI FireGL V7700"
+AMD9513.1 = "ATI Radeon HD 3850 X2"
+AMD9515.1 = "ATI Radeon HD 3850 AGP"
+AMD9519.1 = "AMD FireStream 9170"
+AMD9540.1 = "ATI Radeon HD 4550"
+AMD954F.1 = "ATI Radeon HD 4300/4500 Series"
+AMD9552.1 = "ATI Mobility Radeon HD 4300 Series"
+AMD9553.1 = "ATI Mobility Radeon HD 4500 Series"
+AMD9555.1 = "ATI Mobility Radeon HD 4500 Series"
+AMD9557.1 = "ATI FirePro RG220"
+AMD955F.1 = "ATI Mobility Radeon HD 4330"
+AMD9581.1 = "ATI Mobility Radeon HD 2600"
+AMD9583.1 = "ATI Mobility Radeon HD 2600 XT"
+AMD9586.1 = "ATI Radeon HD 2600 XT AGP"
+AMD9587.1 = "ATI Radeon HD 2600 Pro AGP"
+AMD9588.1 = "ATI Radeon HD 2600 XT"
+AMD9589.1 = "ATI Radeon HD 2600 Pro"
+AMD958A.1 = "Gemini RV630"
+AMD958B.1 = "Gemini ATI Mobility Radeon HD 2600 XT"
+AMD958C.1 = "ATI FireGL V5600"
+AMD958D.1 = "ATI FireGL V3600"
+AMD9591.1 = "ATI Mobility Radeon HD 3650"
+AMD9593.1 = "ATI Mobility Radeon HD 3670"
+AMD9596.1 = "ATI Radeon HD 3650 AGP"
+AMD9598.1 = "ATI Radeon HD 3600 Series"
+AMD95C0.1 = "ATI Radeon HD 3470"
+AMD95C2.1 = "ATI Mobility Radeon HD 3430"
+AMD95C4.1 = "ATI Mobility Radeon HD 3400 Series"
+AMD95C5.1 = "ATI Radeon HD 3450"
+AMD95C6.1 = "ATI Radeon HD 3450"
+AMD95C9.1 = "ATI Radeon HD 3450"
+AMD95CC.1 = "ATI FirePro V3700 (FireGL)"
+AMD95CD.1 = "ATI FirePro 2450"
+AMD95CE.1 = "ATI FirePro 2260"
+AMD95CF.1 = "ATI FirePro 2260"
+AMD9610.1 = "ATI Radeon HD 3200 Graphics"
+AMD9611.1 = "ATI Radeon 3100 Graphics"
+AMD9612.1 = "ATI Radeon HD 3200 Graphics"
+AMD9613.1 = "ATI Radeon 3100 Graphics"
+AMD9614.1 = "ATI Radeon HD 3300 Graphics"
+AMD9615.1 = "ATI Radeon HD 3200 Graphics"
+AMD9616.1 = "ATI Radeon 3000 Graphics"
+AMD9710.1 = "ATI Radeon HD 4200"
+AMD9712.1 = "ATI Mobility Radeon HD 4200 Series"
+AMD9713.1 = "ATI Mobility Radeon 4100"
+AMD9714.1 = "ATI Radeon HD 4290"
+AMD9715.1 = "ATI Radeon HD 4250"
+AMD6700.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6701.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6702.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6703.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6704.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6705.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6706.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6707.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6708.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6709.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6718.1 = "AMD Radeon HD 6900 Series"
+AMD6719.1 = "AMD Radeon HD 6900 Series"
+AMD671C.1 = "AMD Radeon HD 6900 Series"
+AMD671D.1 = "AMD Radeon HD 6900 Series"
+AMD671F.1 = "AMD Radeon HD 6900 Series"
+AMD6720.1 = "AMD Radeon HD 6900M Series"
+AMD6721.1 = "Mobility Radeon HD 6000 series"
+AMD6722.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6723.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6724.1 = "Mobility Radeon HD 6000 series"
+AMD6725.1 = "Mobility Radeon HD 6000 series"
+AMD6726.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6727.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6728.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6729.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6738.1 = "AMD Radeon HD 6800 Series"
+AMD6739.1 = "AMD Radeon HD 6800 Series"
+AMD673E.1 = "AMD Radeon HD 6700 Series"
+AMD6740.1 = "AMD Radeon HD 6700M Series"
+AMD6741.1 = "AMD Radeon 6600M and 6700M Series"
+AMD6742.1 = "AMD Radeon HD 7500/7600 Series"
+AMD6743.1 = "AMD Radeon E6760"
+AMD6744.1 = "AMD Mobility Radeon HD 6000 series"
+AMD6746.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6747.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6748.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6749.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD674A.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6750.1 = "AMD Radeon HD 6600A Series"
+AMD6751.1 = "AMD Radeon HD 7600A Series"
+AMD6758.1 = "AMD Radeon HD 6670"
+AMD6759.1 = "AMD Radeon HD 6570"
+AMD675B.1 = "AMD Radeon HD 7600 Series"
+AMD675D.1 = "AMD Radeon HD 7500 Series"
+AMD675F.1 = "AMD Radeon HD 5500 Series"
+AMD6760.1 = "AMD Radeon HD 7400M Series"
+AMD6761.1 = "AMD Radeon HD 6430M"
+AMD6762.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6763.1 = "AMD Radeon E6460"
+AMD6764.1 = "Mobility Radeon HD 6000 series"
+AMD6765.1 = "Mobility Radeon HD 6000 series"
+AMD6766.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6767.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6768.1 = "ATI FirePro V (FireGL V) Graphics Adapter"
+AMD6770.1 = "AMD Radeon HD 6400 Series"
+AMD6771.1 = "AMD Radeon(TM) HD8490"
+AMD6772.1 = "AMD Radeon HD 7400A Series"
+AMD6778.1 = "AMD Radeon HD 7000 series"
+AMD6779.1 = "AMD RADEON HD 6450"
+AMD677B.1 = "AMD Radeon HD 7400 Series"
+AMD6840.1 = "AMD Radeon HD 7600M Series"
+AMD6841.1 = "AMD Radeon HD 7500M/7600M Series"
+AMD6842.1 = "AMD Radeon HD 7000M Series"
+AMD6843.1 = "AMD Radeon HD 7670M"
+AMD6849.1 = "AMD Radeon HD 7400 Series"
+AMD684C.1 = "ATI FirePro V(FireGL V) Graphics Adapter"
+AMD6850.1 = "AMD Radeon HD 7400 Series"
+AMD6858.1 = "AMD Radeon HD 7400 Series"
+AMD6859.1 = "AMD Radeon HD 7400 Series"
+AMD6880.1 = "EG LEXINGTON"
+AMD6888.1 = "ATI FirePro V8800 (FireGL) Graphics Adapter"
+AMD6889.1 = "ATI FirePro V7800 (FireGL) Graphics Adapter"
+AMD688A.1 = "ATI FirePro V9800 (FireGL) Graphics Adapter"
+AMD688C.1 = "AMD FireStream 9370"
+AMD688D.1 = "AMD FireStream 9350"
+AMD6898.1 = "AMD Radeon HD 5800 Series"
+AMD6899.1 = "AMD Radeon HD 5800 Series"
+AMD689B.1 = "AMD Radeon HD 6800 Series"
+AMD689C.1 = "AMD Radeon HD 5900 Series"
+AMD689D.1 = "AMD Radeon HD 5900 Series"
+AMD689E.1 = "AMD Radeon HD 5800 Series"
+AMD68A0.1 = "AMD Mobility Radeon HD 5800 Series"
+AMD68A1.1 = "AMD Mobility Radeon HD 5800 Series"
+AMD68A8.1 = "AMD Radeon HD 6800M Series"
+AMD68A9.1 = "ATI FirePro V5800 (FireGL) Graphics Adapter"
+AMD68B0.1 = "AMD Mobility Radeon HD 5800 Series"
+AMD68B8.1 = "AMD Radeon HD 5700 Series"
+AMD68B9.1 = "AMD Radeon HD 5600/5700"
+AMD68BA.1 = "AMD Radeon HD 6700 Series"
+AMD68BE.1 = "AMD Radeon HD 5700 Series"
+AMD68BF.1 = "AMD Radeon HD 6700 Series"
+AMD68C0.1 = "AMD Mobility Radeon HD 5000"
+AMD68C1.1 = "AMD Mobility Radeon HD 5000 Series"
+AMD68C7.1 = "AMD Mobility Radeon HD 5570"
+AMD68C8.1 = "ATI FirePro V4800 (FireGL) Graphics Adapter"
+AMD68C9.1 = "ATI FirePro 3800 (FireGL) Graphics Adapter"
+AMD68D8.1 = "AMD Radeon HD 5670"
+AMD68D9.1 = "AMD Radeon HD 5570"
+AMD68DA.1 = "AMD Radeon HD 5500 Series"
+AMD68DE.1 = "EG REDWOOD"
+AMD68E0.1 = "AMD Mobility Radeon HD 5000 Series"
+AMD68E1.1 = "AMD Mobility Radeon HD 5000 Series"
+AMD68E4.1 = "AMD Radeon HD 6300M Series"
+AMD68E5.1 = "AMD Radeon HD 6300M Series"
+AMD68E8.1 = "EG CEDAR"
+AMD68E9.1 = "ATI FirePro (FireGL) Graphics Adapter"
+AMD68F1.1 = "ATI FirePro (FireGL) Graphics Adapter"
+AMD68F2.1 = "AMD FirePro 2270 (ATI FireGL)"
+AMD68F8.1 = "EG CEDAR"
+AMD68F9.1 = "AMD Radeon HD 5450"
+AMD68FA.1 = "AMD Radeon HD 7300 Series"
+AMD68FE.1 = "EG CEDAR"
+AMD964E.1 = "SUMO 964E"
+AMD964F.1 = "SUMO 964F"
+AMD9900.1 = "AMD Radeon HD 7660G"
+AMD9901.1 = "AMD Radeon HD 7660D"
+AMD9903.1 = "AMD Radeon HD 7640G"
+AMD9904.1 = "AMD Radeon HD 7560D"
+AMD9905.1 = "ATI FirePro A300 Series(FireGL V) Graphics Adapter"
+AMD9906.1 = "AMD FirePro A300 Series (FireGL V) Graphics Adapter"
+AMD9907.1 = "AMD Radeon HD 7620G"
+AMD9908.1 = "AMD Radeon HD 7600G"
+AMD9909.1 = "AMD Radeon HD 7500G"
+AMD990A.1 = "AMD Radeon HD 7500G"
+AMD990B.1 = "AMD Radeon HD 8650G"
+AMD990C.1 = "AMD Radeon HD 8670D"
+AMD990D.1 = "AMD Radeon HD 8550G"
+AMD990E.1 = "AMD Radeon HD 8570D"
+AMD990F.1 = "AMD Radeon HD 8610G"
+AMD9910.1 = "AMD Radeon HD 7660G"
+AMD9913.1 = "AMD Radeon HD 7640G"
+AMD9917.1 = "AMD Radeon HD 7620G"
+AMD9918.1 = "AMD Radeon HD 7600G"
+AMD9919.1 = "AMD Radeon HD 7500G"
+AMD9990.1 = "AMD Radeon HD 7520G"
+AMD9991.1 = "AMD Radeon HD 7540D"
+AMD9992.1 = "AMD Radeon HD 7420G"
+AMD9993.1 = "AMD Radeon HD 7480D"
+AMD9994.1 = "AMD Radeon HD 7400G"
+AMD9995.1 = "AMD Radeon HD 8450G"
+AMD9996.1 = "AMD Radeon HD 8470D"
+AMD9997.1 = "AMD Radeon HD 8350G"
+AMD9998.1 = "AMD Radeon HD 8370D"
+AMD9999.1 = "AMD Radeon HD 8510G"
+AMD999A.1 = "AMD Radeon HD 8410G"
+AMD999B.1 = "AMD Radeon HD 8310G"
+AMD999C.1 = "AMD Radeon HD 8650D"
+AMD999D.1 = "AMD Radeon HD 8550D"
+AMD99A0.1 = "AMD Radeon HD 7520G"
+AMD99A2.1 = "AMD Radeon HD 7420G"
+AMD99A4.1 = "AMD Radeon HD 7400G"
+AMD15D8.1 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15D8.2 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15D8.3 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15D8.4 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15D8.5 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15D8.6 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15D8.7 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15D8.8 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15D8.9 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15D8.10 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15D8.11 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15D8.12 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15D8.13 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15D8.14 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15D8.15 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15D8.16 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15D8.17 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15D8.18 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15D8.19 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15D8.20 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15D8.21 = "AMD Radeon(TM) Graphics"
+AMD15D8.22 = "AMD Radeon(TM) Graphics"
+AMD15D8.23 = "AMD Radeon(TM) Graphics"
+AMD15D8.24 = "AMD Radeon(TM) Graphics"
+AMD15D8.25 = "AMD Radeon(TM) Graphics"
+AMD15D8.26 = "AMD Radeon(TM) Graphics"
+AMD15D8.27 = "AMD Radeon(TM) Graphics"
+AMD15D8.28 = "AMD Radeon(TM) Graphics"
+AMD15D8.29 = "AMD Radeon(TM) Graphics"
+AMD15D8.30 = "AMD Radeon(TM) Graphics"
+AMD15D8.31 = "AMD Radeon(TM) Graphics"
+AMD15D8.32 = "AMD Radeon(TM) Graphics"
+AMD15D8.33 = "AMD Radeon(TM) Graphics"
+AMD15D8.34 = "AMD Radeon(TM) Graphics"
+AMD15D8.35 = "AMD Radeon(TM) Graphics"
+AMD15D8.36 = "AMD Radeon(TM) Graphics"
+AMD15D8.37 = "AMD Radeon(TM) Graphics"
+AMD15D8.38 = "AMD Radeon(TM) Graphics"
+AMD15D8.39 = "AMD Radeon(TM) Graphics"
+AMD15D8.40 = "AMD Radeon(TM) Graphics"
+AMD15D8.41 = "AMD Radeon(TM) Graphics"
+AMD15DD.1 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.2 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.3 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.4 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.5 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.6 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.7 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.8 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.9 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.10 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.11 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.12 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.13 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.14 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.15 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.16 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.17 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.18 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.19 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.20 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.21 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.22 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.23 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.24 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.25 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.26 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.27 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.28 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.29 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.30 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.31 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.32 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.33 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.34 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.35 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.36 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.37 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.38 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.39 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.40 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.41 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.42 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD15DD.43 = "AMD Radeon(TM) RX Vega 10 Graphics"
+AMD15DD.44 = "AMD Radeon(TM) Vega 8 Graphics"
+AMD15DD.45 = "AMD Radeon(TM) Vega 3 Graphics"
+AMD15DD.46 = "AMD Radeon(TM) Vega 6 Graphics"
+AMD6660.1 = "AMD Radeon (TM) 520"
+AMD6660.2 = "AMD Radeon (TM) 525DX"
+AMD6660.3 = "AMD Radeon (TM) R5 M330"
+AMD6665.1 = "Radeon(TM) 520"
+AMD6665.2 = "Radeon(TM) 520"
+AMD6665.3 = "Radeon(TM) 520"
+AMD6665.4 = "Radeon(TM) 520"
+AMD6665.5 = "Radeon(TM) 520"
+AMD6665.6 = "Radeon(TM) 520"
+AMD6665.7 = "Radeon(TM) 520"
+AMD6665.8 = "Radeon(TM) 520"
+AMD6665.9 = "Radeon(TM) 520"
+AMD6665.10 = "Radeon(TM) 520"
+AMD6900.1 = "AMD Radeon (TM) 530"
+AMD6900.2 = "AMD Radeon (TM) 535DX"
+AMD6900.3 = "Radeon 535"
+AMD6900.4 = "Radeon(TM) 530"
+AMD6900.5 = "Radeon(TM) 535"
+AMD6900.6 = "Radeon(TM) 530"
+AMD6900.7 = "Radeon(TM) 530"
+AMD6900.8 = "Radeon(TM) 530"
+AMD6900.9 = "Radeon(TM) 530"
+AMD6900.10 = "Radeon(TM) 530"
+AMD6900.11 = "Radeon 535"
+AMD6900.12 = "Radeon 530"
+AMD6900.13 = "Radeon 535"
+AMD6900.14 = "Radeon 530"
+AMD6900.15 = "AMD Radeon(TM) 535 series"
+AMD6900.16 = "AMD Radeon(TM) 530 series"
+AMD6900.17 = "AMD Radeon(TM) 535 series"
+AMD6900.18 = "AMD Radeon(TM) 530 series"
+AMD6900.19 = "Radeon(TM) 535"
+AMD6900.20 = "Radeon(TM) 530"
+AMD6900.21 = "Radeon 535"
+AMD6900.22 = "Radeon(TM) 530"
+AMD6900.23 = "AMD Radeon(TM) 535 series"
+AMD6900.24 = "AMD Radeon(TM) 530 series"
+AMD6900.25 = "AMD Radeon(TM) 535 series"
+AMD6900.26 = "AMD Radeon(TM) 530 series"
+AMD6900.27 = "AMD Radeon(TM) 535 series"
+AMD6900.28 = "AMD Radeon(TM) 530 series"
+AMD9874.1 = "AMD Radeon R7 Graphics"
+AMD9874.2 = "AMD Radeon R7 Graphics"
+AMD9874.3 = "AMD Radeon R5 Graphics"
+AMD9874.4 = "AMD Radeon R7 Graphics"
+AMD9874.5 = "AMD Radeon R7 Graphics"
+AMD9874.6 = "AMD Radeon R5 Graphics"
+AMD98E4.1 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.2 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.3 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.4 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.5 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.6 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.7 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.8 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.9 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.10 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.11 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.12 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.13 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.14 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.15 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.16 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.17 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.18 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.19 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.20 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.21 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.22 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.23 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.24 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.25 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.26 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.27 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.28 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.29 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.30 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.31 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.32 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.33 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.34 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.35 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.36 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.37 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.38 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.39 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.40 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.41 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.42 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.43 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.44 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.45 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.46 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.47 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.48 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.49 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.50 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.51 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.52 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.53 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.54 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.55 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.56 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.57 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.58 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.59 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.60 = "AMD Radeon(TM) R4 Graphics"
+AMD98E4.61 = "AMD Radeon(TM) R2 Graphics"
+AMD98E4.62 = "AMD Radeon(TM) R5 Graphics"
+AMD98E4.63 = "AMD Radeon(TM) R3 Graphics"
+AMD98E4.64 = "AMD Radeon(TM) R4 Graphics"
+
+
+[PowerSlider]
+SubGroup = {C763B4EC-0E50-4B6B-9BED-2B92A6EE884E}, "AMD Power Slider", "Adjust AMD Power Slider options"
+Setting = {7EC1751B-60ED-4588-AFB5-9819D3D77D90}, "Overlay", "Adjust overlay settings"
+Value = 0, "Battery saver", "Enable all AMD power savings features for best battery life", %FLG_ADDREG_TYPE_DWORD%, 0x0
+Value = 1, "Better battery", "Enable some AMD power savings feature to increase battery life", %FLG_ADDREG_TYPE_DWORD%, 0x1
+Value = 2, "Better performance", "Enable more performance gaining features", %FLG_ADDREG_TYPE_DWORD%, 0x2
+Value = 3, "Best performance", "Enable all possible AMD performance gaining features", %FLG_ADDREG_TYPE_DWORD%, 0x3
+Default = %GUID_MAX_POWER_SAVINGS%, %POWERSLIDER_AC%, 0
+Default = %GUID_MAX_POWER_SAVINGS%, %POWERSLIDER_DC%, 0
+Default = %GUID_TYPICAL_POWER_SAVINGS%, %POWERSLIDER_AC%, 2
+Default = %GUID_TYPICAL_POWER_SAVINGS%, %POWERSLIDER_DC%, 2
+Default = %GUID_MIN_POWER_SAVINGS%, %POWERSLIDER_AC%, 3
+Default = %GUID_MIN_POWER_SAVINGS%, %POWERSLIDER_DC%, 3
+Default = %GUID_BETTER_BATTERY%, %POWERSLIDER_AC%, 1
+Default = %GUID_BETTER_BATTERY%, %POWERSLIDER_DC%, 1
+Default = %GUID_BEST_PERFORMANCE%, %POWERSLIDER_AC%, 3
+Default = %GUID_BEST_PERFORMANCE%, %POWERSLIDER_DC%, 3
+
+[Ati2evxx_Generic_Service_Inst_DS]
+ServiceType = 0x10
+StartType = 2
+ErrorControl = 1
+ServiceBinary = %13%\B354982\atiesrxx.exe
+LoadOrderGroup = Event log
+
+[ati2mtag_ServiceSettings]
+HKR,,PowerXpressLoad,%REG_DWORD%,0xFFFFFFFF
+
+[ati2mtag_Proxy_DS]
+ServiceType = 1
+StartType = 3
+ErrorControl = 0
+LoadOrderGroup = Video
+ServiceBinary = %13%\B354982\atikmpag.sys
+
+[ati2mtag_KMD_DS]
+ServiceType = 1
+StartType = 3
+ErrorControl = 0
+LoadOrderGroup = Video
+AddReg = ati2mtag_ServiceSettings
+ServiceBinary = %13%\B354982\atikmdag.sys
+
+[ATI.Mfg.NTamd64.6.0.1]
+
+[ATI.Mfg.NTamd64.6.1.1]
+
+[ATI.Mfg.NTamd64.6.2.1]
+
+[ATI.Mfg.NTamd64.6.3.1]
+
+[ATI.Mfg.NTamd64.10.0.1..14310]
+"%AMD15D8.1%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C1
+"%AMD15D8.2%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C2
+"%AMD15D8.3%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C3
+"%AMD15D8.4%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C4
+"%AMD15D8.5%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EA103C&REV_C5
+"%AMD15D8.6%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C1
+"%AMD15D8.7%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C2
+"%AMD15D8.8%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C3
+"%AMD15D8.9%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C4
+"%AMD15D8.10%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_85EC103C&REV_C5
+"%AMD15D8.11%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C1
+"%AMD15D8.12%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C2
+"%AMD15D8.13%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C3
+"%AMD15D8.14%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C4
+"%AMD15D8.15%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8638103C&REV_C5
+"%AMD15D8.16%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C1
+"%AMD15D8.17%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C2
+"%AMD15D8.18%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C3
+"%AMD15D8.19%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C4
+"%AMD15D8.20%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8639103C&REV_C5
+"%AMD15D8.21%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8796103C&REV_C4
+"%AMD15D8.22%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8796103C&REV_CD
+"%AMD15D8.23%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8796103C&REV_CE
+"%AMD15D8.24%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8797103C&REV_C4
+"%AMD15D8.25%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8797103C&REV_CD
+"%AMD15D8.26%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_8797103C&REV_CE
+"%AMD15D8.27%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879A103C&REV_C4
+"%AMD15D8.28%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879A103C&REV_CD
+"%AMD15D8.29%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879A103C&REV_CE
+"%AMD15D8.30%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879B103C&REV_C4
+"%AMD15D8.31%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879B103C&REV_CD
+"%AMD15D8.32%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879B103C&REV_CE
+"%AMD15D8.33%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879E103C&REV_C4
+"%AMD15D8.34%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879E103C&REV_CD
+"%AMD15D8.35%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879E103C&REV_CE
+"%AMD15D8.36%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879F103C&REV_C4
+"%AMD15D8.37%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879F103C&REV_CD
+"%AMD15D8.38%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_879F103C&REV_CE
+"%AMD15D8.39%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_87CE103C&REV_C4
+"%AMD15D8.40%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_87CE103C&REV_CD
+"%AMD15D8.41%" = ati2mtag_PicassoDS, PCI\VEN_1002&DEV_15D8&SUBSYS_87CE103C&REV_CE
+"%AMD15DD.1%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84A2103C&REV_C3
+"%AMD15DD.2%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84A2103C&REV_C4
+"%AMD15DD.3%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84A2103C&REV_C5
+"%AMD15DD.4%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84A2103C&REV_CC
+"%AMD15DD.5%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84A3103C&REV_C3
+"%AMD15DD.6%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84A3103C&REV_C4
+"%AMD15DD.7%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84A3103C&REV_C5
+"%AMD15DD.8%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84A3103C&REV_CC
+"%AMD15DD.9%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84AE103C&REV_C3
+"%AMD15DD.10%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84AE103C&REV_C4
+"%AMD15DD.11%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84AE103C&REV_C5
+"%AMD15DD.12%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84AE103C&REV_CC
+"%AMD15DD.13%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84AF103C&REV_C3
+"%AMD15DD.14%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84AF103C&REV_C4
+"%AMD15DD.15%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84AF103C&REV_C5
+"%AMD15DD.16%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84AF103C&REV_CC
+"%AMD15DD.17%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84D2103C&REV_C4
+"%AMD15DD.18%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84D2103C&REV_C5
+"%AMD15DD.19%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84D2103C&REV_CC
+"%AMD15DD.20%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84D3103C&REV_C4
+"%AMD15DD.21%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84D3103C&REV_C5
+"%AMD15DD.22%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_84D3103C&REV_CC
+"%AMD15DD.23%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_8562103C&REV_C3
+"%AMD15DD.24%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_8562103C&REV_C4
+"%AMD15DD.25%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_8562103C&REV_C5
+"%AMD15DD.26%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_8562103C&REV_CC
+"%AMD15DD.27%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_8563103C&REV_C3
+"%AMD15DD.28%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_8563103C&REV_C4
+"%AMD15DD.29%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_8563103C&REV_C5
+"%AMD15DD.30%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_8563103C&REV_CC
+"%AMD15DD.31%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_85BD103C&REV_C3
+"%AMD15DD.32%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_85BD103C&REV_C4
+"%AMD15DD.33%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_85BD103C&REV_C5
+"%AMD15DD.34%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_85BD103C&REV_CC
+"%AMD15DD.35%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_85BE103C&REV_C3
+"%AMD15DD.36%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_85BE103C&REV_C4
+"%AMD15DD.37%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_85BE103C&REV_C5
+"%AMD15DD.38%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_85BE103C&REV_CC
+"%AMD15DD.39%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_863A103C&REV_C3
+"%AMD15DD.40%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_863A103C&REV_C4
+"%AMD15DD.41%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_863A103C&REV_C5
+"%AMD15DD.42%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_863A103C&REV_CC
+"%AMD15DD.43%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_863B103C&REV_C3
+"%AMD15DD.44%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_863B103C&REV_C4
+"%AMD15DD.45%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_863B103C&REV_C5
+"%AMD15DD.46%" = ati2mtag_RavenDS, PCI\VEN_1002&DEV_15DD&SUBSYS_863B103C&REV_CC
+"%AMD6660.1%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6660&SUBSYS_8331103C&REV_83
+"%AMD6660.2%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6660&SUBSYS_8333103C&REV_83
+"%AMD6660.3%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6660&SUBSYS_84AD103C&REV_83
+"%AMD6665.1%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_84A1103C&REV_C3
+"%AMD6665.2%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_84A3103C&REV_C3
+"%AMD6665.3%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_84AD103C&REV_C3
+"%AMD6665.4%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_84AF103C&REV_C3
+"%AMD6665.5%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_8561103C&REV_C3
+"%AMD6665.6%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_8563103C&REV_C3
+"%AMD6665.7%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_85BC103C&REV_C3
+"%AMD6665.8%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_85BE103C&REV_C3
+"%AMD6665.9%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_863B103C&REV_C3
+"%AMD6665.10%" = ati2mtag_R503DS, PCI\VEN_1002&DEV_6665&SUBSYS_863D103C&REV_C3
+"%AMD6900.1%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_8331103C&REV_83
+"%AMD6900.2%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_8333103C&REV_83
+"%AMD6900.3%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_84AD103C&REV_C1
+"%AMD6900.4%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_84AD103C&REV_C3
+"%AMD6900.5%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_84AF103C&REV_C1
+"%AMD6900.6%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_84AF103C&REV_C3
+"%AMD6900.7%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_84D1103C&REV_C1
+"%AMD6900.8%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_84D1103C&REV_C3
+"%AMD6900.9%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_84D3103C&REV_C1
+"%AMD6900.10%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_84D3103C&REV_C3
+"%AMD6900.11%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_85BC103C&REV_C1
+"%AMD6900.12%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_85BC103C&REV_C3
+"%AMD6900.13%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_85BE103C&REV_C1
+"%AMD6900.14%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_85BE103C&REV_C3
+"%AMD6900.15%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_85EC103C&REV_C1
+"%AMD6900.16%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_85EC103C&REV_C3
+"%AMD6900.17%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_8639103C&REV_C1
+"%AMD6900.18%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_8639103C&REV_C3
+"%AMD6900.19%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_863B103C&REV_C1
+"%AMD6900.20%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_863B103C&REV_C3
+"%AMD6900.21%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_863D103C&REV_C1
+"%AMD6900.22%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_863D103C&REV_C3
+"%AMD6900.23%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_8797103C&REV_C1
+"%AMD6900.24%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_8797103C&REV_C3
+"%AMD6900.25%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_879B103C&REV_C1
+"%AMD6900.26%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_879B103C&REV_C3
+"%AMD6900.27%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_879F103C&REV_C1
+"%AMD6900.28%" = ati2mtag_TopazDS, PCI\VEN_1002&DEV_6900&SUBSYS_879F103C&REV_C3
+"%AMD9874.1%" = ati2mtag_CarrizoDS, PCI\VEN_1002&DEV_9874&SUBSYS_8332103C&REV_C8
+"%AMD9874.2%" = ati2mtag_CarrizoDS, PCI\VEN_1002&DEV_9874&SUBSYS_8332103C&REV_C9
+"%AMD9874.3%" = ati2mtag_CarrizoDS, PCI\VEN_1002&DEV_9874&SUBSYS_8332103C&REV_CA
+"%AMD9874.4%" = ati2mtag_CarrizoDS, PCI\VEN_1002&DEV_9874&SUBSYS_8333103C&REV_C8
+"%AMD9874.5%" = ati2mtag_CarrizoDS, PCI\VEN_1002&DEV_9874&SUBSYS_8333103C&REV_C9
+"%AMD9874.6%" = ati2mtag_CarrizoDS, PCI\VEN_1002&DEV_9874&SUBSYS_8333103C&REV_CA
+"%AMD98E4.1%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_C0
+"%AMD98E4.2%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_C2
+"%AMD98E4.3%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_C6
+"%AMD98E4.4%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_D2
+"%AMD98E4.5%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_D4
+"%AMD98E4.6%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_DA
+"%AMD98E4.7%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_E2
+"%AMD98E4.8%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8330103C&REV_EA
+"%AMD98E4.9%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_C0
+"%AMD98E4.10%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_C2
+"%AMD98E4.11%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_C6
+"%AMD98E4.12%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_D2
+"%AMD98E4.13%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_D4
+"%AMD98E4.14%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_DA
+"%AMD98E4.15%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_E2
+"%AMD98E4.16%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8331103C&REV_EA
+"%AMD98E4.17%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84A0103C&REV_D4
+"%AMD98E4.18%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84A0103C&REV_DA
+"%AMD98E4.19%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84A0103C&REV_E2
+"%AMD98E4.20%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84A0103C&REV_EA
+"%AMD98E4.21%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84A1103C&REV_D4
+"%AMD98E4.22%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84A1103C&REV_DA
+"%AMD98E4.23%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84A1103C&REV_E2
+"%AMD98E4.24%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84A1103C&REV_EA
+"%AMD98E4.25%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84AC103C&REV_D4
+"%AMD98E4.26%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84AC103C&REV_DA
+"%AMD98E4.27%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84AC103C&REV_E2
+"%AMD98E4.28%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84AC103C&REV_EA
+"%AMD98E4.29%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84AD103C&REV_D4
+"%AMD98E4.30%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84AD103C&REV_DA
+"%AMD98E4.31%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84AD103C&REV_E2
+"%AMD98E4.32%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84AD103C&REV_EA
+"%AMD98E4.33%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84D0103C&REV_D4
+"%AMD98E4.34%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84D0103C&REV_DA
+"%AMD98E4.35%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84D0103C&REV_E2
+"%AMD98E4.36%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84D0103C&REV_EA
+"%AMD98E4.37%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84D1103C&REV_D4
+"%AMD98E4.38%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84D1103C&REV_DA
+"%AMD98E4.39%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84D1103C&REV_E2
+"%AMD98E4.40%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_84D1103C&REV_EA
+"%AMD98E4.41%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8560103C&REV_D4
+"%AMD98E4.42%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8560103C&REV_DA
+"%AMD98E4.43%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8560103C&REV_E2
+"%AMD98E4.44%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8560103C&REV_EA
+"%AMD98E4.45%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8561103C&REV_D4
+"%AMD98E4.46%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8561103C&REV_DA
+"%AMD98E4.47%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8561103C&REV_E2
+"%AMD98E4.48%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_8561103C&REV_EA
+"%AMD98E4.49%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_85BB103C&REV_D4
+"%AMD98E4.50%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_85BB103C&REV_DA
+"%AMD98E4.51%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_85BB103C&REV_E2
+"%AMD98E4.52%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_85BB103C&REV_EA
+"%AMD98E4.53%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_85BC103C&REV_D4
+"%AMD98E4.54%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_85BC103C&REV_DA
+"%AMD98E4.55%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_85BC103C&REV_E2
+"%AMD98E4.56%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_85BC103C&REV_EA
+"%AMD98E4.57%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_863C103C&REV_D4
+"%AMD98E4.58%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_863C103C&REV_DA
+"%AMD98E4.59%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_863C103C&REV_E2
+"%AMD98E4.60%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_863C103C&REV_EA
+"%AMD98E4.61%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_863D103C&REV_D4
+"%AMD98E4.62%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_863D103C&REV_DA
+"%AMD98E4.63%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_863D103C&REV_E2
+"%AMD98E4.64%" = ati2mtag_StoneyDS, PCI\VEN_1002&DEV_98E4&SUBSYS_863D103C&REV_EA
+"%AMD9400.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9400
+"%AMD9403.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9403
+"%AMD9405.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9405
+"%AMD940A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_940A
+"%AMD940B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_940B
+"%AMD940F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_940F
+"%AMD9440.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9440
+"%AMD9441.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9441
+"%AMD9442.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9442
+"%AMD9443.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9443
+"%AMD9444.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9444
+"%AMD944A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_944A
+"%AMD944C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_944C
+"%AMD944E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_944E
+"%AMD9450.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9450
+"%AMD9452.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9452
+"%AMD9456.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9456
+"%AMD945A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_945A
+"%AMD9460.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9460
+"%AMD9462.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9462
+"%AMD9480.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9480
+"%AMD9488.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9488
+"%AMD9490.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9490
+"%AMD9491.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9491
+"%AMD9495.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9495
+"%AMD9498.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9498
+"%AMD949C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_949C
+"%AMD949E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_949E
+"%AMD949F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_949F
+"%AMD94A0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94A0
+"%AMD94A1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94A1
+"%AMD94A3.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94A3
+"%AMD94B3.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94B3
+"%AMD94B4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94B4
+"%AMD94B5.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94B5
+"%AMD94C1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C1
+"%AMD94C3.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C3
+"%AMD94C4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C4
+"%AMD94C6.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C6
+"%AMD94C7.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C7
+"%AMD94C8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C8
+"%AMD94C9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94C9
+"%AMD94CB.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94CB
+"%AMD94CC.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_94CC
+"%AMD9501.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9501
+"%AMD9504.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9504
+"%AMD9505.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9505
+"%AMD9506.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9506
+"%AMD9507.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9507
+"%AMD9508.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9508
+"%AMD9509.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9509
+"%AMD950F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_950F
+"%AMD9511.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9511
+"%AMD9513.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9513
+"%AMD9515.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9515
+"%AMD9519.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9519
+"%AMD9540.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9540
+"%AMD954F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_954F
+"%AMD9552.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9552
+"%AMD9553.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9553
+"%AMD9555.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9555
+"%AMD9557.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9557
+"%AMD955F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_955F
+"%AMD9581.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9581
+"%AMD9583.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9583
+"%AMD9586.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9586
+"%AMD9587.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9587
+"%AMD9588.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9588
+"%AMD9589.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9589
+"%AMD958A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_958A
+"%AMD958B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_958B
+"%AMD958C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_958C
+"%AMD958D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_958D
+"%AMD9591.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9591
+"%AMD9593.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9593
+"%AMD9596.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9596
+"%AMD9598.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9598
+"%AMD95C0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C0
+"%AMD95C2.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C2
+"%AMD95C4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C4
+"%AMD95C5.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C5
+"%AMD95C6.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C6
+"%AMD95C9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95C9
+"%AMD95CC.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95CC
+"%AMD95CD.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95CD
+"%AMD95CE.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95CE
+"%AMD95CF.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_95CF
+"%AMD9610.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9610
+"%AMD9611.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9611
+"%AMD9612.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9612
+"%AMD9613.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9613
+"%AMD9614.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9614
+"%AMD9615.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9615
+"%AMD9616.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9616
+"%AMD9710.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9710
+"%AMD9712.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9712
+"%AMD9713.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9713
+"%AMD9714.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9714
+"%AMD9715.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9715
+"%AMD6700.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6700
+"%AMD6701.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6701
+"%AMD6702.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6702
+"%AMD6703.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6703
+"%AMD6704.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6704
+"%AMD6705.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6705
+"%AMD6706.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6706
+"%AMD6707.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6707
+"%AMD6708.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6708
+"%AMD6709.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6709
+"%AMD6718.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6718
+"%AMD6719.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6719
+"%AMD671C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_671C
+"%AMD671D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_671D
+"%AMD671F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_671F
+"%AMD6720.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6720
+"%AMD6721.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6721
+"%AMD6722.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6722
+"%AMD6723.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6723
+"%AMD6724.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6724
+"%AMD6725.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6725
+"%AMD6726.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6726
+"%AMD6727.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6727
+"%AMD6728.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6728
+"%AMD6729.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6729
+"%AMD6738.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6738
+"%AMD6739.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6739
+"%AMD673E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_673E
+"%AMD6740.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6740
+"%AMD6741.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6741
+"%AMD6742.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6742
+"%AMD6743.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6743
+"%AMD6744.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6744
+"%AMD6746.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6746
+"%AMD6747.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6747
+"%AMD6748.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6748
+"%AMD6749.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6749
+"%AMD674A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_674A
+"%AMD6750.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6750
+"%AMD6751.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6751
+"%AMD6758.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6758
+"%AMD6759.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6759
+"%AMD675B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_675B
+"%AMD675D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_675D
+"%AMD675F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_675F
+"%AMD6760.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6760
+"%AMD6761.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6761
+"%AMD6762.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6762
+"%AMD6763.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6763
+"%AMD6764.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6764
+"%AMD6765.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6765
+"%AMD6766.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6766
+"%AMD6767.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6767
+"%AMD6768.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6768
+"%AMD6770.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6770
+"%AMD6771.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6771
+"%AMD6772.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6772
+"%AMD6778.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6778
+"%AMD6779.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6779
+"%AMD677B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_677B
+"%AMD6840.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6840
+"%AMD6841.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6841
+"%AMD6842.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6842
+"%AMD6843.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6843
+"%AMD6849.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6849
+"%AMD684C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_684C
+"%AMD6850.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6850
+"%AMD6858.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6858
+"%AMD6859.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6859
+"%AMD6880.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6880
+"%AMD6888.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6888
+"%AMD6889.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6889
+"%AMD688A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_688A
+"%AMD688C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_688C
+"%AMD688D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_688D
+"%AMD6898.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6898
+"%AMD6899.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_6899
+"%AMD689B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_689B
+"%AMD689C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_689C
+"%AMD689D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_689D
+"%AMD689E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_689E
+"%AMD68A0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68A0
+"%AMD68A1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68A1
+"%AMD68A8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68A8
+"%AMD68A9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68A9
+"%AMD68B0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68B0
+"%AMD68B8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68B8
+"%AMD68B9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68B9
+"%AMD68BA.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68BA
+"%AMD68BE.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68BE
+"%AMD68BF.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68BF
+"%AMD68C0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C0
+"%AMD68C1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C1
+"%AMD68C7.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C7
+"%AMD68C8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C8
+"%AMD68C9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68C9
+"%AMD68D8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68D8
+"%AMD68D9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68D9
+"%AMD68DA.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68DA
+"%AMD68DE.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68DE
+"%AMD68E0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E0
+"%AMD68E1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E1
+"%AMD68E4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E4
+"%AMD68E5.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E5
+"%AMD68E8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E8
+"%AMD68E9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68E9
+"%AMD68F1.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68F1
+"%AMD68F2.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68F2
+"%AMD68F8.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68F8
+"%AMD68F9.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68F9
+"%AMD68FA.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68FA
+"%AMD68FE.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_68FE
+"%AMD964E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_964E
+"%AMD964F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_964F
+"%AMD9900.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9900
+"%AMD9901.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9901
+"%AMD9903.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9903
+"%AMD9904.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9904
+"%AMD9905.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9905
+"%AMD9906.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9906
+"%AMD9907.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9907
+"%AMD9908.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9908
+"%AMD9909.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9909
+"%AMD990A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990A
+"%AMD990B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990B
+"%AMD990C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990C
+"%AMD990D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990D
+"%AMD990E.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990E
+"%AMD990F.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_990F
+"%AMD9910.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9910
+"%AMD9913.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9913
+"%AMD9917.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9917
+"%AMD9918.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9918
+"%AMD9919.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9919
+"%AMD9990.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9990
+"%AMD9991.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9991
+"%AMD9992.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9992
+"%AMD9993.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9993
+"%AMD9994.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9994
+"%AMD9995.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9995
+"%AMD9996.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9996
+"%AMD9997.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9997
+"%AMD9998.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9998
+"%AMD9999.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_9999
+"%AMD999A.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_999A
+"%AMD999B.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_999B
+"%AMD999C.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_999C
+"%AMD999D.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_999D
+"%AMD99A0.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_99A0
+"%AMD99A2.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_99A2
+"%AMD99A4.1%" = ati2mtag_Legacy, PCI\VEN_1002&DEV_99A4
+;
+; General installation section
+;
+
+[ati2mtag_PicassoDS]
+FeatureScore=D1
+CopyFiles=DS.Graphics
+CopyFiles=DS.System32
+CopyFiles=DS.SysWow64
+CopyFiles=CCC.Install
+CopyFiles=R300.AMDKMPFD
+CopyFiles=R300.MFTENC
+CopyFiles=R300.MFTDEC
+CopyFiles=R300.MFTMJPEG
+CopyFiles=R300.MFTHEVC
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_AI_SoftwareDeviceSettings
+AddReg = ati2mtag_Picasso_SoftwareDeviceSettings
+AddReg = ati2mtag_PicassoDefault_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_DSUMD_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_PXAA_IGPU_Only_2ID
+AddReg = ati2mtag_DSUMD
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = DS.DelFiles
+DelFiles = DS.DelFilesWow
+RegisterDlls = MFTENCRegister
+RegisterDlls = MFTDECRegister
+RegisterDlls = MFTMJPEGRegister
+RegisterDlls = MFTHEVCRegister
+AddPowerSetting = PowerSlider
+
+[ati2mtag_PicassoDS.Services]
+AddService = amdkmdap, 0x00000002, ati2mtag_Proxy_DS, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, ati2mtag_KMD_DS, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst_DS, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_PicassoDS.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_PicassoDS.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_PicassoDS.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_RavenDS]
+FeatureScore=D1
+CopyFiles=DS.Graphics
+CopyFiles=DS.System32
+CopyFiles=DS.SysWow64
+CopyFiles=CCC.Install
+CopyFiles=R300.AMDKMPFD
+CopyFiles=R300.MFTENC
+CopyFiles=R300.MFTDEC
+CopyFiles=R300.MFTMJPEG
+CopyFiles=R300.MFTHEVC
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_AI_SoftwareDeviceSettings
+AddReg = ati2mtag_Raven_SoftwareDeviceSettings
+AddReg = ati2mtag_RavenDefault_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_DSUMD_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_PXAA_IGPU_Only_2ID
+AddReg = ati2mtag_DSUMD
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = DS.DelFiles
+DelFiles = DS.DelFilesWow
+RegisterDlls = MFTENCRegister
+RegisterDlls = MFTDECRegister
+RegisterDlls = MFTMJPEGRegister
+RegisterDlls = MFTHEVCRegister
+AddPowerSetting = PowerSlider
+
+[ati2mtag_RavenDS.Services]
+AddService = amdkmdap, 0x00000002, ati2mtag_Proxy_DS, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, ati2mtag_KMD_DS, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst_DS, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_RavenDS.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_RavenDS.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_RavenDS.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_R503DS]
+FeatureScore=D1
+CopyFiles=DS.Graphics
+CopyFiles=DS.System32
+CopyFiles=DS.SysWow64
+CopyFiles=CCC.Install
+CopyFiles=R300.AMDKMPFD
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_CI_SoftwareDeviceSettings
+AddReg = ati2mtag_R503_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_DSUMD_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_R503_PX
+AddReg = ati2mtag_PX_DGPU_Only_2ID
+AddReg = ati2mtag_DSUMD
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = DS.DelFiles
+DelFiles = DS.DelFilesWow
+
+[ati2mtag_R503DS.Services]
+AddService = amdkmdap, 0x00000002, ati2mtag_Proxy_DS, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, ati2mtag_KMD_DS, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst_DS, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_R503DS.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_R503DS.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_R503DS.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_TopazDS]
+FeatureScore=D1
+CopyFiles=DS.Graphics
+CopyFiles=DS.System32
+CopyFiles=DS.SysWow64
+CopyFiles=CCC.Install
+CopyFiles=R300.AMDKMPFD
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_VI_SoftwareDeviceSettings
+AddReg = ati2mtag_Topaz_SoftwareDeviceSettings
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_DSUMD_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Topaz_PX
+AddReg = ati2mtag_PX_DGPU_Only_2ID
+AddReg = ati2mtag_DSUMD
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = DS.DelFiles
+DelFiles = DS.DelFilesWow
+
+[ati2mtag_TopazDS.Services]
+AddService = amdkmdap, 0x00000002, ati2mtag_Proxy_DS, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, ati2mtag_KMD_DS, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst_DS, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_TopazDS.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_TopazDS.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_TopazDS.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_CarrizoDS]
+FeatureScore=D1
+CopyFiles=DS.Graphics
+CopyFiles=DS.System32
+CopyFiles=DS.SysWow64
+CopyFiles=CCC.Install
+CopyFiles=R300.AMDKMPFD
+CopyFiles=R300.MFTENC
+CopyFiles=R300.MFTDEC
+CopyFiles=R300.MFTMJPEG
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_VI_SoftwareDeviceSettings
+AddReg = ati2mtag_Carrizo_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_DSUMD_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_PXAA_IGPU_Only_2ID
+AddReg = ati2mtag_DSUMD
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = DS.DelFiles
+DelFiles = DS.DelFilesWow
+RegisterDlls = MFTENCRegister
+RegisterDlls = MFTDECRegister
+RegisterDlls = MFTMJPEGRegister
+
+[ati2mtag_CarrizoDS.Services]
+AddService = amdkmdap, 0x00000002, ati2mtag_Proxy_DS, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, ati2mtag_KMD_DS, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst_DS, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_CarrizoDS.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_CarrizoDS.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_CarrizoDS.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[ati2mtag_StoneyDS]
+FeatureScore=D1
+CopyFiles=DS.Graphics
+CopyFiles=DS.System32
+CopyFiles=DS.SysWow64
+CopyFiles=CCC.Install
+CopyFiles=R300.AMDKMPFD
+CopyFiles=R300.MFTENC
+CopyFiles=R300.MFTDEC
+CopyFiles=R300.MFTMJPEG
+AddReg = ati2mtag_SoftwareDeviceSettings
+AddReg = ati2mtag_VI_SoftwareDeviceSettings
+AddReg = ati2mtag_Stoney_SoftwareDeviceSettings
+AddReg = ati2mtag_Post_EG
+AddReg = ati2mtag_MultiUVD_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_NONPX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PX_SoftwareDeviceSettings
+AddReg = ati2mtag_Mobile_PXAA_SoftwareDeviceSettings
+AddReg = ati2mtag_DSUMD_common
+AddReg = ati2mtag_PXAA
+AddReg = ati2mtag_Manhattan_PX
+AddReg = ati2mtag_PXAA_IGPU_Only_2ID
+AddReg = ati2mtag_DSUMD
+DelReg = ati2mtag_RemoveDeviceSettings
+DelFiles = DS.DelFiles
+DelFiles = DS.DelFilesWow
+RegisterDlls = MFTENCRegister
+RegisterDlls = MFTDECRegister
+RegisterDlls = MFTMJPEGRegister
+
+[ati2mtag_StoneyDS.Services]
+AddService = amdkmdap, 0x00000002, ati2mtag_Proxy_DS, R300_EventLog_Inst
+AddService = amdkmdag, 0x00000000, ati2mtag_KMD_DS, R300_EventLog_Inst
+DelService = Ati External Event Utility
+AddService = AMD External Events Utility, 0x00000000, Ati2evxx_Generic_Service_Inst_DS, Ati2evxx_EventLog_Inst, APPLICATION, ATIeRecord
+
+[ati2mtag_StoneyDS.Coinstallers]
+AddReg = Coinstaller_AddReg
+CopyFiles = Coinstaller_CopyFiles
+
+[ati2mtag_StoneyDS.HW]
+AddReg = atikmdag_MSI_HardwareDeviceSettings
+
+[ati2mtag_StoneyDS.GeneralConfigData]
+MaximumDeviceMemoryConfiguration=128
+MaximumNumberOfDevices=4
+
+[DS.DelFiles]
+amd_comgr.dll
+AMD_OpenCL64.dll
+amdave64.dll
+amdgfxinfo64.dll
+amdhdl64.dll
+amdhip64.dll
+amdihk64.dll
+AMDKernelEvents.mc
+amdlogum.exe
+amdlvr64.dll
+amdmantle64.dll
+amdmcl64.dll
+amdmiracast.dll
+amdmmcl6.dll
+amdocl12cl64.dll
+amdocl64.dll
+amdpcom64.dll
+amduve64.dll
+amdvlk64.dll
+amd-vulkan64.json
+amdxc64.dll
+amdxcstub64.dll
+amdxn64.dll
+amfrt64.dll
+ati2erec.dll
+atiadlxx.dll
+atiapfxx.blb
+aticfx64.dll
+aticfxstub64.dll
+atidemgy.dll
+atidxx64.dll
+atidxxstub64.dll
+atieah64.exe
+atieclxx.exe
+atiesrxx.exe
+atig6pxx.dll
+atig6txx.dll
+atiglpxx.dll
+atimpc64.dll
+atimuixx.dll
+atio6axx.dll
+ATIODCLI.exe
+ATIODE.exe
+atisamu64.dll
+atiu9p64.dll
+atiumd64.dll
+atiumd6a.cap
+atiumd6a.dll
+atiuxp64.dll
+clinfo.exe
+coinst_19.40.dll
+detoured64.dll
+dgtrayicon.exe
+GameManager64.dll
+mantle64.dll
+mantleaxl64.dll
+Rapidfire64.dll
+RapidFireServer64.dll
+vulkan64.dll
+vulkaninfo64.exe
+
+[DS.DelFilesWow]
+amd_comgr32.dll
+AMD_OpenCL32.dll
+amdave32.dll
+amdgfxinfo32.dll
+amdhdl32.dll
+amdihk32.dll
+amdlvr32.dll
+amdmantle32.dll
+amdmcl32.dll
+amdmmcl.dll
+amdocl.dll
+amdocl12cl.dll
+amdpcom32.dll
+amduve32.dll
+amdvlk32.dll
+amd-vulkan32.json
+amdxc32.dll
+amdxcstub32.dll
+amdxn32.dll
+amfrt32.dll
+atiadlxy.dll
+atiapfxx.blb
+aticfx32.dll
+aticfxstub32.dll
+atidxx32.dll
+atidxxstub32.dll
+atieah32.exe
+atigktxx.dll
+atiglpxx.dll
+atimpc32.dll
+atioglxx.dll
+atisamu32.dll
+atiu9pag.dll
+atiumdag.dll
+atiumdva.cap
+atiumdva.dll
+atiuxpag.dll
+detoured32.dll
+GameManager32.dll
+mantle32.dll
+mantleaxl32.dll
+Rapidfire.dll
+RapidFireServer.dll
+vulkan32.dll
+vulkaninfo32.exe

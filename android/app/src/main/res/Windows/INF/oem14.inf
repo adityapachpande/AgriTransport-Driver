@@ -1,0 +1,634 @@
+;
+; hpanalyticscomp.inf
+;
+; Installs the HP Analytics
+;
+; Copyright(c) 2018, HP Development Company, L.P.All rights reserved.
+; This software contains confidential and proprietary information of HP.
+; The user of this software agrees not to disclose, disseminate or copy
+; such Confidential Information and shall use the software only in accordance
+; with the terms of the license agreement the user entered into with HP.
+;
+
+[Version]
+Signature           = $Windows NT$
+Class               = SoftwareComponent
+ClassGuid           = {5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider            = %Company%
+CatalogFile.ntamd64 = hpanalyticscompx64.cat
+CatalogFile.ntx86   = hpanalyticscompx86.cat
+DriverVer           = 10/19/2020,4.2.260.0
+
+;======================= Device Install Section========================
+
+[DestinationDirs]
+EXE.CopyList.ntamd64.provider_data_sources.battery = 13, x64\Provider Data Sources\Battery
+EXE.CopyList.ntamd64.provider_data_sources.diskselftest = 13, x64\Provider Data Sources\DiskSelfTest
+EXE.CopyList.ntamd64.provider_data_sources.drivercrash.x64 = 13, x64\Provider Data Sources\DriverCrash\x64
+EXE.CopyList.ntamd64.provider_data_sources.nvme.x64 = 13, x64\Provider Data Sources\NVME\x64
+EXE.CopyList.ntamd64.provider_data_sources.procinfo = 13, x64\Provider Data Sources\ProcInfo
+EXE.CopyList.ntamd64.provider_data_sources._shared.diskcheck = 13, x64\Provider Data Sources\_Shared\DiskCheck
+EXE.CopyList.ntamd64.providers = 13, x64\Providers
+EXE.CopyList.ntamd64.x64 = 13, x64\x64
+EXE.CopyList.ntamd64 = 13, x64
+EXE.CopyList.ntx86.provider_data_sources.battery = 13, x86\Provider Data Sources\Battery
+EXE.CopyList.ntx86.provider_data_sources.diskselftest = 13, x86\Provider Data Sources\DiskSelfTest
+EXE.CopyList.ntx86.provider_data_sources.drivercrash.x86 = 13, x86\Provider Data Sources\DriverCrash\x86
+EXE.CopyList.ntx86.provider_data_sources.nvme.win32 = 13, x86\Provider Data Sources\NVME\Win32
+EXE.CopyList.ntx86.provider_data_sources.procinfo = 13, x86\Provider Data Sources\ProcInfo
+EXE.CopyList.ntx86.provider_data_sources._shared.diskcheck = 13, x86\Provider Data Sources\_Shared\DiskCheck
+EXE.CopyList.ntx86.providers = 13, x86\Providers
+EXE.CopyList.ntx86.win32 = 13, x86\Win32
+EXE.CopyList.ntx86.x86 = 13, x86\x86
+EXE.CopyList.ntx86 = 13, x86
+
+[Manufacturer]
+%Mfg% = HP, ntamd64, ntx86
+
+;======================= Device Install x64 Section ========================
+
+[HP.ntamd64]
+%DeviceDesc% = hpanalyticscomp_Install.ntamd64, SWC\HPAnalytics
+
+[hpanalyticscomp_Install.ntamd64]
+CopyFiles = EXE.CopyList.ntamd64.provider_data_sources.battery
+CopyFiles = EXE.CopyList.ntamd64.provider_data_sources.diskselftest
+CopyFiles = EXE.CopyList.ntamd64.provider_data_sources.drivercrash.x64
+CopyFiles = EXE.CopyList.ntamd64.provider_data_sources.nvme.x64
+CopyFiles = EXE.CopyList.ntamd64.provider_data_sources.procinfo
+CopyFiles = EXE.CopyList.ntamd64.provider_data_sources._shared.diskcheck
+CopyFiles = EXE.CopyList.ntamd64.providers
+CopyFiles = EXE.CopyList.ntamd64.x64
+CopyFiles = EXE.CopyList.ntamd64
+
+[SourceDisksNames.amd64]
+1 = %DiskId%, , , \x64\Provider Data Sources\Battery
+2 = %DiskId%, , , \x64\Provider Data Sources\DiskSelfTest
+3 = %DiskId%, , , \x64\Provider Data Sources\DriverCrash\x64
+4 = %DiskId%, , , \x64\Provider Data Sources\NVME\x64
+5 = %DiskId%, , , \x64\Provider Data Sources\ProcInfo
+6 = %DiskId%, , , \x64\Provider Data Sources\_Shared\DiskCheck
+7 = %DiskId%, , , \x64\Providers
+8 = %DiskId%, , , \x64\x64
+9 = %DiskId%, , , \x64
+
+[SourceDisksFiles.amd64]
+BatteryTest.exe = 1
+BatteryTest.exe.hpsign = 1
+HpBatteryCdm.dll = 1
+HpBatteryChargeSubTest.dll = 1
+HPBatteryStateSubTest.dll = 1
+HpBlogic.dll = 1
+HpBwcDecode.dll = 1
+ETD_SMARTCmd.exe = 2
+dumpchk.exe = 3
+NVMEHealthInfox64.dll = 4
+ProcInfo.exe = 5
+ETD_GetSMART.exe = 6
+ApplicationsInstalledProvider.dll = 7
+BatteryProvider.dll = 7
+BiosphereProvider.dll = 7
+BiosProvider.dll = 7
+DeviceConsentProvider.dll = 7
+DeviceOnlineTimeProvider.dll = 7
+DiskLogicalProvider.dll = 7
+DiskPhysicalProvider.dll = 7
+DiskSelfTestProvider.dll = 7
+DisplayProvider.dll = 7
+DriverCrashProvider.dll = 7
+EnvironmentVariableProvider.dll = 7
+GraphicsCardProvider.dll = 7
+GraphicsProvider.dll = 7
+GraphicsSettingsProvider.dll = 7
+HPBiosProvider.dll = 7
+HPBiosSensorsProvider.dll = 7
+HPITImageProvider.dll = 7
+HpsaMessagesProvider.dll = 7
+HpsaUpdatesProvider.dll = 7
+InstalledWindowsUpdatesProvider.dll = 7
+MemoryPhysicalProvider.dll = 7
+MemoryProvider.dll = 7
+NetworkProvider.dll = 7
+NVMEProvider.dll = 7
+NVMESelfTestProvider.dll = 7
+OperatingSystemProvider.dll = 7
+PnPDeviceProvider.dll = 7
+PnPDriverProvider.dll = 7
+ProcessorProvider.dll = 7
+RealTimeClockProvider.dll = 7
+SaaSAppProvider.dll = 7
+SecurityProvider.dll = 7
+SmartDriveProvider.dll = 7
+StorageUsageProvider.dll = 7
+SureRecoverSettingsProvider.dll = 7
+SystemDriverProvider.dll = 7
+SystemProvider.dll = 7
+SystemSlotsProvider.dll = 7
+SystemStateProvider.dll = 7
+ThermalProvider.dll = 7
+TPMProvider.dll = 7
+WindowsEventsProvider.dll = 7
+WindowsPerformanceProvider.dll = 7
+WindowsProcessesProvider.dll = 7
+WindowsServicesProvider.dll = 7
+WindowsUpdatesProvider.dll = 7
+CATHashCalculator.dll = 8
+concrt140.dll = 8
+FusionManagedWrapper.dll = 8
+FusionWorker.dll = 8
+Logging.dll = 8
+msvcp140.dll = 8
+msvcp140_1.dll = 8
+msvcp140_2.dll = 8
+NativeRpcClient.dll = 8
+RpcClient.dll = 8
+SQLite.Interop.dll = 8
+vccorlib140.dll = 8
+vcruntime140.dll = 8
+AWSSDK.CognitoIdentity.dll = 9
+AWSSDK.Core.dll = 9
+AWSSDK.Kinesis.dll = 9
+AWSSDK.SecurityToken.dll = 9
+CaslSDK.dll = 9
+config.json = 9
+Crc32C.NET.dll = 9
+EntityFramework.dll = 9
+EntityFramework.SqlServer.dll = 9
+HPGraphicsAnalytics.dll = 9
+LICENSES.TXT = 9
+log4net.dll = 9
+ManagedWifi.dll = 9
+MathNet.Numerics.dll = 9
+Newtonsoft.Json.dll = 9
+SmbiosSDK.dll = 9
+Snappy.NET.dll = 9
+System.Data.SQLite.dll = 9
+TAI-MSM.msm = 9
+TouchpointAnalyticsClient.exe = 9
+TouchpointAnalyticsClient.exe.config = 9
+TouchpointAnalyticsClient.exe.hpsign = 9
+TouchpointAnalyticsClientAPI.dll = 9
+TouchpointAnalyticsClientCommons.dll = 9
+TouchpointAnalyticsClientService.exe = 9
+TouchpointAnalyticsClientService.exe.config = 9
+TouchpointAnalyticsClientService.exe.hpsign = 9
+TouchpointAnalyticsClientService_HPManifest.p7s = 9
+TouchpointAnalyticsClientService_HPManifest.xml = 9
+TouchpointAnalyticsClient_HPManifest.p7s = 9
+TouchpointAnalyticsClient_HPManifest.xml = 9
+TouchpointGpuInfo.exe = 9
+WMISDK.dll = 9
+
+[EXE.CopyList.ntamd64.provider_data_sources.battery]
+BatteryTest.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+BatteryTest.exe.hpsign, , %COPYFLG_FORCE_FILE_IN_USE%
+HpBatteryCdm.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpBatteryChargeSubTest.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPBatteryStateSubTest.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpBlogic.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpBwcDecode.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntamd64.provider_data_sources.diskselftest]
+ETD_SMARTCmd.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntamd64.provider_data_sources.drivercrash.x64]
+dumpchk.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntamd64.provider_data_sources.nvme.x64]
+NVMEHealthInfox64.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntamd64.provider_data_sources.procinfo]
+ProcInfo.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntamd64.provider_data_sources._shared.diskcheck]
+ETD_GetSMART.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntamd64.providers]
+ApplicationsInstalledProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BatteryProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BiosphereProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BiosProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DeviceConsentProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DeviceOnlineTimeProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DiskLogicalProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DiskPhysicalProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DiskSelfTestProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DisplayProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DriverCrashProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+EnvironmentVariableProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+GraphicsCardProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+GraphicsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+GraphicsSettingsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPBiosProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPBiosSensorsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPITImageProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpsaMessagesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpsaUpdatesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+InstalledWindowsUpdatesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+MemoryPhysicalProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+MemoryProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NVMEProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NVMESelfTestProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+OperatingSystemProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+PnPDeviceProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+PnPDriverProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+ProcessorProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+RealTimeClockProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SaaSAppProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SecurityProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SmartDriveProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+StorageUsageProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SureRecoverSettingsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemDriverProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemSlotsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemStateProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+ThermalProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+TPMProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsEventsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsPerformanceProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsProcessesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsServicesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsUpdatesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntamd64.x64]
+CATHashCalculator.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+concrt140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+FusionManagedWrapper.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+FusionWorker.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+Logging.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140_1.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140_2.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NativeRpcClient.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+RpcClient.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SQLite.Interop.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+vccorlib140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+vcruntime140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntamd64]
+AWSSDK.CognitoIdentity.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AWSSDK.Core.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AWSSDK.Kinesis.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AWSSDK.SecurityToken.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+CaslSDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+config.json, , %COPYFLG_FORCE_FILE_IN_USE%
+Crc32C.NET.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+EntityFramework.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+EntityFramework.SqlServer.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPGraphicsAnalytics.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+LICENSES.TXT, , %COPYFLG_FORCE_FILE_IN_USE%
+log4net.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+ManagedWifi.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+MathNet.Numerics.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+Newtonsoft.Json.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SmbiosSDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+Snappy.NET.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+System.Data.SQLite.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+TAI-MSM.msm, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient.exe.config, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient.exe.hpsign, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientAPI.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientCommons.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService.exe.config, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService.exe.hpsign, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointGpuInfo.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+WMISDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[hpanalyticscomp_Install.ntamd64.Services]
+AddService = HpTouchpointAnalyticsService, 0x00000C00, HpTouchpointAnalyticsService_Service_Inst64, 
+AddService = , 0x00000002
+
+[HpTouchpointAnalyticsService_Service_Inst64]
+DisplayName    = %hpanalyticscomp%
+ServiceType    = 0x00000010
+StartType      = %SERVICE_AUTO_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup = "Base"
+ServiceBinary  = %13%\x64\TouchpointAnalyticsClientService.exe
+
+[hpanalyticscomp_Install.ntamd64.HW]
+AddReg = hpanalyticscomp_Install.ntamd64.HW_AddReg
+
+[hpanalyticscomp_Install.ntamd64.HW_AddReg]
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{E5FB98E0-0784-44F0-8CEC-95CD4690C43F}, DisplayVersion, , 255.255.65535.0
+
+;======================= Device Install x86 Section ========================
+
+[HP.ntx86]
+%DeviceDesc% = hpanalyticscomp_Install.ntx86, SWC\HPAnalytics
+
+[hpanalyticscomp_Install.ntx86]
+CopyFiles = EXE.CopyList.ntx86.provider_data_sources.battery
+CopyFiles = EXE.CopyList.ntx86.provider_data_sources.diskselftest
+CopyFiles = EXE.CopyList.ntx86.provider_data_sources.drivercrash.x86
+CopyFiles = EXE.CopyList.ntx86.provider_data_sources.nvme.win32
+CopyFiles = EXE.CopyList.ntx86.provider_data_sources.procinfo
+CopyFiles = EXE.CopyList.ntx86.provider_data_sources._shared.diskcheck
+CopyFiles = EXE.CopyList.ntx86.providers
+CopyFiles = EXE.CopyList.ntx86.win32
+CopyFiles = EXE.CopyList.ntx86.x86
+CopyFiles = EXE.CopyList.ntx86
+
+[SourceDisksNames.x86]
+1 = %DiskId%, , , \x86\Provider Data Sources\Battery
+2 = %DiskId%, , , \x86\Provider Data Sources\DiskSelfTest
+3 = %DiskId%, , , \x86\Provider Data Sources\DriverCrash\x86
+4 = %DiskId%, , , \x86\Provider Data Sources\NVME\Win32
+5 = %DiskId%, , , \x86\Provider Data Sources\ProcInfo
+6 = %DiskId%, , , \x86\Provider Data Sources\_Shared\DiskCheck
+7 = %DiskId%, , , \x86\Providers
+8 = %DiskId%, , , \x86\Win32
+9 = %DiskId%, , , \x86\x86
+10 = %DiskId%, , , \x86
+
+[SourceDisksFiles.x86]
+BatteryTest.exe = 1
+BatteryTest.exe.hpsign = 1
+HpBatteryCdm.dll = 1
+HpBatteryChargeSubTest.dll = 1
+HPBatteryStateSubTest.dll = 1
+HpBlogic.dll = 1
+HpBwcDecode.dll = 1
+ETD_SMARTCmd.exe = 2
+dumpchk.exe = 3
+NVMEHealthInfoWin32.dll = 4
+ProcInfo.exe = 5
+ETD_GetSMART.exe = 6
+ApplicationsInstalledProvider.dll = 7
+BatteryProvider.dll = 7
+BiosphereProvider.dll = 7
+BiosProvider.dll = 7
+DeviceConsentProvider.dll = 7
+DeviceOnlineTimeProvider.dll = 7
+DiskLogicalProvider.dll = 7
+DiskPhysicalProvider.dll = 7
+DiskSelfTestProvider.dll = 7
+DisplayProvider.dll = 7
+DriverCrashProvider.dll = 7
+EnvironmentVariableProvider.dll = 7
+GraphicsCardProvider.dll = 7
+GraphicsProvider.dll = 7
+GraphicsSettingsProvider.dll = 7
+HPBiosProvider.dll = 7
+HPBiosSensorsProvider.dll = 7
+HPITImageProvider.dll = 7
+HpsaMessagesProvider.dll = 7
+HpsaUpdatesProvider.dll = 7
+InstalledWindowsUpdatesProvider.dll = 7
+MemoryPhysicalProvider.dll = 7
+MemoryProvider.dll = 7
+NetworkProvider.dll = 7
+NVMEProvider.dll = 7
+NVMESelfTestProvider.dll = 7
+OperatingSystemProvider.dll = 7
+PnPDeviceProvider.dll = 7
+PnPDriverProvider.dll = 7
+ProcessorProvider.dll = 7
+RealTimeClockProvider.dll = 7
+SaaSAppProvider.dll = 7
+SecurityProvider.dll = 7
+SmartDriveProvider.dll = 7
+StorageUsageProvider.dll = 7
+SureRecoverSettingsProvider.dll = 7
+SystemDriverProvider.dll = 7
+SystemProvider.dll = 7
+SystemSlotsProvider.dll = 7
+SystemStateProvider.dll = 7
+ThermalProvider.dll = 7
+TPMProvider.dll = 7
+WindowsEventsProvider.dll = 7
+WindowsPerformanceProvider.dll = 7
+WindowsProcessesProvider.dll = 7
+WindowsServicesProvider.dll = 7
+WindowsUpdatesProvider.dll = 7
+CATHashCalculator.dll = 8
+concrt140.dll = 8
+FusionManagedWrapper.dll = 8
+FusionWorker.dll = 8
+Logging.dll = 8
+msvcp140.dll = 8
+msvcp140_1.dll = 8
+msvcp140_2.dll = 8
+NativeRpcClient.dll = 8
+RpcClient.dll = 8
+vccorlib140.dll = 8
+vcruntime140.dll = 8
+SQLite.Interop.dll = 9
+AWSSDK.CognitoIdentity.dll = 10
+AWSSDK.Core.dll = 10
+AWSSDK.Kinesis.dll = 10
+AWSSDK.SecurityToken.dll = 10
+CaslSDK.dll = 10
+config.json = 10
+Crc32C.NET.dll = 10
+EntityFramework.dll = 10
+EntityFramework.SqlServer.dll = 10
+HPGraphicsAnalytics.dll = 10
+LICENSES.TXT = 10
+log4net.dll = 10
+ManagedWifi.dll = 10
+MathNet.Numerics.dll = 10
+Newtonsoft.Json.dll = 10
+SmbiosSDK.dll = 10
+Snappy.NET.dll = 10
+System.Data.SQLite.dll = 10
+TAI-MSM.msm = 10
+TouchpointAnalyticsClient.exe = 10
+TouchpointAnalyticsClient.exe.config = 10
+TouchpointAnalyticsClient.exe.hpsign = 10
+TouchpointAnalyticsClientAPI.dll = 10
+TouchpointAnalyticsClientCommons.dll = 10
+TouchpointAnalyticsClientService.exe = 10
+TouchpointAnalyticsClientService.exe.config = 10
+TouchpointAnalyticsClientService.exe.hpsign = 10
+TouchpointAnalyticsClientService_HPManifest.p7s = 10
+TouchpointAnalyticsClientService_HPManifest.xml = 10
+TouchpointAnalyticsClient_HPManifest.p7s = 10
+TouchpointAnalyticsClient_HPManifest.xml = 10
+TouchpointGpuInfo.exe = 10
+WMISDK.dll = 10
+
+[EXE.CopyList.ntx86.provider_data_sources.battery]
+BatteryTest.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+BatteryTest.exe.hpsign, , %COPYFLG_FORCE_FILE_IN_USE%
+HpBatteryCdm.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpBatteryChargeSubTest.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPBatteryStateSubTest.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpBlogic.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpBwcDecode.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntx86.provider_data_sources.diskselftest]
+ETD_SMARTCmd.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntx86.provider_data_sources.drivercrash.x86]
+dumpchk.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntx86.provider_data_sources.nvme.win32]
+NVMEHealthInfoWin32.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntx86.provider_data_sources.procinfo]
+ProcInfo.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntx86.provider_data_sources._shared.diskcheck]
+ETD_GetSMART.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntx86.providers]
+ApplicationsInstalledProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BatteryProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BiosphereProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BiosProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DeviceConsentProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DeviceOnlineTimeProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DiskLogicalProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DiskPhysicalProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DiskSelfTestProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DisplayProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DriverCrashProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+EnvironmentVariableProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+GraphicsCardProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+GraphicsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+GraphicsSettingsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPBiosProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPBiosSensorsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPITImageProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpsaMessagesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HpsaUpdatesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+InstalledWindowsUpdatesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+MemoryPhysicalProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+MemoryProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NVMEProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NVMESelfTestProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+OperatingSystemProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+PnPDeviceProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+PnPDriverProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+ProcessorProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+RealTimeClockProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SaaSAppProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SecurityProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SmartDriveProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+StorageUsageProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SureRecoverSettingsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemDriverProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemSlotsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemStateProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+ThermalProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+TPMProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsEventsProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsPerformanceProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsProcessesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsServicesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsUpdatesProvider.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntx86.win32]
+CATHashCalculator.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+concrt140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+FusionManagedWrapper.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+FusionWorker.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+Logging.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140_1.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140_2.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NativeRpcClient.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+RpcClient.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+vccorlib140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+vcruntime140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntx86.x86]
+SQLite.Interop.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[EXE.CopyList.ntx86]
+AWSSDK.CognitoIdentity.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AWSSDK.Core.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AWSSDK.Kinesis.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AWSSDK.SecurityToken.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+CaslSDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+config.json, , %COPYFLG_FORCE_FILE_IN_USE%
+Crc32C.NET.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+EntityFramework.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+EntityFramework.SqlServer.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPGraphicsAnalytics.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+LICENSES.TXT, , %COPYFLG_FORCE_FILE_IN_USE%
+log4net.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+ManagedWifi.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+MathNet.Numerics.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+Newtonsoft.Json.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SmbiosSDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+Snappy.NET.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+System.Data.SQLite.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+TAI-MSM.msm, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient.exe.config, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient.exe.hpsign, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientAPI.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientCommons.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService.exe.config, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService.exe.hpsign, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClientService_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointAnalyticsClient_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+TouchpointGpuInfo.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+WMISDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[hpanalyticscomp_Install.ntx86.Services]
+AddService = HpTouchpointAnalyticsService, 0x00000C00, HpTouchpointAnalyticsService_Service_Inst86, 
+AddService = , 0x00000002
+
+[HpTouchpointAnalyticsService_Service_Inst86]
+DisplayName    = %hpanalyticscomp%
+ServiceType    = 0x00000010
+StartType      = %SERVICE_AUTO_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup = "Base"
+ServiceBinary  = %13%\x86\TouchpointAnalyticsClientService.exe
+
+[hpanalyticscomp_Install.ntx86.HW]
+AddReg = hpanalyticscomp_Install.ntx86.HW_AddReg
+
+[hpanalyticscomp_Install.ntx86.HW_AddReg]
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{E5FB98E0-0784-44F0-8CEC-95CD4690C43F}, DisplayVersion, , 255.255.65535.0
+
+[Strings]
+Mfg = "HP"
+DiskId = "Install disk (1)"
+Company = "HP Inc."
+DeviceDesc = "HP Analytics"
+hpanalyticscomp = "HP Analytics service"
+
+;
+; The "standard" defines
+;
+REG_EXPAND_SZ = 0x00020000
+REG_DWORD = 0x00010001
+SERVICE_BOOT_START = 0x00000000
+SERVICE_SYSTEM_START = 0x00000001
+SERVICE_AUTO_START = 0x00000002
+SERVICE_DEMAND_START = 0x00000003
+SERVICE_DISABLED = 0x00000004
+SERVICE_ERROR_IGNORE = 0x00000000
+SERVICE_ERROR_NORMAL = 0x00000001
+SERVICE_ERROR_SEVERE = 0x00000002
+SERVICE_ERROR_CRITICAL = 0x00000003
+COPYFLG_WARN_IF_SKIP = 0x00000001
+COPYFLG_NOSKIP = 0x00000002
+COPYFLG_NOVERSIONCHECK = 0x00000004
+COPYFLG_FORCE_FILE_IN_USE = 0x00000008
+COPYFLG_NO_OVERWRITE = 0x00000010
+COPYFLG_NO_VERSION_DIALOG = 0x00000020
+COPYFLG_OVERWRITE_OLDER_ONLY = 0x00000040
+COPYFLG_REPLACEONLY = 0x00000400
+COPYFLG_NODECOMP = 0x00000800
+COPYFLG_REPLACE_BOOT_FILE = 0x00001000
+COPYFLG_NOPRUNE = 0x00002000
+COPYFLG_IN_USE_RENAME = 0x00004000

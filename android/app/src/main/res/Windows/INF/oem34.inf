@@ -1,0 +1,353 @@
+;
+; hpcustomcapcomp.inf
+;
+; Installs the HP Application Driver Component
+;
+; Copyright(c) 2018, HP Development Company, L.P.All rights reserved.
+; This software contains confidential and proprietary information of HP.
+; The user of this software agrees not to disclose, disseminate or copy
+; such Confidential Information and shall use the software only in accordance
+; with the terms of the license agreement the user entered into with HP.
+;
+
+[Version]
+Signature           = $Windows NT$
+Class               = SoftwareComponent
+ClassGuid           = {5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider            = %Company%
+CatalogFile.ntamd64 = hpcustomcapcompx64.cat
+CatalogFile.ntx86   = hpcustomcapcompx86.cat
+DriverVer           = 01/04/2021,1.29.2212.0
+
+;======================= Device Install Section========================
+
+[DestinationDirs]
+EXE.CopyList.ntamd64 = 13, x64
+EXE.CopyList.ntx86 = 13, x86
+
+[Manufacturer]
+%Mfg% = HP, ntamd64, ntx86
+
+;======================= Device Install x64 Section ========================
+
+[HP.ntamd64]
+%DeviceDesc% = hpcustomcapcomp_Install.ntamd64, SWC\HPIC0003
+
+[hpcustomcapcomp_Install.ntamd64]
+CopyFiles = EXE.CopyList.ntamd64
+
+[SourceDisksNames.amd64]
+1 = %DiskId%, , , \x64
+
+[SourceDisksFiles.amd64]
+AnalyticsService.dll = 1
+AppHelperCap.exe = 1
+AppHelperCap_HPManifest.p7s = 1
+AppHelperCap_HPManifest.xml = 1
+AppServiceProxy.dll = 1
+AppServiceProxySDK.dll = 1
+BingService.dll = 1
+BingServiceLib.dll = 1
+BridgeCommunication.exe = 1
+concrt140.dll = 1
+CryptographyUtilityService.dll = 1
+CustomTriggerService.dll = 1
+DDCService.dll = 1
+DeviceDetectionService.dll = 1
+DeviceService.dll = 1
+EasyCleanService.dll = 1
+FileSystemService.dll = 1
+FirewallService.dll = 1
+HomeInfoService.dll = 1
+HPAnalyticsNativeClientLib.dll = 1
+HttpService.dll = 1
+IntelBenchmarkSDK.dll = 1
+IntelOverclockingSDK.dll = 1
+IntelXTUOverclockingService.dll = 1
+InternetProxy.dll = 1
+LauncherService.dll = 1
+Logging.dll = 1
+MOZFileDecompressor.dll = 1
+msvcp140.dll = 1
+msvcp140_1.dll = 1
+msvcp140_2.dll = 1
+msvcp140_codecvt_ids.dll = 1
+NetworkBoosterService.dll = 1
+NetworkCap.exe = 1
+NetworkCap_HPManifest.p7s = 1
+NetworkCap_HPManifest.xml = 1
+ProfileHelperModel.dll = 1
+RegistrationService.dll = 1
+RpcClient.Native.dll = 1
+SdkWrapperForNativeCode.dll = 1
+SMBiosService.dll = 1
+SysInfoCap.exe = 1
+SysInfoCap_HPManifest.p7s = 1
+SysInfoCap_HPManifest.xml = 1
+SystemPropertiesService.dll = 1
+UserInfoService.dll = 1
+vccorlib140.dll = 1
+vcruntime140.dll = 1
+vcruntime140_1.dll = 1
+WindowsNTService.dll = 1
+WindowsRegistryService.dll = 1
+WMIService.dll = 1
+
+[EXE.CopyList.ntamd64]
+AnalyticsService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AppHelperCap.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+AppHelperCap_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+AppHelperCap_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+AppServiceProxy.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AppServiceProxySDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BingService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BingServiceLib.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BridgeCommunication.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+concrt140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+CryptographyUtilityService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+CustomTriggerService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DDCService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DeviceDetectionService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DeviceService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+EasyCleanService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+FileSystemService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+FirewallService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HomeInfoService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPAnalyticsNativeClientLib.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HttpService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+IntelBenchmarkSDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+IntelOverclockingSDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+IntelXTUOverclockingService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+InternetProxy.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+LauncherService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+Logging.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+MOZFileDecompressor.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140_1.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140_2.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+msvcp140_codecvt_ids.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkBoosterService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkCap.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkCap_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkCap_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+ProfileHelperModel.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+RegistrationService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+RpcClient.Native.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SdkWrapperForNativeCode.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SMBiosService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SysInfoCap.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+SysInfoCap_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+SysInfoCap_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemPropertiesService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+UserInfoService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+vccorlib140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+vcruntime140.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+vcruntime140_1.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsNTService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsRegistryService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WMIService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[hpcustomcapcomp_Install.ntamd64.Services]
+AddService = HPSysInfoCap, 0x00000800, HPSysInfoCap_Service_Inst64, 
+AddService = HPAppHelperCap, 0x00000800, HPAppHelperCap_Service_Inst64, 
+AddService = HPNetworkCap, 0x00000800, HPNetworkCap_Service_Inst64, 
+AddService = , 0x00000002
+
+[HPSysInfoCap_Service_Inst64]
+DisplayName    = %ServiceSysInfoDesc%
+ServiceType    = 0x00000010
+StartType      = %SERVICE_AUTO_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup = "Base"
+ServiceBinary  = %13%\x64\SysInfoCap.exe
+Dependencies   = rpcss
+
+[HPAppHelperCap_Service_Inst64]
+DisplayName    = %ServiceAppHelperDesc%
+ServiceType    = 0x00000010
+StartType      = %SERVICE_AUTO_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup = "Base"
+ServiceBinary  = %13%\x64\AppHelperCap.exe
+Dependencies   = rpcss
+
+[HPNetworkCap_Service_Inst64]
+DisplayName    = %ServiceNetworkDesc%
+ServiceType    = 0x00000010
+StartType      = %SERVICE_AUTO_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup = "Base"
+ServiceBinary  = %13%\x64\NetworkCap.exe
+Dependencies   = rpcss
+
+;======================= Device Install x86 Section ========================
+
+[HP.ntx86]
+%DeviceDesc% = hpcustomcapcomp_Install.ntx86, SWC\HPIC0003
+
+[hpcustomcapcomp_Install.ntx86]
+CopyFiles = EXE.CopyList.ntx86
+
+[SourceDisksNames.x86]
+1 = %DiskId%, , , \x86
+
+[SourceDisksFiles.x86]
+AnalyticsService.dll = 1
+AppHelperCap.exe = 1
+AppHelperCap_HPManifest.p7s = 1
+AppHelperCap_HPManifest.xml = 1
+AppServiceProxy.dll = 1
+AppServiceProxySDK.dll = 1
+BingService.dll = 1
+BingServiceLib.dll = 1
+BridgeCommunication.exe = 1
+CryptographyUtilityService.dll = 1
+CustomTriggerService.dll = 1
+DDCService.dll = 1
+DeviceDetectionService.dll = 1
+DeviceService.dll = 1
+EasyCleanService.dll = 1
+FileSystemService.dll = 1
+FirewallService.dll = 1
+HomeInfoService.dll = 1
+HPAnalyticsNativeClientLib.dll = 1
+HttpService.dll = 1
+IntelBenchmarkSDK.dll = 1
+IntelOverclockingSDK.dll = 1
+IntelXTUOverclockingService.dll = 1
+InternetProxy.dll = 1
+LauncherService.dll = 1
+Logging.dll = 1
+MOZFileDecompressor.dll = 1
+NetworkBoosterService.dll = 1
+NetworkCap.exe = 1
+NetworkCap_HPManifest.p7s = 1
+NetworkCap_HPManifest.xml = 1
+ProfileHelperModel.dll = 1
+RegistrationService.dll = 1
+RpcClient.Native.dll = 1
+SdkWrapperForNativeCode.dll = 1
+SMBiosService.dll = 1
+SysInfoCap.exe = 1
+SysInfoCap_HPManifest.p7s = 1
+SysInfoCap_HPManifest.xml = 1
+SystemPropertiesService.dll = 1
+UserInfoService.dll = 1
+WindowsNTService.dll = 1
+WindowsRegistryService.dll = 1
+WMIService.dll = 1
+
+[EXE.CopyList.ntx86]
+AnalyticsService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AppHelperCap.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+AppHelperCap_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+AppHelperCap_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+AppServiceProxy.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+AppServiceProxySDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BingService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BingServiceLib.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+BridgeCommunication.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+CryptographyUtilityService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+CustomTriggerService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DDCService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DeviceDetectionService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+DeviceService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+EasyCleanService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+FileSystemService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+FirewallService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HomeInfoService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HPAnalyticsNativeClientLib.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+HttpService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+IntelBenchmarkSDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+IntelOverclockingSDK.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+IntelXTUOverclockingService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+InternetProxy.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+LauncherService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+Logging.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+MOZFileDecompressor.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkBoosterService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkCap.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkCap_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+NetworkCap_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+ProfileHelperModel.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+RegistrationService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+RpcClient.Native.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SdkWrapperForNativeCode.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SMBiosService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+SysInfoCap.exe, , %COPYFLG_FORCE_FILE_IN_USE%
+SysInfoCap_HPManifest.p7s, , %COPYFLG_FORCE_FILE_IN_USE%
+SysInfoCap_HPManifest.xml, , %COPYFLG_FORCE_FILE_IN_USE%
+SystemPropertiesService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+UserInfoService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsNTService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WindowsRegistryService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+WMIService.dll, , %COPYFLG_FORCE_FILE_IN_USE%
+
+[hpcustomcapcomp_Install.ntx86.Services]
+AddService = HPSysInfoCap, 0x00000800, HPSysInfoCap_Service_Inst86, 
+AddService = HPAppHelperCap, 0x00000800, HPAppHelperCap_Service_Inst86, 
+AddService = HPNetworkCap, 0x00000800, HPNetworkCap_Service_Inst86, 
+AddService = , 0x00000002
+
+[HPSysInfoCap_Service_Inst86]
+DisplayName    = %ServiceSysInfoDesc%
+ServiceType    = 0x00000010
+StartType      = %SERVICE_AUTO_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup = "Base"
+ServiceBinary  = %13%\x86\SysInfoCap.exe
+Dependencies   = rpcss
+
+[HPAppHelperCap_Service_Inst86]
+DisplayName    = %ServiceAppHelperDesc%
+ServiceType    = 0x00000010
+StartType      = %SERVICE_AUTO_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup = "Base"
+ServiceBinary  = %13%\x86\AppHelperCap.exe
+Dependencies   = rpcss
+
+[HPNetworkCap_Service_Inst86]
+DisplayName    = %ServiceNetworkDesc%
+ServiceType    = 0x00000010
+StartType      = %SERVICE_AUTO_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup = "Base"
+ServiceBinary  = %13%\x86\NetworkCap.exe
+Dependencies   = rpcss
+
+[Strings]
+Mfg = "HP"
+DiskId = "Install disk (1)"
+Company = "HP Inc."
+DeviceDesc = "HP Application Driver Component"
+ServiceSysInfoDesc = "HP System Info HSA Service"
+ServiceAppHelperDesc = "HP App Helper HSA Service"
+ServiceNetworkDesc = "HP Network HSA Service"
+
+;
+; The "standard" defines
+;
+REG_EXPAND_SZ = 0x00020000
+REG_DWORD = 0x00010001
+SERVICE_BOOT_START = 0x00000000
+SERVICE_SYSTEM_START = 0x00000001
+SERVICE_AUTO_START = 0x00000002
+SERVICE_DEMAND_START = 0x00000003
+SERVICE_DISABLED = 0x00000004
+SERVICE_ERROR_IGNORE = 0x00000000
+SERVICE_ERROR_NORMAL = 0x00000001
+SERVICE_ERROR_SEVERE = 0x00000002
+SERVICE_ERROR_CRITICAL = 0x00000003
+COPYFLG_WARN_IF_SKIP = 0x00000001
+COPYFLG_NOSKIP = 0x00000002
+COPYFLG_NOVERSIONCHECK = 0x00000004
+COPYFLG_FORCE_FILE_IN_USE = 0x00000008
+COPYFLG_NO_OVERWRITE = 0x00000010
+COPYFLG_NO_VERSION_DIALOG = 0x00000020
+COPYFLG_OVERWRITE_OLDER_ONLY = 0x00000040
+COPYFLG_REPLACEONLY = 0x00000400
+COPYFLG_NODECOMP = 0x00000800
+COPYFLG_REPLACE_BOOT_FILE = 0x00001000
+COPYFLG_NOPRUNE = 0x00002000
+COPYFLG_IN_USE_RENAME = 0x00004000
