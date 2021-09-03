@@ -15,11 +15,11 @@ Future<void> main() async {
   final FirebaseApp app = await Firebase.initializeApp(
       name: 'db2',
       options:  FirebaseOptions(
-        appId: '1:1077846897323:android:5878755665fbf251cafdee',
-        apiKey: 'AIzaSyD5NuKqAzz2qlyqZq_sJ5ZXQeWAjgFl4Bk',
-        projectId: 'agritransport-10f46',
-        messagingSenderId: '1077846897323',
-        databaseURL: 'https://agritransport-10f46-default-rtdb.firebaseio.com',
+        appId: 'YOUR APP ID HERE',
+        apiKey: 'YOUR API KEY HERE',
+        projectId: 'ID',
+        messagingSenderId: 'YOUR ID',
+        databaseURL: 'ADD YOUR DATABASE URL HERE',
       ),
   );
 
