@@ -108,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                               fontSize: 14.00,
                             )
                         ),
-                        style:TextStyle(fontSize: 14.0),
+                        style:TextStyle(fontSize: 13.5),
                       ),
 
                       SizedBox(height: 10,),
