@@ -14,7 +14,7 @@ import 'dataprovider/appdata.dart';
 import 'package:http/http.dart' as http;
 
 
-String mapKey = 'AIzaSyD5NuKqAzz2qlyqZq_sJ5ZXQeWAjgFl4Bk';
+String mapKey = 'YOUR KEY HERE';
 
 final CameraPosition googlePlex = CameraPosition(
   target: LatLng(37.42796133580664, -122.085749655962),
@@ -66,7 +66,7 @@ class HelperMethods{
 
 
 
-    String url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/${position.latitude},${position.longitude}.json?access_token=pk.eyJ1IjoiYWRpdHlhLXBhY2hwYW5kZSIsImEiOiJja24wNTNib3kwazdrMnVvM2Joa3ZvcGVvIn0.adsHNz_zZTWB0XO5A5DnoA';
+  
 
 
 
